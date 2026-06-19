@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Klinik Intan Utama | Spesialis Luka Diabetes & Pembersihan Luka</title>
+  <meta name="description" content="Klinik Intan Utama membantu perawatan dan pembersihan luka diabetes dengan pendekatan rapi, nyaman, dan terpantau. Booking jadwal rawat luka diabetes lewat WhatsApp." />
+  <meta name="keywords" content="klinik luka diabetes, pembersihan luka diabetes, perawatan luka diabetes, rawat luka diabetes, klinik spesialis luka diabetes, debridement luka diabetes" />
+  <meta name="theme-color" content="#6f1d1b" />
+  <meta property="og:title" content="Klinik Intan Utama | Spesialis Luka Diabetes" />
+  <meta property="og:description" content="Rawat luka diabetes dengan pembersihan luka, balutan modern, edukasi perawatan rumah, dan kontrol berkala." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@650;750&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --mahogany:#6f1d1b;
+      --mahogany-2:#42100f;
+      --coral:#ff7b54;
+      --teal:#18a999;
+      --mint:#b9f5dc;
+      --amber:#ffd166;
+      --cream:#fff7ea;
+      --sand:#f7e7d1;
+      --ink:#261b19;
+      --muted:#76665f;
+      --white:#fffdf8;
+      --line:rgba(111,29,27,.16);
+      --shadow:0 24px 80px rgba(66,16,15,.16);
+      --shadow-soft:0 16px 46px rgba(66,16,15,.10);
+      --radius:28px;
+      --radius-lg:42px;
+      --container:min(1140px, calc(100% - 40px));
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 8% 5%, rgba(255,209,102,.24), transparent 26rem),
+        radial-gradient(circle at 92% 18%, rgba(24,169,153,.18), transparent 25rem),
+        linear-gradient(180deg, #fffbf3 0%, #fff7ea 100%);
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img,svg{max-width:100%;display:block}
+    button,input,textarea{font:inherit}
+    ::selection{background:rgba(255,123,84,.26)}
+
+    .page-shell{position:relative;min-height:100vh;overflow:hidden}
+    .grain{
+      pointer-events:none;
+      position:fixed;
+      inset:0;
+      opacity:.065;
+      mix-blend-mode:multiply;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+      z-index:0;
+    }
+
+    .container{width:var(--container);margin:0 auto;position:relative;z-index:2}
+
+    .topbar{
+      position:fixed;
+      top:18px;
+      left:50%;
+      transform:translateX(-50%);
+      width:min(1180px, calc(100% - 28px));
+      z-index:40;
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      align-items:center;
+      gap:18px;
+      padding:12px 14px;
+      border:1px solid rgba(255,247,234,.28);
+      border-radius:999px;
+      background:rgba(66,16,15,.58);
+      backdrop-filter:blur(18px);
+      box-shadow:0 20px 70px rgba(38,27,25,.18);
+      color:var(--white);
+    }
+
+    .brand{display:flex;align-items:center;gap:12px;min-width:0;padding-left:6px}
+    .brand-mark{
+      width:43px;height:43px;border-radius:50%;
+      background:conic-gradient(from 130deg, var(--amber), var(--coral), var(--teal), var(--amber));
+      display:grid;place-items:center;
+      box-shadow:0 10px 30px rgba(255,123,84,.28);
+      flex:0 0 auto;
+    }
+    .brand-mark span{
+      width:27px;height:27px;border-radius:50%;
+      display:grid;place-items:center;
+      background:rgba(255,253,248,.94);
+      color:var(--mahogany);
+      font-family:"Playfair Display", Georgia, serif;
+      font-weight:750;
+      font-size:17px;
+      line-height:1;
+    }
+    .brand-text strong{display:block;font-size:14px;letter-spacing:.08em;text-transform:uppercase;line-height:1.1}
+    .brand-text small{display:block;font-size:11px;color:rgba(255,253,248,.72);margin-top:2px;white-space:nowrap}
+
+    .nav{display:flex;justify-content:center;align-items:center;gap:6px}
+    .nav a{
+      padding:11px 13px;
+      border-radius:999px;
+      font-size:14px;
+      color:rgba(255,253,248,.83);
+      transition:.25s ease;
+      white-space:nowrap;
+    }
+    .nav a:hover{background:rgba(255,247,234,.12);color:#fff}
+    .nav-cta{display:flex;gap:9px;align-items:center}
+    .pill{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      min-height:43px;
+      padding:0 18px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:14px;
+      transition:.25s ease;
+      border:1px solid transparent;
+      white-space:nowrap;
+      cursor:pointer;
+    }
+    .pill.primary{background:var(--amber);color:var(--mahogany-2);box-shadow:0 13px 32px rgba(255,209,102,.26)}
+    .pill.primary:hover{transform:translateY(-2px);box-shadow:0 18px 42px rgba(255,209,102,.32)}
+    .pill.ghost{border-color:rgba(255,253,248,.45);color:#fff;background:rgba(255,253,248,.06)}
+    .pill.ghost:hover{background:rgba(255,253,248,.14);transform:translateY(-2px)}
+    .menu-toggle{display:none;border:0;background:rgba(255,253,248,.12);color:#fff;border-radius:999px;width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer}
+    .menu-toggle svg{width:21px;height:21px}
+
+    .hero{
+      min-height:760px;
+      padding:144px 0 92px;
+      position:relative;
+      color:var(--white);
+      background:
+        linear-gradient(115deg, rgba(66,16,15,.90) 0%, rgba(111,29,27,.76) 42%, rgba(24,169,153,.50) 100%),
+        radial-gradient(circle at 70% 32%, rgba(255,209,102,.32), transparent 23rem),
+        linear-gradient(135deg, var(--mahogany-2), var(--mahogany));
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size:66px 66px;
+      mask-image:linear-gradient(90deg, transparent, #000 15%, #000 86%, transparent);
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      right:-12rem;bottom:-18rem;
+      width:50rem;height:50rem;border-radius:50%;
+      background:radial-gradient(circle, rgba(255,209,102,.18), transparent 66%);
+      filter:blur(2px);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.04fr .96fr;
+      gap:54px;
+      align-items:center;
+      position:relative;
+      z-index:2;
+    }
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;
+      margin:0 0 18px;
+      padding:10px 14px;
+      border:1px solid rgba(255,253,248,.24);
+      border-radius:999px;
+      background:rgba(255,253,248,.08);
+      color:rgba(255,253,248,.90);
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+    .eyebrow i{width:9px;height:9px;border-radius:999px;background:var(--mint);box-shadow:0 0 0 6px rgba(185,245,220,.12)}
+    h1,h2,h3{font-family:"Playfair Display", Georgia, serif;color:inherit;letter-spacing:-.035em}
+    h1{
+      margin:0;
+      font-size:clamp(46px, 6vw, 84px);
+      line-height:.96;
+      max-width:830px;
+    }
+    .hero h1 span{color:var(--amber)}
+    .hero-sub{
+      margin:24px 0 0;
+      max-width:650px;
+      font-size:clamp(17px, 1.5vw, 21px);
+      line-height:1.72;
+      color:rgba(255,253,248,.86);
+    }
+    .hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:34px}
+    .hero .pill{min-height:50px;padding:0 22px;font-size:15px}
+    .micro-trust{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:12px;
+      margin-top:34px;
+      max-width:700px;
+    }
+    .micro-trust .item{
+      border:1px solid rgba(255,253,248,.18);
+      background:rgba(255,253,248,.08);
+      border-radius:21px;
+      padding:16px 15px;
+      min-height:94px;
+    }
+    .micro-trust strong{display:block;font-size:22px;margin-bottom:7px;color:var(--amber)}
+    .micro-trust span{display:block;font-size:13px;line-height:1.42;color:rgba(255,253,248,.78)}
+
+    .hero-visual{position:relative;min-height:560px;display:grid;place-items:center}
+    .visual-card{
+      position:relative;
+      width:min(472px, 100%);
+      min-height:555px;
+      border-radius:48px;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(255,209,102,.38), transparent 13rem),
+        linear-gradient(180deg, rgba(255,253,248,.96), rgba(255,247,234,.92));
+      color:var(--ink);
+      box-shadow:0 40px 120px rgba(0,0,0,.28);
+      border:1px solid rgba(255,253,248,.42);
+    }
+    .visual-top{height:318px;position:relative;overflow:hidden;background:linear-gradient(140deg, #fff2d8, #b9f5dc 55%, #ffb39a)}
+    .visual-top svg{position:absolute;inset:auto 0 0 0;width:100%;height:100%}
+    .visual-badge{
+      position:absolute;left:24px;top:24px;
+      padding:10px 14px;border-radius:999px;
+      background:rgba(255,253,248,.82);backdrop-filter:blur(10px);
+      font-size:12px;font-weight:800;color:var(--mahogany);
+      box-shadow:0 12px 30px rgba(66,16,15,.12);
+    }
+    .visual-body{padding:24px 24px 26px}
+    .visit-card{
+      display:flex;gap:14px;align-items:flex-start;
+      padding:17px;border-radius:24px;
+      background:#fffdf8;
+      box-shadow:0 15px 40px rgba(66,16,15,.08);
+      border:1px solid rgba(111,29,27,.10);
+    }
+    .visit-icon{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:rgba(24,169,153,.13);color:var(--teal);flex:0 0 auto}
+    .visit-card h3{margin:0 0 7px;font-size:22px;letter-spacing:-.02em;color:var(--mahogany)}
+    .visit-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.58}
+    .check-list{display:grid;gap:11px;margin:18px 0 0;padding:0;list-style:none}
+    .check-list li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:14px;line-height:1.45}
+    .check-list li::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--teal);box-shadow:inset 0 0 0 5px #fff;flex:0 0 auto;margin-top:2px}
+    .floating-note{
+      position:absolute;
+      right:-18px;
+      top:88px;
+      width:168px;
+      border-radius:25px;
+      background:var(--amber);
+      color:var(--mahogany-2);
+      padding:16px;
+      box-shadow:0 20px 54px rgba(66,16,15,.22);
+      animation:floaty 5s ease-in-out infinite;
+    }
+    .floating-note strong{display:block;font-size:24px;line-height:1;margin-bottom:8px}
+    .floating-note span{font-size:13px;font-weight:700;line-height:1.35;display:block}
+    .floating-note.bottom{left:-28px;right:auto;top:auto;bottom:54px;background:var(--mint);width:188px;animation-delay:-2s}
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+    .statement{
+      margin-top:-1px;
+      background:linear-gradient(90deg, var(--teal), #2ac3ae 58%, var(--amber));
+      color:var(--mahogany-2);
+      padding:34px 0;
+      position:relative;
+      z-index:4;
+    }
+    .statement p{
+      margin:0;
+      font-family:"Playfair Display", Georgia, serif;
+      font-size:clamp(28px, 3.2vw, 44px);
+      font-weight:750;
+      line-height:1.16;
+      letter-spacing:-.035em;
+      max-width:1020px;
+    }
+
+    section{padding:96px 0;position:relative}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:36px}
+    .section-kicker{
+      display:inline-flex;align-items:center;gap:8px;
+      margin-bottom:12px;
+      color:var(--mahogany);
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+    .section-kicker::before{content:"";width:26px;height:2px;background:var(--coral);border-radius:999px}
+    h2{margin:0;font-size:clamp(34px, 4.2vw, 58px);line-height:1.03;color:var(--mahogany-2)}
+    .section-copy{max-width:590px;margin:14px 0 0;color:var(--muted);font-size:17px;line-height:1.75}
+
+    .focus-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+    .focus-card{
+      position:relative;
+      border-radius:var(--radius-lg);
+      overflow:hidden;
+      min-height:470px;
+      background:var(--white);
+      box-shadow:var(--shadow-soft);
+      border:1px solid var(--line);
+      isolation:isolate;
+    }
+    .focus-card::after{
+      content:"";position:absolute;inset:0;
+      background:linear-gradient(180deg, transparent 25%, rgba(38,27,25,.14) 65%, rgba(66,16,15,.78) 100%);
+      z-index:1;
+    }
+    .focus-art{height:100%;min-height:470px;background:linear-gradient(135deg, rgba(255,209,102,.35), rgba(24,169,153,.28));display:grid;place-items:center;padding:28px}
+    .focus-card:nth-child(2) .focus-art{background:linear-gradient(135deg, rgba(255,123,84,.34), rgba(185,245,220,.38))}
+    .focus-content{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:34px;color:var(--white)}
+    .focus-content h3{margin:0 0 12px;font-size:32px;letter-spacing:-.025em}
+    .focus-content p{margin:0 0 20px;color:rgba(255,253,248,.84);line-height:1.7;max-width:500px}
+    .text-link{display:inline-flex;align-items:center;gap:10px;font-weight:800;color:inherit}
+    .text-link svg{transition:.25s ease}.text-link:hover svg{transform:translateX(5px)}
+
+    .difference{background:linear-gradient(180deg, rgba(247,231,209,.52), rgba(255,247,234,.88))}
+    .approach-grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:22px;align-items:stretch}
+    .approach-card{
+      background:var(--mahogany-2);
+      color:var(--white);
+      min-height:360px;
+      border-radius:36px;
+      padding:34px 28px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      box-shadow:0 22px 70px rgba(66,16,15,.17);
+      border:1px solid rgba(255,253,248,.09);
+      overflow:hidden;
+      position:relative;
+    }
+    .approach-card::before{content:"";position:absolute;right:-60px;top:-60px;width:170px;height:170px;border-radius:50%;background:rgba(255,209,102,.13)}
+    .approach-card:nth-child(2){background:#0d5d58}.approach-card:nth-child(2)::before{background:rgba(185,245,220,.18)}
+    .approach-card:nth-child(3){background:#923126}.approach-card:nth-child(3)::before{background:rgba(255,123,84,.18)}
+    .approach-number{font-size:13px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);position:relative;z-index:1}
+    .approach-card h3{margin:48px 0 14px;font-size:30px;line-height:1.08;position:relative;z-index:1}
+    .approach-card p{margin:0;color:rgba(255,253,248,.80);line-height:1.72;position:relative;z-index:1}
+    .approach-card .pill{align-self:flex-start;margin-top:28px;min-height:42px;padding:0 16px;font-size:13px}
+
+    .services-grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:18px}
+    .service-card{
+      min-height:214px;
+      background:rgba(255,253,248,.78);
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:26px;
+      box-shadow:0 12px 36px rgba(66,16,15,.06);
+      transition:.25s ease;
+    }
+    .service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-soft);border-color:rgba(24,169,153,.34)}
+    .service-icon{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;margin-bottom:20px;background:rgba(24,169,153,.13);color:var(--teal)}
+    .service-card:nth-child(2n) .service-icon{background:rgba(255,123,84,.14);color:var(--coral)}
+    .service-card:nth-child(3n) .service-icon{background:rgba(255,209,102,.20);color:#ad6d00}
+    .service-card h3{font-size:24px;margin:0 0 10px;color:var(--mahogany-2);letter-spacing:-.02em}
+    .service-card p{margin:0;color:var(--muted);line-height:1.65;font-size:15px}
+
+    .warning-strip{
+      margin-top:26px;
+      border-radius:32px;
+      padding:24px;
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      gap:20px;
+      align-items:center;
+      background:linear-gradient(90deg, rgba(111,29,27,.95), rgba(146,49,38,.92));
+      color:var(--white);
+      box-shadow:0 22px 70px rgba(66,16,15,.15);
+    }
+    .warning-strip .icon{width:60px;height:60px;border-radius:22px;background:rgba(255,209,102,.18);display:grid;place-items:center;color:var(--amber)}
+    .warning-strip h3{margin:0 0 7px;font-size:26px;letter-spacing:-.02em}
+    .warning-strip p{margin:0;color:rgba(255,253,248,.80);line-height:1.62}
+
+    .journey{background:var(--mahogany-2);color:var(--white);overflow:hidden}
+    .journey::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 22%, rgba(255,209,102,.18), transparent 25rem), radial-gradient(circle at 10% 80%, rgba(24,169,153,.22), transparent 25rem)}
+    .journey h2{color:var(--white)}.journey .section-copy{color:rgba(255,253,248,.76)}.journey .section-kicker{color:var(--amber)}
+    .journey-steps{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:16px;margin-top:42px;position:relative;z-index:2}
+    .step{
+      padding:24px 22px;
+      min-height:250px;
+      border:1px solid rgba(255,253,248,.12);
+      border-radius:30px;
+      background:rgba(255,253,248,.07);
+      backdrop-filter:blur(10px);
+      position:relative;
+      overflow:hidden;
+    }
+    .step b{font-size:44px;font-family:"Playfair Display", Georgia, serif;color:var(--amber);line-height:1}
+    .step h3{font-size:24px;margin:28px 0 10px;color:var(--white);letter-spacing:-.02em}
+    .step p{margin:0;color:rgba(255,253,248,.74);line-height:1.64;font-size:15px}
+
+    .clinic-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch}
+    .clinic-card{
+      border-radius:var(--radius-lg);
+      background:var(--white);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow-soft);
+      overflow:hidden;
+    }
+    .clinic-map{
+      min-height:430px;
+      background:
+        linear-gradient(rgba(255,253,248,.78), rgba(255,253,248,.78)),
+        radial-gradient(circle at 28% 35%, rgba(24,169,153,.36) 0 7%, transparent 7.4%),
+        radial-gradient(circle at 66% 62%, rgba(255,123,84,.35) 0 8%, transparent 8.4%),
+        linear-gradient(90deg, rgba(111,29,27,.10) 1px, transparent 1px),
+        linear-gradient(rgba(111,29,27,.10) 1px, transparent 1px),
+        #fff4df;
+      background-size:auto, auto, auto, 48px 48px, 48px 48px, auto;
+      display:grid;
+      place-items:center;
+      padding:34px;
+      position:relative;
+    }
+    .location-pin{
+      width:min(360px, 100%);
+      padding:26px;
+      border-radius:32px;
+      background:rgba(255,253,248,.86);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(111,29,27,.14);
+      box-shadow:0 22px 70px rgba(66,16,15,.16);
+      text-align:center;
+    }
+    .location-pin .pin{width:72px;height:72px;border-radius:26px;margin:0 auto 18px;background:var(--mahogany);display:grid;place-items:center;color:var(--amber);box-shadow:0 18px 46px rgba(111,29,27,.24)}
+    .location-pin h3{font-size:30px;margin:0 0 10px;color:var(--mahogany-2)}
+    .location-pin p{margin:0;color:var(--muted);line-height:1.6}
+    .info-panel{padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+    .info-list{display:grid;gap:14px}
+    .info-row{display:flex;gap:14px;align-items:flex-start;padding:16px;border:1px solid rgba(111,29,27,.10);border-radius:22px;background:#fffaf1}
+    .info-row svg{width:22px;height:22px;color:var(--teal);flex:0 0 auto;margin-top:2px}
+    .info-row strong{display:block;margin-bottom:3px;color:var(--mahogany-2)}
+    .info-row span{font-size:14px;color:var(--muted);line-height:1.5}
+
+    .faq-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:34px;align-items:start}
+    .faq-list{display:grid;gap:12px}
+    .faq-item{background:rgba(255,253,248,.80);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 10px 26px rgba(66,16,15,.05)}
+    .faq-q{width:100%;border:0;background:transparent;display:flex;justify-content:space-between;gap:18px;align-items:center;text-align:left;padding:22px 24px;cursor:pointer;font-weight:800;color:var(--mahogany-2)}
+    .faq-q svg{width:20px;height:20px;transition:.25s ease;flex:0 0 auto}
+    .faq-a{display:grid;grid-template-rows:0fr;transition:.28s ease}.faq-a>div{overflow:hidden}.faq-a p{margin:0;padding:0 24px 22px;color:var(--muted);line-height:1.7}
+    .faq-item.open .faq-a{grid-template-rows:1fr}.faq-item.open .faq-q svg{transform:rotate(45deg)}
+
+    .final-cta{
+      padding:86px 0;
+      background:
+        linear-gradient(115deg, rgba(66,16,15,.94), rgba(111,29,27,.91)),
+        radial-gradient(circle at 80% 25%, rgba(255,209,102,.28), transparent 20rem);
+      color:var(--white);
+    }
+    .cta-box{
+      min-height:330px;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      border:1px solid rgba(255,253,248,.13);
+      border-radius:48px;
+      background:rgba(255,253,248,.06);
+      padding:46px 26px;
+      position:relative;
+      overflow:hidden;
+    }
+    .cta-box::before{content:"";position:absolute;inset:22px;border:1px solid rgba(255,253,248,.10);border-radius:36px;pointer-events:none}
+    .cta-box h2{color:var(--white);max-width:850px;margin:0 auto;font-size:clamp(34px, 4vw, 56px)}
+    .cta-box p{max-width:640px;margin:18px auto 0;color:rgba(255,253,248,.78);line-height:1.75;font-size:17px}
+    .cta-box .hero-actions{justify-content:center;margin-top:30px}
+
+    footer{background:#2b0c0b;color:rgba(255,253,248,.70);padding:34px 0}
+    .footer-grid{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center}
+    footer strong{color:var(--white)}
+    footer p{margin:6px 0 0;line-height:1.6;font-size:13px}
+    .footer-links{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+    .footer-links a{font-size:13px;color:rgba(255,253,248,.72)}
+    .footer-links a:hover{color:var(--amber)}
+
+    .wa-float{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:35;
+      width:62px;height:62px;border-radius:50%;
+      display:grid;place-items:center;
+      background:#22c55e;
+      color:#fff;
+      box-shadow:0 20px 50px rgba(34,197,94,.36);
+      border:3px solid rgba(255,253,248,.84);
+      transition:.25s ease;
+    }
+    .wa-float:hover{transform:translateY(-4px) scale(1.03)}
+    .wa-float svg{width:31px;height:31px}
+
+    .reveal{opacity:1;transform:none}
+    .js .reveal{opacity:0;transform:translateY(22px);transition:.65s cubic-bezier(.2,.8,.2,1)}
+    .js .reveal.in-view{opacity:1;transform:none}
+
+    @media (max-width:1020px){
+      .topbar{grid-template-columns:auto auto;justify-content:space-between;border-radius:30px;align-items:center}
+      .nav{position:absolute;left:14px;right:14px;top:76px;background:rgba(66,16,15,.96);border:1px solid rgba(255,253,248,.16);border-radius:26px;padding:14px;display:none;flex-direction:column;align-items:stretch;box-shadow:0 28px 70px rgba(38,27,25,.22)}
+      .nav.open{display:flex}.nav a{text-align:center}.nav-cta{display:none}.menu-toggle{display:flex}
+      .hero{padding-top:128px}.hero-grid{grid-template-columns:1fr;gap:42px}.hero-visual{min-height:auto}.visual-card{min-height:520px}.floating-note{right:10px}.floating-note.bottom{left:10px}
+      .approach-grid,.services-grid{grid-template-columns:repeat(2, minmax(0,1fr))}.journey-steps{grid-template-columns:repeat(2, minmax(0,1fr))}.clinic-grid,.faq-wrap{grid-template-columns:1fr}
+    }
+    @media (max-width:720px){
+      :root{--container:min(100% - 28px, 1140px)}
+      .topbar{top:10px;width:calc(100% - 18px);padding:10px;border-radius:24px}.brand-text small{display:none}.brand-text strong{font-size:12px}.brand-mark{width:40px;height:40px}.menu-toggle{width:40px;height:40px}.nav{top:67px}
+      .hero{min-height:auto;padding:112px 0 64px}.hero-grid{gap:34px}.hero-sub{font-size:16px}.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .pill{width:100%}.micro-trust{grid-template-columns:1fr;gap:10px}.micro-trust .item{min-height:auto;padding:14px 15px}.visual-card{border-radius:34px;min-height:auto}.visual-top{height:260px}.visual-body{padding:18px}.floating-note{position:relative;right:auto;left:auto;top:auto;bottom:auto;width:100%;margin-top:12px;animation:none}.floating-note.bottom{left:auto;bottom:auto;width:100%;margin-top:12px}.hero-visual{display:block}
+      .statement{padding:26px 0}.statement p{font-size:27px}
+      section{padding:70px 0}.section-head{display:block;margin-bottom:28px}.section-copy{font-size:16px}.focus-grid,.approach-grid,.services-grid,.journey-steps{grid-template-columns:1fr}.focus-card{min-height:420px;border-radius:32px}.focus-art{min-height:420px;padding:20px}.focus-content{padding:26px}.approach-card{min-height:300px;border-radius:30px}.warning-strip{grid-template-columns:1fr;text-align:left}.warning-strip .pill{width:100%}.clinic-map{min-height:330px;padding:22px}.info-panel{padding:22px}.footer-grid{grid-template-columns:1fr}.footer-links{justify-content:flex-start}.wa-float{right:16px;bottom:16px;width:58px;height:58px}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MedicalClinic",
+    "name":"Klinik Intan Utama",
+    "medicalSpecialty":"Wound Care",
+    "description":"Klinik yang berfokus pada perawatan dan pembersihan luka diabetes, edukasi perawatan kaki, dan kontrol luka berkala.",
+    "areaServed":"Indonesia",
+    "telephone":"+62-812-0000-0000",
+    "url":"https://example.com",
+    "availableService":[
+      "Pembersihan luka diabetes",
+      "Perawatan luka diabetes",
+      "Balutan modern",
+      "Edukasi perawatan luka di rumah"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="page-shell">
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="topbar" aria-label="Navigasi utama">
+      <a class="brand" href="#home" aria-label="Klinik Intan Utama">
+        <div class="brand-mark" aria-hidden="true"><span>IU</span></div>
+        <div class="brand-text">
+          <strong>Klinik Intan Utama</strong>
+          <small>Spesialis Luka Diabetes</small>
+        </div>
+      </a>
+      <nav class="nav" id="siteNav">
+        <a href="#fokus">Fokus Kami</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#alur">Alur Rawat</a>
+        <a href="#lokasi">Kontak</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="pill ghost" href="#faq">Cek Gejala</a>
+        <a class="pill primary js-wa" href="#">Booking WhatsApp</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="siteNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal in-view">
+            <div class="eyebrow"><i></i> Rawat luka diabetes jangan tunggu makin dalam</div>
+            <h1 id="hero-title">Pembersihan luka diabetes yang <span>rapi, nyaman, dan terpantau.</span></h1>
+            <p class="hero-sub">Klinik Intan Utama membantu pasien dan keluarga merawat luka diabetes dengan pendekatan yang lebih tenang: luka dinilai dulu, dibersihkan sesuai kondisi, diberi balutan yang tepat, lalu dipantau sampai perawatan rumahnya lebih jelas.</p>
+            <div class="hero-actions" aria-label="Aksi utama">
+              <a class="pill primary js-wa" href="#">Booking Jadwal Rawat Luka</a>
+              <a class="pill ghost" href="#alur">Lihat Alur Perawatan</a>
+            </div>
+            <div class="micro-trust" aria-label="Keunggulan layanan">
+              <div class="item"><strong>01</strong><span>Asesmen luka sebelum tindakan, bukan asal bersihin.</span></div>
+              <div class="item"><strong>02</strong><span>Balutan disesuaikan dengan kondisi luka dan kenyamanan pasien.</span></div>
+              <div class="item"><strong>03</strong><span>Keluarga dibantu paham cara merawat luka di rumah.</span></div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal in-view" aria-label="Ilustrasi perawatan luka diabetes">
+            <article class="visual-card">
+              <div class="visual-top">
+                <div class="visual-badge">Wound Care Focus</div>
+                <svg viewBox="0 0 520 360" role="img" aria-label="Ilustrasi tenaga kesehatan merawat luka kaki diabetes">
+                  <defs>
+                    <linearGradient id="skin" x1="0" x2="1"><stop offset="0" stop-color="#d78b63"/><stop offset="1" stop-color="#a85b43"/></linearGradient>
+                    <linearGradient id="coat" x1="0" x2="1"><stop offset="0" stop-color="#fffdf8"/><stop offset="1" stop-color="#e6fff2"/></linearGradient>
+                    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="15" flood-color="#42100f" flood-opacity=".18"/></filter>
+                  </defs>
+                  <circle cx="400" cy="58" r="88" fill="#ffd166" opacity=".35"/>
+                  <circle cx="96" cy="70" r="76" fill="#18a999" opacity=".23"/>
+                  <path d="M0 282 C100 214 198 336 315 268 C414 210 468 248 520 214 L520 360 L0 360Z" fill="#fff7ea" opacity=".88"/>
+                  <g filter="url(#softShadow)">
+                    <path d="M161 279 C210 251 267 248 329 262 C382 274 412 289 445 303 C404 333 273 344 188 324 C152 316 136 298 161 279Z" fill="url(#skin)"/>
+                    <path d="M303 266 C330 268 359 276 383 286 C364 301 316 305 288 296 C271 290 278 265 303 266Z" fill="#6f1d1b" opacity=".12"/>
+                    <path d="M312 267 C339 270 368 279 385 287" stroke="#fffdf8" stroke-width="8" stroke-linecap="round" opacity=".84"/>
+                    <path d="M310 281 C338 285 362 291 381 299" stroke="#18a999" stroke-width="5" stroke-linecap="round" opacity=".58"/>
+                  </g>
+                  <g filter="url(#softShadow)">
+                    <path d="M86 132 C95 92 132 72 169 83 C201 92 218 121 216 155 L211 259 L83 259 L79 158 C78 149 81 140 86 132Z" fill="url(#coat)"/>
+                    <circle cx="151" cy="64" r="41" fill="#be7351"/>
+                    <path d="M115 63 C124 20 183 19 195 59 C181 46 156 45 133 52 C126 55 120 59 115 63Z" fill="#42100f"/>
+                    <path d="M118 150 C89 184 72 220 69 268" stroke="#fffdf8" stroke-width="34" stroke-linecap="round"/>
+                    <path d="M203 150 C238 186 262 221 278 270" stroke="#fffdf8" stroke-width="34" stroke-linecap="round"/>
+                    <path d="M73 268 C114 250 158 250 200 268" stroke="#18a999" stroke-width="12" stroke-linecap="round" opacity=".65"/>
+                    <path d="M276 270 C309 257 335 257 361 268" stroke="#ff7b54" stroke-width="12" stroke-linecap="round" opacity=".72"/>
+                    <path d="M126 158 H194" stroke="#18a999" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+                    <circle cx="159" cy="185" r="18" fill="#ffd166" opacity=".7"/>
+                    <path d="M150 185h18M159 176v18" stroke="#6f1d1b" stroke-width="4" stroke-linecap="round"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="visual-body">
+                <div class="visit-card">
+                  <div class="visit-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 8-8 8s-8-3-8-8c0-4.5 4-7 8-10 4 3 8 5.5 8 10Z"/><path d="M12 8v8M8 12h8"/></svg>
+                  </div>
+                  <div>
+                    <h3>Perawatan luka yang lebih jelas</h3>
+                    <p>Pasien dan keluarga mendapat arahan kapan kontrol, kapan perlu waspada, dan apa yang sebaiknya dilakukan di rumah.</p>
+                  </div>
+                </div>
+                <ul class="check-list">
+                  <li>Pembersihan luka sesuai kondisi luka saat datang.</li>
+                  <li>Balutan dipilih berdasarkan kelembapan dan risiko infeksi.</li>
+                  <li>Rencana kontrol dibuat agar progres luka lebih mudah dipantau.</li>
+                </ul>
+              </div>
+            </article>
+            <div class="floating-note"><strong>Step 1</strong><span>Foto dan nilai kondisi luka sebelum tindakan.</span></div>
+            <div class="floating-note bottom"><strong>Home Care</strong><span>Edukasi simpel untuk keluarga, bukan teori ribet.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="statement">
+        <div class="container">
+          <p>Luka diabetes itu bukan cuma soal menutup luka. Yang penting: bersih, aman, terkontrol, dan pasien tahu harus apa setelah pulang.</p>
+        </div>
+      </div>
+
+      <section id="fokus">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-kicker">Fokus Klinik</div>
+              <h2>Perawatan luka diabetes yang dibuat lebih manusiawi.</h2>
+            </div>
+            <p class="section-copy">Kami tahu luka diabetes sering bikin keluarga panik. Karena itu, setiap kunjungan dibuat lebih terstruktur: lihat kondisi luka, jelaskan kemungkinan masalahnya, lakukan tindakan yang dibutuhkan, lalu susun langkah berikutnya.</p>
+          </div>
+
+          <div class="focus-grid">
+            <article class="focus-card reveal">
+              <div class="focus-art" aria-hidden="true">
+                <svg viewBox="0 0 560 420" role="img">
+                  <defs><linearGradient id="fg1" x1="0" x2="1"><stop stop-color="#fffdf8"/><stop offset="1" stop-color="#b9f5dc"/></linearGradient></defs>
+                  <rect x="55" y="70" width="450" height="270" rx="48" fill="url(#fg1)" opacity=".92"/>
+                  <circle cx="185" cy="154" r="55" fill="#ff7b54" opacity=".88"/>
+                  <path d="M100 300 C160 235 222 270 280 226 C342 180 396 194 462 274" fill="none" stroke="#6f1d1b" stroke-width="20" stroke-linecap="round" opacity=".22"/>
+                  <rect x="244" y="137" width="190" height="130" rx="30" fill="#fffdf8" stroke="#6f1d1b" stroke-opacity=".16"/>
+                  <path d="M292 202h94M339 155v94" stroke="#18a999" stroke-width="20" stroke-linecap="round"/>
+                  <path d="M150 236 C182 220 229 221 268 238" stroke="#ffd166" stroke-width="18" stroke-linecap="round"/>
+                  <path d="M146 268 C208 251 274 258 322 286" stroke="#6f1d1b" stroke-width="12" stroke-linecap="round" opacity=".28"/>
+                </svg>
+              </div>
+              <div class="focus-content">
+                <h3>Pembersihan Luka Diabetes</h3>
+                <p>Untuk luka yang kotor, basah, berbau, bernanah, atau lama tidak membaik. Tindakan disesuaikan dengan kondisi luka dan kenyamanan pasien.</p>
+                <a class="text-link js-wa" href="#">Tanya jadwal tindakan <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+              </div>
+            </article>
+
+            <article class="focus-card reveal">
+              <div class="focus-art" aria-hidden="true">
+                <svg viewBox="0 0 560 420" role="img">
+                  <rect x="70" y="55" width="420" height="295" rx="60" fill="#fffdf8" opacity=".88"/>
+                  <circle cx="390" cy="127" r="72" fill="#ffd166" opacity=".64"/>
+                  <circle cx="167" cy="246" r="96" fill="#18a999" opacity=".22"/>
+                  <path d="M156 126 C186 96 239 99 261 136 C288 178 261 246 214 279 C167 245 128 187 156 126Z" fill="#6f1d1b" opacity=".88"/>
+                  <path d="M187 180h48M211 156v48" stroke="#fffdf8" stroke-width="12" stroke-linecap="round"/>
+                  <rect x="278" y="182" width="160" height="92" rx="26" fill="#b9f5dc"/>
+                  <path d="M307 213h101M307 242h70" stroke="#42100f" stroke-opacity=".45" stroke-width="10" stroke-linecap="round"/>
+                  <path d="M112 316 C184 283 296 322 438 292" stroke="#ff7b54" stroke-width="18" stroke-linecap="round" opacity=".72"/>
+                </svg>
+              </div>
+              <div class="focus-content">
+                <h3>Edukasi Keluarga</h3>
+                <p>Keluarga biasanya yang paling sering membantu di rumah. Karena itu, kami bantu jelaskan cara melihat tanda bahaya dan menjaga luka tetap aman.</p>
+                <a class="text-link" href="#faq">Lihat pertanyaan umum <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="difference" id="beda">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-kicker">Kenapa Berbeda</div>
+              <h2>Bukan sekadar ganti perban. Kami bantu lihat gambaran besarnya.</h2>
+            </div>
+          </div>
+          <div class="approach-grid">
+            <article class="approach-card reveal">
+              <div>
+                <div class="approach-number">01 / Nilai Luka</div>
+                <h3>Luka dicek dulu sebelum dibersihkan.</h3>
+                <p>Kami melihat ukuran, kedalaman, cairan luka, bau, warna jaringan, dan tanda infeksi. Jadi tindakannya tidak dibuat asal sama untuk semua pasien.</p>
+              </div>
+              <a class="pill ghost" href="#alur">Lihat alur</a>
+            </article>
+            <article class="approach-card reveal">
+              <div>
+                <div class="approach-number">02 / Rawat Tepat</div>
+                <h3>Balutan dipilih sesuai kebutuhan luka.</h3>
+                <p>Luka terlalu kering, terlalu basah, bernanah, atau mudah berdarah butuh pendekatan berbeda. Tujuannya menjaga area luka lebih bersih dan terkontrol.</p>
+              </div>
+              <a class="pill ghost" href="#layanan">Lihat layanan</a>
+            </article>
+            <article class="approach-card reveal">
+              <div>
+                <div class="approach-number">03 / Pantau Ulang</div>
+                <h3>Kontrol dibuat jelas, keluarga tidak menebak-nebak.</h3>
+                <p>Pasien diberi arahan kapan kontrol, apa yang perlu dipantau di rumah, dan kapan harus segera mencari pertolongan.</p>
+              </div>
+              <a class="pill ghost js-wa" href="#">Booking kontrol</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="layanan">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-kicker">Layanan</div>
+              <h2>Layanan rawat luka yang paling sering dibutuhkan pasien diabetes.</h2>
+            </div>
+            <p class="section-copy">Setiap luka berbeda. Tim klinik akan menyesuaikan tindakan setelah melihat kondisi luka secara langsung.</p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <div class="service-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M5 9h14M5 15h14"/><rect x="4" y="4" width="16" height="16" rx="5"/></svg></div>
+              <h3>Pembersihan luka</h3>
+              <p>Membersihkan luka dari kotoran, cairan berlebih, dan jaringan yang perlu ditangani sesuai penilaian tenaga kesehatan.</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 8h10M7 12h10M8 16h5"/><rect x="4" y="3" width="16" height="18" rx="3"/></svg></div>
+              <h3>Balutan modern</h3>
+              <p>Memilih balutan yang membantu menjaga kelembapan luka tetap seimbang dan lebih nyaman saat aktivitas harian.</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18c2-5 5-8 8-8s6 3 8 8"/><path d="M12 6v8M8 10h8"/></svg></div>
+              <h3>Kontrol infeksi</h3>
+              <p>Membantu mengenali tanda infeksi seperti kemerahan meluas, bengkak, nanah, bau, nyeri meningkat, atau demam.</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-5"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
+              <h3>Edukasi perawatan rumah</h3>
+              <p>Instruksi sederhana untuk keluarga: apa yang boleh dilakukan, apa yang sebaiknya dihindari, dan kapan kontrol ulang.</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 20V6a2 2 0 0 1 2-2h8l2 2v14"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></div>
+              <h3>Monitoring progres luka</h3>
+              <p>Perubahan luka dipantau dari kunjungan ke kunjungan supaya keluarga lebih mudah melihat apakah perawatan berjalan baik.</p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M12 4v16"/><path d="M20 12a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg></div>
+              <h3>Rujukan bila perlu</h3>
+              <p>Bila ada kondisi berat, klinik dapat menyarankan pemeriksaan lanjutan atau rujukan sesuai kebutuhan medis pasien.</p>
+            </article>
+          </div>
+
+          <div class="warning-strip reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" width="31" height="31" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 2.5 18a2 2 0 0 0 1.8 3h15.4a2 2 0 0 0 1.8-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg></div>
+            <div>
+              <h3>Kalau luka menghitam, bernanah, bau, atau disertai demam, jangan tunggu.</h3>
+              <p>Segera konsultasi. Bila kondisi tampak berat atau pasien terlihat lemas, pertimbangkan datang ke IGD terdekat.</p>
+            </div>
+            <a class="pill primary js-wa" href="#">Chat Admin</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="journey" id="alur">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-kicker">Alur Rawat</div>
+              <h2>Dari datang sampai pulang, pasien tidak dibuat bingung.</h2>
+            </div>
+            <p class="section-copy">Alur ini dibuat agar pasien dan keluarga tahu gambaran kunjungan di Klinik Intan Utama. Detail tindakan tetap mengikuti kondisi luka saat diperiksa.</p>
+          </div>
+          <div class="journey-steps">
+            <article class="step reveal"><b>1</b><h3>Daftar & cerita keluhan</h3><p>Admin membantu jadwal. Pasien atau keluarga bisa cerita sudah berapa lama luka muncul dan perawatan apa yang pernah dicoba.</p></article>
+            <article class="step reveal"><b>2</b><h3>Asesmen luka</h3><p>Tim klinik menilai kondisi luka, tanda infeksi, keluhan nyeri, serta faktor yang bisa menghambat penyembuhan.</p></article>
+            <article class="step reveal"><b>3</b><h3>Pembersihan & balutan</h3><p>Luka dibersihkan dan diberi balutan sesuai kebutuhan. Pasien tetap dijelaskan supaya tidak kaget saat perawatan.</p></article>
+            <article class="step reveal"><b>4</b><h3>Kontrol & edukasi rumah</h3><p>Keluarga mendapat instruksi ringkas, jadwal kontrol, dan tanda bahaya yang perlu dipantau setelah pulang.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="lokasi">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-kicker">Kontak Klinik</div>
+              <h2>Booking jadwal rawat luka diabetes lewat WhatsApp.</h2>
+            </div>
+            <p class="section-copy">Kirim foto luka bila diminta admin, ceritakan keluhannya, lalu tim klinik bantu arahkan jadwal kunjungan yang sesuai.</p>
+          </div>
+
+          <div class="clinic-grid">
+            <article class="clinic-card reveal">
+              <div class="clinic-map">
+                <div class="location-pin">
+                  <div class="pin"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                  <h3>Klinik Intan Utama</h3>
+                  <p>Spesialis Luka Diabetes<br>Alamat bisa diisi sesuai lokasi resmi klinik.</p>
+                </div>
+              </div>
+            </article>
+            <aside class="clinic-card info-panel reveal">
+              <div class="info-list">
+                <div class="info-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.6 2.6a2 2 0 0 1-.45 2.11L8.9 10.7a16 16 0 0 0 4.4 4.4l1.27-1.25a2 2 0 0 1 2.11-.45c.83.28 1.7.48 2.6.6A2 2 0 0 1 22 16.92Z"/></svg>
+                  <div><strong>WhatsApp Admin</strong><span>+62 812 0000 0000<br>Ganti nomor ini sesuai nomor resmi klinik.</span></div>
+                </div>
+                <div class="info-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4M16 2v4M3 10h18"/><rect x="3" y="4" width="18" height="18" rx="3"/></svg>
+                  <div><strong>Jam Layanan</strong><span>Senin - Sabtu, pukul 08.00 - 20.00<br>Sesuaikan dengan jadwal klinik.</span></div>
+                </div>
+                <div class="info-row">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></svg>
+                  <div><strong>Catatan penting</strong><span>Informasi di website ini bersifat edukasi. Keputusan tindakan tetap berdasarkan pemeriksaan langsung.</span></div>
+                </div>
+              </div>
+              <a class="pill primary js-wa" href="#">Konsultasi Jadwal via WhatsApp</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="container faq-wrap">
+          <div class="reveal">
+            <div class="section-kicker">FAQ</div>
+            <h2>Pertanyaan yang sering ditanyakan keluarga pasien.</h2>
+            <p class="section-copy">Jawaban ini dibuat singkat dan mudah dipahami. Untuk kondisi pribadi pasien, tetap perlu pemeriksaan langsung.</p>
+          </div>
+          <div class="faq-list reveal">
+            <article class="faq-item open">
+              <button class="faq-q" type="button">Kapan luka diabetes perlu dibawa ke klinik? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-a"><div><p>Kalau luka tidak membaik, makin basah, bau, bernanah, nyeri meningkat, kulit sekitar merah bengkak, atau pasien demam, sebaiknya segera diperiksa.</p></div></div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-q" type="button">Apakah luka diabetes boleh dirawat sendiri di rumah? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-a"><div><p>Perawatan rumah boleh dilakukan setelah mendapat arahan yang jelas. Tapi untuk luka dalam, bernanah, menghitam, atau sulit membaik, jangan hanya mengandalkan perawatan rumahan.</p></div></div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-q" type="button">Apakah pembersihan luka pasti sakit? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-a"><div><p>Rasa tidak nyaman bisa muncul, tergantung kondisi luka. Tim klinik akan menjelaskan prosesnya dan menyesuaikan tindakan agar pasien tetap merasa aman.</p></div></div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-q" type="button">Berapa kali harus kontrol? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              <div class="faq-a"><div><p>Jadwal kontrol tergantung kondisi luka, cairan luka, tanda infeksi, gula darah, dan kemampuan keluarga merawat luka di rumah. Setelah diperiksa, klinik akan memberi arahan jadwal.</p></div></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="cta-box reveal">
+            <div>
+              <div class="eyebrow"><i></i> Lebih cepat diperiksa, lebih jelas langkahnya</div>
+              <h2 id="cta-title">Jangan biarkan luka diabetes dirawat dengan menebak-nebak.</h2>
+              <p>Chat admin Klinik Intan Utama untuk cek jadwal perawatan luka. Ceritakan kondisi pasien, lama luka, dan keluhan yang muncul.</p>
+              <div class="hero-actions">
+                <a class="pill primary js-wa" href="#">Booking via WhatsApp</a>
+                <a class="pill ghost" href="#layanan">Lihat Layanan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <strong>Klinik Intan Utama</strong>
+          <p>Landing page demo untuk layanan spesialis luka diabetes. Ganti nomor, alamat, jam layanan, dan legalitas klinik sesuai data resmi.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#layanan">Layanan</a>
+          <a href="#faq">FAQ</a>
+          <a class="js-wa" href="#">WhatsApp</a>
+        </div>
+      </div>
+    </footer>
+
+    <a class="wa-float js-wa" href="#" aria-label="Chat WhatsApp Klinik Intan Utama">
+      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.02 3.2A12.66 12.66 0 0 0 5.13 22.35L3.8 28.8l6.6-1.73A12.67 12.67 0 1 0 16.02 3.2Zm0 23.04c-1.92 0-3.78-.52-5.4-1.5l-.39-.23-3.91 1.02 1.04-3.8-.25-.4a10.35 10.35 0 1 1 8.91 4.91Zm5.86-7.75c-.32-.16-1.88-.93-2.18-1.04-.29-.1-.5-.16-.72.16-.21.31-.82 1.04-1 1.25-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.56-1.58-.95-.85-1.59-1.9-1.77-2.21-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.18.21-.31.32-.52.1-.21.05-.4-.03-.56-.08-.16-.72-1.73-.98-2.37-.26-.62-.52-.53-.72-.54h-.61c-.21 0-.56.08-.85.4-.29.31-1.12 1.09-1.12 2.66s1.15 3.09 1.31 3.3c.16.21 2.27 3.46 5.5 4.85.77.33 1.37.53 1.84.68.77.24 1.48.21 2.04.13.62-.09 1.88-.77 2.15-1.51.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.61-.37Z"/></svg>
+    </a>
+  </div>
+
+  <script>
+    document.documentElement.classList.add('js');
+    const WA_NUMBER = '6281200000000';
+    const WA_MESSAGE = encodeURIComponent('Halo Admin Klinik Intan Utama, saya ingin booking jadwal perawatan luka diabetes.');
+    const waUrl = `https://wa.me/${WA_NUMBER}?text=${WA_MESSAGE}`;
+
+    document.querySelectorAll('.js-wa').forEach(link => {
+      link.setAttribute('href', waUrl);
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener');
+    });
+
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('#siteNav');
+    toggle?.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle?.setAttribute('aria-expanded','false');
+    }));
+
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        item.classList.toggle('open');
+      });
+    });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold: .12});
+    revealEls.forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

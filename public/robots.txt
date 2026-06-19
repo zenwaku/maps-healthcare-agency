@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zenwaku.github.io/maps-healthcare-agency/sitemap.xml

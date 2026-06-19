@@ -1,0 +1,1514 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Klinik Mari Kita Sehat | Konsultasi Nutrisi, Diet Obesitas & Program Berat Badan Ideal</title>
+  <meta name="description" content="Klinik Mari Kita Sehat membantu program diet, konsultasi nutrisi, obesitas, pola makan tidak teratur, follow up berkala, terapi GLP-1 sesuai evaluasi dokter, dan pendampingan berat badan ideal." />
+  <meta name="keywords" content="klinik diet, konsultasi nutrisi, diet obesitas, program turun berat badan, suntik GLP-1, klinik obesitas, berat badan ideal, pola makan sehat" />
+  <meta name="theme-color" content="#064e3b" />
+  <style>
+    :root{
+      --forest:#064e3b;
+      --forest-2:#0b3b32;
+      --teal:#0f766e;
+      --mint:#dffcf2;
+      --lime:#c9f24a;
+      --cream:#fff7ed;
+      --sand:#f5ead8;
+      --orange:#fb923c;
+      --gold:#f5c451;
+      --ink:#15251f;
+      --muted:#66756f;
+      --line:rgba(6,78,59,.14);
+      --white:#ffffff;
+      --shadow:0 24px 70px rgba(6,78,59,.13);
+      --soft-shadow:0 14px 34px rgba(6,78,59,.10);
+      --radius:28px;
+      --radius-sm:18px;
+      --max:1160px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(201,242,74,.18), transparent 34rem),
+        linear-gradient(180deg, #fffdfa 0%, #fff7ed 42%, #ffffff 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.58;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+    }
+    img,svg{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button,input,textarea,select{font:inherit}
+    .container{width:min(var(--max), calc(100% - 40px)); margin-inline:auto}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      color:var(--teal);
+      font-size:.78rem;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin-bottom:12px;
+    }
+    .eyebrow::before{
+      content:"";
+      width:30px;
+      height:2px;
+      background:linear-gradient(90deg, var(--lime), var(--teal));
+      border-radius:999px;
+    }
+    .section-title{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:clamp(2rem, 4.4vw, 3.4rem);
+      line-height:1.02;
+      letter-spacing:-.045em;
+      margin:0;
+    }
+    .section-title span{color:var(--teal)}
+    .section-lead{
+      color:var(--muted);
+      max-width:760px;
+      margin:16px auto 0;
+      font-size:1.04rem;
+    }
+    .section-head{text-align:center;margin-bottom:42px}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      border:0;
+      cursor:pointer;
+      min-height:48px;
+      padding:14px 22px;
+      border-radius:999px;
+      font-weight:850;
+      transition:transform .22s ease, box-shadow .22s ease, background .22s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      background:linear-gradient(135deg, var(--lime), #a7f03a 38%, var(--gold));
+      color:#17330f;
+      box-shadow:0 16px 34px rgba(201,242,74,.32);
+    }
+    .btn-secondary{
+      background:rgba(255,255,255,.16);
+      color:var(--white);
+      border:1px solid rgba(255,255,255,.35);
+      backdrop-filter:blur(10px);
+    }
+    .btn-outline{
+      background:var(--white);
+      border:1px solid var(--line);
+      color:var(--forest);
+      box-shadow:var(--soft-shadow);
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:rgba(15,118,110,.08);
+      color:var(--forest);
+      border:1px solid rgba(15,118,110,.14);
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:.88rem;
+      font-weight:750;
+    }
+    .dot{
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:var(--lime);
+      box-shadow:0 0 0 5px rgba(201,242,74,.22);
+      flex:0 0 auto;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,253,250,.86);
+      border-bottom:1px solid rgba(6,78,59,.10);
+      backdrop-filter:blur(18px);
+    }
+    .nav{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+    .brand-mark{
+      width:46px;
+      height:46px;
+      border-radius:15px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(145deg, var(--forest), var(--teal));
+      box-shadow:0 14px 26px rgba(6,78,59,.18);
+      color:var(--lime);
+      flex:0 0 auto;
+    }
+    .brand strong{
+      display:block;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.24rem;
+      letter-spacing:-.03em;
+      line-height:1;
+      color:var(--forest);
+    }
+    .brand small{
+      display:block;
+      margin-top:4px;
+      color:var(--muted);
+      font-size:.78rem;
+      font-weight:700;
+    }
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      color:#3b4b45;
+      font-size:.94rem;
+      font-weight:750;
+    }
+    .nav-links a{position:relative}
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-9px;
+      width:100%;
+      height:2px;
+      background:var(--teal);
+      transform:scaleX(0);
+      transform-origin:right;
+      transition:transform .22s ease;
+    }
+    .nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+    .call-card{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:9px 14px 9px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.75);
+      box-shadow:0 10px 24px rgba(6,78,59,.08);
+      color:var(--forest);
+      font-weight:850;
+    }
+    .call-icon{
+      width:34px;height:34px;border-radius:999px;
+      display:grid;place-items:center;
+      color:#17330f;
+      background:linear-gradient(145deg,var(--lime),var(--gold));
+      flex:0 0 auto;
+    }
+    .mobile-menu{display:none}
+
+    .hero{
+      position:relative;
+      padding:54px 0 0;
+      isolation:isolate;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0 0 auto 0;
+      height:620px;
+      background:
+        radial-gradient(circle at 82% 18%, rgba(201,242,74,.26), transparent 24rem),
+        radial-gradient(circle at 8% 8%, rgba(15,118,110,.12), transparent 28rem);
+      z-index:-1;
+    }
+    .hero-card{
+      display:grid;
+      grid-template-columns:minmax(0, 1.02fr) minmax(360px, .98fr);
+      min-height:600px;
+      overflow:hidden;
+      border:1px solid rgba(6,78,59,.12);
+      border-radius:36px;
+      background:linear-gradient(135deg, rgba(255,255,255,.92), rgba(255,247,237,.76));
+      box-shadow:var(--shadow);
+    }
+    .hero-copy{
+      padding:clamp(36px,5vw,72px);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    h1{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2.75rem, 5.7vw, 5.25rem);
+      line-height:.98;
+      letter-spacing:-.062em;
+      margin:0;
+      color:var(--forest-2);
+    }
+    h1 span{color:var(--teal)}
+    .hero-subtitle{
+      max-width:650px;
+      color:#52635d;
+      font-size:clamp(1.02rem,1.8vw,1.22rem);
+      margin:22px 0 0;
+    }
+    .hero-list{
+      display:grid;
+      gap:12px;
+      margin:28px 0 0;
+      padding:0;
+      list-style:none;
+    }
+    .hero-list li{
+      display:flex;
+      align-items:flex-start;
+      gap:11px;
+      color:#2c4038;
+      font-weight:720;
+    }
+    .check{
+      width:24px;
+      height:24px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:rgba(15,118,110,.10);
+      color:var(--teal);
+      flex:0 0 auto;
+      margin-top:1px;
+    }
+    .hero-actions{
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:34px;
+    }
+    .hero-note{
+      margin-top:20px;
+      color:var(--muted);
+      font-size:.9rem;
+      max-width:610px;
+    }
+    .hero-visual{
+      position:relative;
+      min-height:560px;
+      overflow:hidden;
+      background:
+        linear-gradient(150deg, rgba(6,78,59,.97), rgba(15,118,110,.92) 55%, rgba(201,242,74,.78)),
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,.32), transparent 18rem);
+    }
+    .hero-visual::after{
+      content:"";
+      position:absolute;
+      inset:auto -100px -160px auto;
+      width:430px;
+      height:430px;
+      border-radius:50%;
+      background:rgba(255,255,255,.16);
+      filter:blur(1px);
+    }
+    .visual-inner{
+      position:absolute;
+      inset:34px;
+      display:grid;
+      grid-template-rows:auto 1fr auto;
+      gap:18px;
+    }
+    .status-card{
+      justify-self:end;
+      width:min(320px, 100%);
+      border:1px solid rgba(255,255,255,.25);
+      border-radius:22px;
+      background:rgba(255,255,255,.16);
+      box-shadow:0 20px 60px rgba(0,0,0,.12);
+      backdrop-filter:blur(18px);
+      padding:16px;
+      color:var(--white);
+    }
+    .status-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      font-size:.86rem;
+      opacity:.92;
+      font-weight:750;
+    }
+    .progress{
+      height:10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.20);
+      overflow:hidden;
+      margin-top:12px;
+    }
+    .progress span{display:block;height:100%;width:68%;background:linear-gradient(90deg,var(--lime),var(--gold));border-radius:999px}
+    .person-scene{
+      align-self:center;
+      justify-self:center;
+      width:min(430px, 92%);
+      filter:drop-shadow(0 25px 40px rgba(0,0,0,.18));
+      transform:translateY(8px);
+    }
+    .mini-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      z-index:2;
+    }
+    .mini-card{
+      border:1px solid rgba(255,255,255,.24);
+      border-radius:18px;
+      background:rgba(255,255,255,.18);
+      backdrop-filter:blur(14px);
+      padding:14px;
+      color:var(--white);
+      min-height:94px;
+    }
+    .mini-card b{display:block;font-size:1.12rem;line-height:1.1}
+    .mini-card span{display:block;margin-top:6px;font-size:.76rem;line-height:1.3;opacity:.9}
+
+    .statement{
+      margin-top:34px;
+      background:linear-gradient(135deg, var(--forest), var(--teal));
+      color:var(--white);
+      border-radius:34px;
+      overflow:hidden;
+      position:relative;
+      box-shadow:var(--shadow);
+    }
+    .statement::before,
+    .statement::after{
+      content:"";
+      position:absolute;
+      border-radius:999px;
+      background:rgba(201,242,74,.18);
+    }
+    .statement::before{width:260px;height:260px;left:-120px;top:-110px}
+    .statement::after{width:340px;height:340px;right:-150px;bottom:-180px}
+    .statement-inner{
+      position:relative;
+      z-index:1;
+      min-height:230px;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      padding:44px 24px;
+    }
+    .statement h2{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2rem,4.6vw,4rem);
+      line-height:1.04;
+      letter-spacing:-.05em;
+      margin:0 auto 20px;
+      max-width:900px;
+      font-weight:500;
+    }
+    .statement p{margin:0 auto 24px;max-width:680px;color:rgba(255,255,255,.84)}
+
+    section{padding:86px 0}
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:22px;
+    }
+    .service-card{
+      position:relative;
+      padding:28px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.82);
+      box-shadow:0 14px 35px rgba(6,78,59,.06);
+      min-height:328px;
+      overflow:hidden;
+      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+    .service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(15,118,110,.23)}
+    .service-card::after{
+      content:"";
+      position:absolute;
+      width:190px;
+      height:190px;
+      right:-100px;
+      top:-90px;
+      background:rgba(201,242,74,.18);
+      border-radius:50%;
+      transition:transform .3s ease;
+    }
+    .service-card:hover::after{transform:scale(1.18)}
+    .icon-wrap{
+      width:96px;
+      height:96px;
+      border-radius:28px;
+      background:linear-gradient(145deg, rgba(223,252,242,.95), rgba(255,247,237,.95));
+      border:1px solid rgba(6,78,59,.10);
+      display:grid;
+      place-items:center;
+      margin-bottom:24px;
+      position:relative;
+      z-index:1;
+    }
+    .service-card h3{
+      font-size:1.18rem;
+      line-height:1.25;
+      margin:0;
+      letter-spacing:-.025em;
+      color:var(--forest-2);
+    }
+    .service-card p{margin:12px 0 0;color:var(--muted);font-size:.96rem}
+    .ticks{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:9px}
+    .ticks li{display:flex;gap:9px;align-items:flex-start;color:#3e514a;font-size:.92rem;font-weight:650}
+    .ticks svg{flex:0 0 18px;margin-top:3px;color:var(--teal)}
+
+    .why{
+      background:linear-gradient(180deg, rgba(223,252,242,.62), rgba(255,247,237,.62));
+      border-block:1px solid rgba(6,78,59,.08);
+    }
+    .why-wrap{
+      display:grid;
+      grid-template-columns:.88fr 1.12fr;
+      gap:38px;
+      align-items:center;
+    }
+    .why-panel{
+      border-radius:36px;
+      background:var(--forest);
+      color:var(--white);
+      padding:42px;
+      min-height:430px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      position:relative;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    .why-panel::before{
+      content:"";
+      position:absolute;
+      width:360px;height:360px;
+      right:-160px;top:-160px;
+      background:rgba(201,242,74,.22);
+      border-radius:50%;
+    }
+    .why-panel h2{
+      position:relative;
+      margin:0;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2.1rem,4vw,3.8rem);
+      letter-spacing:-.055em;
+      line-height:1.03;
+      font-weight:500;
+    }
+    .why-panel p{position:relative;margin:20px 0 0;color:rgba(255,255,255,.78)}
+    .why-stats{
+      position:relative;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+      margin-top:28px;
+    }
+    .why-stat{
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.20);
+      border-radius:18px;
+      padding:16px;
+    }
+    .why-stat b{display:block;font-size:1.7rem;line-height:1;color:var(--lime)}
+    .why-stat span{display:block;font-size:.82rem;opacity:.88;margin-top:8px}
+    .why-list{display:grid;gap:18px}
+    .why-item{
+      display:grid;
+      grid-template-columns:72px 1fr;
+      gap:18px;
+      align-items:start;
+      padding:24px;
+      border-radius:26px;
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--line);
+      box-shadow:0 12px 28px rgba(6,78,59,.06);
+    }
+    .why-icon{
+      width:72px;height:72px;border-radius:22px;
+      display:grid;place-items:center;
+      background:linear-gradient(145deg, rgba(201,242,74,.32), rgba(223,252,242,.92));
+      color:var(--forest);
+    }
+    .why-item h3{margin:0 0 7px;font-size:1.08rem;letter-spacing:-.02em;color:var(--forest)}
+    .why-item p{margin:0;color:var(--muted);font-size:.96rem}
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr .92fr;
+      gap:46px;
+      align-items:center;
+    }
+    .about-copy .section-title{font-size:clamp(2rem,4.4vw,3.55rem)}
+    .about-copy p{color:var(--muted);margin:18px 0 0}
+    .about-points{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:12px;
+      margin:24px 0 0;
+    }
+    .about-point{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      padding:14px;
+      border-radius:18px;
+      background:rgba(223,252,242,.66);
+      border:1px solid rgba(6,78,59,.08);
+      color:#31443c;
+      font-size:.93rem;
+      font-weight:700;
+    }
+    .clinic-card{
+      position:relative;
+      min-height:520px;
+      border-radius:38px;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 28% 20%, rgba(201,242,74,.34), transparent 16rem),
+        linear-gradient(150deg, #fff, #e9fff8 45%, #fff7ed);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      padding:30px;
+    }
+    .coach-illustration{
+      width:100%;
+      max-width:430px;
+      margin:12px auto 0;
+      filter:drop-shadow(0 22px 35px rgba(6,78,59,.12));
+    }
+    .floating-note{
+      position:absolute;
+      border-radius:22px;
+      background:rgba(255,255,255,.88);
+      border:1px solid rgba(6,78,59,.10);
+      padding:14px 16px;
+      box-shadow:0 18px 38px rgba(6,78,59,.10);
+      max-width:214px;
+    }
+    .floating-note b{display:block;color:var(--forest);font-size:.92rem;line-height:1.2}
+    .floating-note span{display:block;color:var(--muted);font-size:.78rem;margin-top:5px;line-height:1.35}
+    .note-1{top:24px;left:24px}
+    .note-2{right:24px;bottom:28px}
+
+    .program{
+      padding-top:0;
+    }
+    .program-box{
+      display:grid;
+      grid-template-columns:.92fr 1.08fr;
+      gap:36px;
+      align-items:center;
+      padding:40px;
+      border-radius:38px;
+      background:linear-gradient(135deg, rgba(255,247,237,.95), rgba(223,252,242,.74));
+      border:1px solid rgba(6,78,59,.10);
+      box-shadow:var(--shadow);
+    }
+    .video-card{
+      position:relative;
+      min-height:330px;
+      border-radius:30px;
+      overflow:hidden;
+      background:
+        linear-gradient(rgba(6,78,59,.52), rgba(6,78,59,.44)),
+        radial-gradient(circle at 30% 20%, rgba(201,242,74,.7), transparent 15rem),
+        linear-gradient(145deg, #0f766e, #064e3b);
+      display:grid;
+      place-items:center;
+      color:var(--white);
+      box-shadow:0 20px 50px rgba(6,78,59,.20);
+    }
+    .video-card .play{
+      width:82px;height:82px;border-radius:999px;
+      display:grid;place-items:center;
+      background:rgba(255,255,255,.9);
+      color:var(--forest);
+      box-shadow:0 20px 50px rgba(0,0,0,.18);
+      transition:transform .22s ease;
+    }
+    .video-card:hover .play{transform:scale(1.06)}
+    .video-caption{
+      position:absolute;
+      left:22px;right:22px;bottom:22px;
+      padding:16px;
+      background:rgba(255,255,255,.14);
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:20px;
+      backdrop-filter:blur(14px);
+      font-weight:800;
+    }
+    .program-copy h2{
+      margin:0;
+      font-size:clamp(1.9rem, 4vw, 3.1rem);
+      font-family:Georgia,"Times New Roman",serif;
+      letter-spacing:-.045em;
+      line-height:1.08;
+      color:var(--forest);
+    }
+    .program-copy p{color:var(--muted);margin:15px 0 0}
+    .steps{display:grid;gap:14px;margin-top:24px}
+    .step{
+      display:grid;
+      grid-template-columns:46px 1fr;
+      gap:14px;
+      padding:14px;
+      border-radius:20px;
+      background:rgba(255,255,255,.73);
+      border:1px solid rgba(6,78,59,.08);
+    }
+    .num{
+      width:46px;height:46px;border-radius:16px;
+      display:grid;place-items:center;
+      background:var(--forest);
+      color:var(--lime);
+      font-weight:900;
+    }
+    .step b{display:block;color:var(--forest)}
+    .step span{display:block;color:var(--muted);font-size:.92rem;margin-top:2px}
+
+    .suitability{
+      background:#fff;
+      border-block:1px solid rgba(6,78,59,.08);
+    }
+    .fit-grid{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0,1fr));
+      gap:16px;
+      margin-top:34px;
+    }
+    .fit-card{
+      padding:22px;
+      border-radius:24px;
+      background:linear-gradient(180deg,#fff,#fffaf3);
+      border:1px solid var(--line);
+      min-height:170px;
+    }
+    .fit-card b{display:block;color:var(--forest);font-size:1.02rem;line-height:1.3}
+    .fit-card span{display:block;margin-top:10px;color:var(--muted);font-size:.93rem}
+    .fit-card svg{color:var(--teal);margin-bottom:16px}
+
+    .cta-band{
+      padding:0;
+    }
+    .cta-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:38px;
+      background:linear-gradient(135deg, #0b3b32, #0f766e 62%, #9ee532);
+      color:var(--white);
+      padding:52px;
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:28px;
+      align-items:center;
+      box-shadow:var(--shadow);
+    }
+    .cta-card::before{
+      content:"";
+      position:absolute;
+      width:360px;height:360px;
+      right:-160px;top:-190px;
+      border-radius:50%;
+      background:rgba(255,255,255,.16);
+    }
+    .cta-card h2{
+      position:relative;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2rem,4.4vw,3.6rem);
+      line-height:1.05;
+      margin:0;
+      letter-spacing:-.05em;
+      font-weight:500;
+    }
+    .cta-card p{position:relative;margin:13px 0 0;color:rgba(255,255,255,.82);max-width:760px}
+    .cta-actions{position:relative;display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+
+    .monitoring-grid{
+      display:grid;
+      grid-template-columns:repeat(5, minmax(0,1fr));
+      gap:14px;
+      align-items:stretch;
+    }
+    .monitoring-card{
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:rgba(255,255,255,.76);
+      padding:22px 18px;
+      text-align:center;
+      min-height:160px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      box-shadow:0 12px 26px rgba(6,78,59,.05);
+    }
+    .monitoring-card svg{color:var(--teal)}
+    .monitoring-card b{font-size:.98rem;line-height:1.25;color:var(--forest)}
+    .monitoring-note{
+      margin:26px auto 0;
+      max-width:820px;
+      text-align:center;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .faq{
+      background:linear-gradient(180deg, rgba(255,247,237,.82), rgba(223,252,242,.55));
+      border-block:1px solid rgba(6,78,59,.08);
+    }
+    .faq-box{
+      max-width:920px;
+      margin:0 auto;
+      border-radius:32px;
+      background:rgba(255,255,255,.84);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    details{
+      border-bottom:1px solid rgba(6,78,59,.11);
+    }
+    details:last-child{border-bottom:0}
+    summary{
+      list-style:none;
+      cursor:pointer;
+      padding:24px 28px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      font-weight:850;
+      color:var(--forest);
+    }
+    summary::-webkit-details-marker{display:none}
+    summary::after{
+      content:"+";
+      width:34px;height:34px;border-radius:999px;
+      flex:0 0 auto;
+      display:grid;place-items:center;
+      background:rgba(15,118,110,.08);
+      color:var(--teal);
+      font-size:1.2rem;
+      transition:transform .22s ease;
+    }
+    details[open] summary::after{content:"–";transform:rotate(180deg)}
+    .faq-content{
+      padding:0 28px 24px;
+      color:var(--muted);
+      margin-top:-6px;
+    }
+    .faq-content p{margin:0}
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.88fr 1.12fr;
+      gap:34px;
+      align-items:stretch;
+    }
+    .contact-visual{
+      border-radius:36px;
+      padding:30px;
+      background:linear-gradient(145deg, var(--forest), var(--teal));
+      color:var(--white);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      min-height:580px;
+      overflow:hidden;
+      position:relative;
+      box-shadow:var(--shadow);
+    }
+    .contact-visual::before{
+      content:"";
+      position:absolute;
+      width:340px;height:340px;
+      left:-160px;bottom:-140px;
+      border-radius:50%;
+      background:rgba(201,242,74,.18);
+    }
+    .contact-visual > *{position:relative}
+    .contact-visual h2{
+      margin:0;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2rem,4vw,3.2rem);
+      line-height:1.05;
+      letter-spacing:-.05em;
+      font-weight:500;
+    }
+    .contact-visual p{color:rgba(255,255,255,.78);margin:14px 0 0}
+    .contact-list{display:grid;gap:12px;margin-top:24px}
+    .contact-item{
+      display:flex;align-items:center;gap:12px;
+      padding:14px;
+      border-radius:18px;
+      background:rgba(255,255,255,.11);
+      border:1px solid rgba(255,255,255,.18);
+      color:rgba(255,255,255,.92);
+      font-weight:750;
+    }
+    .contact-item svg{color:var(--lime);flex:0 0 auto}
+    .contact-illust{max-width:400px;margin:20px auto 0;filter:drop-shadow(0 25px 38px rgba(0,0,0,.18))}
+    .form-card{
+      padding:34px;
+      border-radius:36px;
+      background:rgba(255,255,255,.9);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+    .form-card h2{
+      margin:0;
+      font-size:clamp(1.8rem,3vw,2.6rem);
+      font-family:Georgia,"Times New Roman",serif;
+      letter-spacing:-.04em;
+      color:var(--forest);
+    }
+    .form-card p{margin:10px 0 24px;color:var(--muted)}
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+    .field{display:grid;gap:8px}
+    .field.full{grid-column:1/-1}
+    label{font-size:.87rem;font-weight:800;color:var(--forest)}
+    input,textarea,select{
+      width:100%;
+      border:1px solid rgba(6,78,59,.17);
+      border-radius:18px;
+      min-height:52px;
+      padding:13px 15px;
+      background:#fffdf9;
+      color:var(--ink);
+      outline:0;
+      transition:border .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    textarea{min-height:132px;resize:vertical}
+    input:focus,textarea:focus,select:focus{
+      border-color:rgba(15,118,110,.55);
+      box-shadow:0 0 0 5px rgba(15,118,110,.10);
+      background:#fff;
+    }
+    .form-disclaimer{
+      margin:18px 0 0;
+      color:var(--muted);
+      font-size:.88rem;
+    }
+    .form-submit{margin-top:22px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+
+    footer{
+      padding:54px 0 32px;
+      background:var(--forest-2);
+      color:var(--white);
+      margin-top:84px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr .8fr;
+      gap:32px;
+      align-items:start;
+    }
+    footer .brand strong{color:var(--white)}
+    footer .brand small{color:rgba(255,255,255,.7)}
+    .footer-text{margin:18px 0 0;color:rgba(255,255,255,.68);max-width:520px}
+    .footer-col h3{margin:0 0 14px;font-size:1rem;color:var(--lime)}
+    .footer-col a,.footer-col span{display:block;color:rgba(255,255,255,.72);margin:8px 0;font-size:.94rem}
+    .copyright{
+      margin-top:38px;
+      padding-top:22px;
+      border-top:1px solid rgba(255,255,255,.12);
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+      color:rgba(255,255,255,.58);
+      font-size:.86rem;
+    }
+    .wa-float{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      width:58px;height:58px;
+      z-index:70;
+      border-radius:999px;
+      display:grid;place-items:center;
+      background:linear-gradient(145deg,var(--lime),var(--gold));
+      color:#17330f;
+      box-shadow:0 18px 34px rgba(6,78,59,.24);
+      border:1px solid rgba(255,255,255,.8);
+      transition:transform .22s ease;
+    }
+    .wa-float:hover{transform:translateY(-4px) scale(1.03)}
+
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease, transform .65s ease}
+    .reveal.in{opacity:1;transform:none}
+
+    @media (prefers-reduced-motion: reduce){
+      *{scroll-behavior:auto !important;animation-duration:.001ms !important;transition-duration:.001ms !important}
+      .reveal{opacity:1;transform:none}
+    }
+
+    @media (max-width: 1080px){
+      .nav-links{display:none}
+      .mobile-menu{display:inline-flex}
+      .hero-card{grid-template-columns:1fr}
+      .hero-visual{min-height:520px}
+      .services-grid{grid-template-columns:repeat(2, minmax(0,1fr))}
+      .why-wrap,.about-grid,.program-box,.contact-grid{grid-template-columns:1fr}
+      .monitoring-grid{grid-template-columns:repeat(3, minmax(0,1fr))}
+      .fit-grid{grid-template-columns:repeat(2, minmax(0,1fr))}
+      .cta-card{grid-template-columns:1fr}
+      .cta-actions{justify-content:flex-start}
+    }
+    @media (max-width: 720px){
+      .container{width:min(100% - 28px, var(--max))}
+      section{padding:66px 0}
+      .nav{min-height:70px}
+      .brand small{display:none}
+      .call-card span{display:none}
+      .hero{padding-top:24px}
+      .hero-card{border-radius:26px;min-height:0}
+      .hero-copy{padding:28px 22px 34px}
+      h1{font-size:clamp(2.3rem, 14vw, 3.35rem)}
+      .hero-subtitle{font-size:1rem}
+      .hero-actions{align-items:stretch}
+      .hero-actions .btn{width:100%}
+      .hero-visual{min-height:470px}
+      .visual-inner{inset:18px;gap:12px}
+      .status-card{justify-self:stretch;width:auto}
+      .mini-grid{grid-template-columns:1fr;gap:10px}
+      .mini-card{min-height:auto;padding:12px}
+      .mini-card span{margin-top:3px}
+      .person-scene{width:min(320px, 88%)}
+      .statement{border-radius:24px;margin-top:22px}
+      .statement-inner{min-height:210px;padding:34px 18px}
+      .services-grid{grid-template-columns:1fr}
+      .service-card{min-height:auto;padding:24px}
+      .why-panel,.program-box,.cta-card,.contact-visual,.form-card{border-radius:26px;padding:26px}
+      .why-item{grid-template-columns:1fr;padding:20px}
+      .why-icon{width:62px;height:62px}
+      .why-stats,.about-points,.form-grid{grid-template-columns:1fr}
+      .clinic-card{min-height:440px;border-radius:26px;padding:22px}
+      .floating-note{position:relative;inset:auto;max-width:none;margin-bottom:12px}
+      .note-2{margin-top:12px}
+      .fit-grid,.monitoring-grid{grid-template-columns:1fr}
+      summary{padding:20px 18px}
+      .faq-content{padding:0 18px 20px}
+      .contact-visual{min-height:auto}
+      .footer-grid{grid-template-columns:1fr}
+      .copyright{display:block}
+      .wa-float{right:16px;bottom:16px;width:54px;height:54px}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar" aria-label="Navigasi utama">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Klinik Mari Kita Sehat">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="27" height="27" viewBox="0 0 24 24" fill="none"><path d="M12 3c3.7 1.6 6.4 5.1 6.4 9.2 0 4.7-3 8-6.4 8s-6.4-3.3-6.4-8C5.6 8.1 8.3 4.6 12 3Z" stroke="currentColor" stroke-width="1.9"/><path d="M8.9 12.4c1.7.1 3.6-.7 5.8-2.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path d="M12 20V9" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+        </span>
+        <span><strong>Mari Kita Sehat</strong><small>Klinik Nutrisi & Berat Badan</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Menu">
+        <a href="#program">Program</a>
+        <a href="#kenapa-kami">Kenapa Kami</a>
+        <a href="#alur">Alur</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+      <a class="call-card" href="tel:08xxxxxxxxxx" aria-label="Hubungi Klinik Mari Kita Sehat">
+        <span class="call-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8.4 5.4 9.9 8c.3.5.2 1.1-.2 1.5l-1 1c1 2 2.7 3.7 4.8 4.8l1-1c.4-.4 1-.5 1.5-.2l2.6 1.5c.6.3.8 1 .6 1.6-.6 1.7-2.1 2.8-3.9 2.6C9.2 19.7 4.3 14.8 3.7 8.7 3.5 6.9 4.6 5.4 6.3 4.8c.6-.2 1.3 0 1.6.6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+        <span>08xx-xxxx-xxxx</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Hero Klinik Mari Kita Sehat">
+      <div class="container">
+        <div class="hero-card reveal">
+          <div class="hero-copy">
+            <span class="pill"><span class="dot"></span> Konsultasi nutrisi, diet obesitas, dan follow up berkala</span>
+            <h1>Turun berat badan dengan cara yang <span>lebih terarah.</span></h1>
+            <p class="hero-subtitle">Klinik Mari Kita Sehat bantu kamu membangun pola makan yang realistis, jadwal diet yang jelas, dan rencana kontrol berat badan yang dipantau berkala oleh tim klinik.</p>
+            <ul class="hero-list" aria-label="Keunggulan utama">
+              <li><span class="check" aria-hidden="true">✓</span><span>Program diet disesuaikan dengan aktivitas, kebiasaan makan, dan target kamu.</span></li>
+              <li><span class="check" aria-hidden="true">✓</span><span>Follow up berkala supaya progres tidak cuma semangat di minggu pertama.</span></li>
+              <li><span class="check" aria-hidden="true">✓</span><span>Opsi terapi medis seperti agonis reseptor GLP-1 dan pendukung kontrol nafsu makan bila sesuai evaluasi dokter.</span></li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#kontak">Jadwalkan Konsultasi</a>
+              <a class="btn btn-outline" href="#program">Lihat Program</a>
+            </div>
+            <p class="hero-note">Catatan penting: terapi medis dan suplemen tidak diberikan sembarangan. Semua pilihan program tetap perlu evaluasi kondisi, riwayat obat, dan keamanan pasien.</p>
+          </div>
+
+          <div class="hero-visual" aria-label="Ilustrasi program nutrisi klinik">
+            <div class="visual-inner">
+              <div class="status-card">
+                <div class="status-top"><span>Progress check-in</span><span>Minggu 4</span></div>
+                <div class="progress" aria-hidden="true"><span></span></div>
+                <div style="display:flex;justify-content:space-between;gap:12px;margin-top:11px;font-size:.82rem;color:rgba(255,255,255,.82)"><span>Meal plan</span><span>68% konsisten</span></div>
+              </div>
+
+              <svg class="person-scene" viewBox="0 0 430 430" role="img" aria-label="Ilustrasi dokter dan pasien berdiskusi program diet">
+                <defs>
+                  <linearGradient id="skin" x1="0" x2="1"><stop offset="0" stop-color="#f8c6a4"/><stop offset="1" stop-color="#e99a70"/></linearGradient>
+                  <linearGradient id="shirt" x1="0" x2="1"><stop offset="0" stop-color="#ecfeff"/><stop offset="1" stop-color="#c9f24a"/></linearGradient>
+                  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="16" stdDeviation="13" flood-color="#063b32" flood-opacity=".18"/></filter>
+                </defs>
+                <ellipse cx="216" cy="376" rx="150" ry="26" fill="rgba(0,0,0,.13)"/>
+                <g filter="url(#soft)">
+                  <rect x="81" y="191" width="268" height="154" rx="33" fill="#fff7ed"/>
+                  <path d="M111 220h209" stroke="#0f766e" stroke-width="7" stroke-linecap="round" opacity=".16"/>
+                  <path d="M115 251h142" stroke="#0f766e" stroke-width="7" stroke-linecap="round" opacity=".16"/>
+                  <path d="M116 284h180" stroke="#0f766e" stroke-width="7" stroke-linecap="round" opacity=".16"/>
+                  <circle cx="310" cy="258" r="33" fill="#c9f24a"/>
+                  <path d="M296 259l12 12 23-29" fill="none" stroke="#064e3b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <g>
+                  <path d="M111 178c-18 19-32 67-24 119 8 51 50 73 89 65 42-8 49-43 39-84-8-36-20-82-46-102-18-14-42-15-58 2Z" fill="#0b3b32"/>
+                  <circle cx="147" cy="121" r="43" fill="url(#skin)"/>
+                  <path d="M104 123c8-55 63-62 90-27 4 5 7 12 9 18-26-5-48-13-70-31-7 15-19 27-29 40Z" fill="#26362f"/>
+                  <path d="M117 166c28 28 61 27 82-1 24 24 34 64 25 99-9 34-39 57-82 56-43-1-74-24-79-60-5-34 13-73 54-94Z" fill="url(#shirt)"/>
+                  <path d="M75 269c26 30 59 43 98 39" stroke="#fff" stroke-width="13" stroke-linecap="round" opacity=".82"/>
+                  <path d="M206 215c30-6 48 5 56 30" stroke="#fff" stroke-width="13" stroke-linecap="round" opacity=".82"/>
+                </g>
+                <g>
+                  <path d="M283 143c-20 7-36 27-39 60-4 47 18 84 56 91 39 7 74-14 83-58 9-44-3-85-28-103-22-16-47 0-72 10Z" fill="#e9fff8"/>
+                  <circle cx="318" cy="89" r="38" fill="url(#skin)"/>
+                  <path d="M279 82c16-38 69-43 91 0-23 4-47-2-69-17-3 8-11 14-22 17Z" fill="#2b4238"/>
+                  <path d="M274 163c32 17 62 18 92 0 15 26 23 70 8 98-14 28-45 40-82 28-33-11-49-41-44-73 4-26 13-43 26-53Z" fill="#ffffff"/>
+                  <path d="M296 174h45" stroke="#0f766e" stroke-width="8" stroke-linecap="round" opacity=".3"/>
+                  <path d="M289 205h64" stroke="#0f766e" stroke-width="8" stroke-linecap="round" opacity=".2"/>
+                </g>
+                <g>
+                  <circle cx="97" cy="71" r="38" fill="#fff7ed" opacity=".96"/>
+                  <path d="M81 73c11-17 23-22 38-15" stroke="#0f766e" stroke-width="6" stroke-linecap="round"/>
+                  <path d="M77 84c18 12 37 10 54-4" stroke="#fb923c" stroke-width="6" stroke-linecap="round"/>
+                  <circle cx="338" cy="340" r="43" fill="#fff7ed" opacity=".96"/>
+                  <path d="M322 352c20 0 35-14 35-32" stroke="#0f766e" stroke-width="7" stroke-linecap="round"/>
+                  <path d="M319 319h39" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/>
+                </g>
+              </svg>
+
+              <div class="mini-grid" aria-label="Highlight layanan">
+                <div class="mini-card"><b>Meal plan</b><span>Lebih rapi, tidak asal defisit</span></div>
+                <div class="mini-card"><b>Follow up</b><span>Progres dibahas berkala</span></div>
+                <div class="mini-card"><b>Medical option</b><span>Hanya bila aman & sesuai</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="statement reveal">
+          <div class="statement-inner">
+            <div>
+              <h2>Bukan diet ekstrem. Ini rencana makan yang bisa kamu jalani pelan-pelan.</h2>
+              <p>Kamu tidak harus langsung sempurna. Yang penting, ada arah, ada pemantauan, dan ada strategi saat berat badan mulai mentok.</p>
+              <a class="btn btn-secondary" href="#kontak">Mulai dari Konsultasi Pertama</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="program" aria-labelledby="program-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Program Klinik</span>
+          <h2 id="program-title" class="section-title">Layanan untuk bantu berat badan lebih <span>terkontrol.</span></h2>
+          <p class="section-lead">Setiap pasien punya pola hidup, riwayat makan, dan tantangan yang berbeda. Jadi programnya tidak dibuat seperti template massal.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="icon-wrap" aria-hidden="true"><svg width="60" height="60" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="25" stroke="#0f766e" stroke-width="4"/><path d="M18 34c7-12 20-15 31-7" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/><path d="M21 43c9 5 19 5 29-2" stroke="#064e3b" stroke-width="4" stroke-linecap="round"/><circle cx="28" cy="28" r="4" fill="#c9f24a"/></svg></div>
+            <h3>Konsultasi Nutrisi & Diet Obesitas</h3>
+            <p>Diskusi soal kebiasaan makan, aktivitas harian, target berat badan, dan hambatan yang paling sering bikin diet gagal.</p>
+            <ul class="ticks"><li><svg width="18" height="18" viewBox="0 0 18 18"><path d="M3 9.2 7.1 13 15 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Rencana awal dibuat dari kondisi kamu</li><li><svg width="18" height="18" viewBox="0 0 18 18"><path d="M3 9.2 7.1 13 15 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Bahasa penjelasan simpel dan praktis</li></ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="icon-wrap" aria-hidden="true"><svg width="60" height="60" viewBox="0 0 64 64" fill="none"><rect x="15" y="12" width="34" height="42" rx="8" stroke="#0f766e" stroke-width="4"/><path d="M22 24h20M22 34h12M22 44h17" stroke="#064e3b" stroke-width="4" stroke-linecap="round"/><circle cx="47" cy="18" r="8" fill="#c9f24a"/><path d="M44 18l2 2 5-6" stroke="#064e3b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Jadwal Makan Personal</h3>
+            <p>Pengaturan makan dibuat realistis, termasuk jam makan, pilihan lauk, porsi, camilan, dan strategi saat makan di luar.</p>
+            <ul class="ticks"><li><svg width="18" height="18" viewBox="0 0 18 18"><path d="M3 9.2 7.1 13 15 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tidak harus makanan mahal</li><li><svg width="18" height="18" viewBox="0 0 18 18"><path d="M3 9.2 7.1 13 15 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Bisa disesuaikan jadwal kerja</li></ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="icon-wrap" aria-hidden="true"><svg width="60" height="60" viewBox="0 0 64 64" fill="none"><path d="M18 20h28a7 7 0 0 1 7 7v18a7 7 0 0 1-7 7H18a7 7 0 0 1-7-7V27a7 7 0 0 1 7-7Z" stroke="#0f766e" stroke-width="4"/><path d="M20 16v10M44 16v10" stroke="#064e3b" stroke-width="4" stroke-linecap="round"/><path d="M21 36h22" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/><path d="M21 44h12" stroke="#c9f24a" stroke-width="4" stroke-linecap="round"/></svg></div>
+            <h3>Follow Up Berkala</h3>
+            <p>Progres tidak cuma dilihat dari angka timbangan. Pola makan, lapar berlebih, mood, dan konsistensi juga ikut dibahas.</p>
+            <ul class="ticks"><li><svg width="18" height="18" viewBox="0 0 18 18"><path d="M3 9.2 7.1 13 15 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Evaluasi rutin dan adjustment</li><li><svg width="18" height="18" viewBox="0 0 18 18"><path d="M3 9.2 7.1 13 15 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Bantu tetap on track</li></ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="icon-wrap" aria-hidden="true"><svg width="60" height="60" viewBox="0 0 64 64" fill="none"><path d="M20 48 49 19c3-3 3-7 0-10s-7-3-10 0L10 38c-2 2-2 5 0 7l3 3c2 2 5 2 7 0Z" stroke="#0f766e" stroke-width="4"/><path d="m39 9 16 16" stroke="#064e3b" stroke-width="4" stroke-linecap="round"/><path d="M17 40l7 7" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/><path d="M29 29l7 7" stroke="#c9f24a" stroke-width="4" stroke-linecap="round"/></svg></div>
+            <h3>Opsi Suntik GLP-1</h3>
+            <p>Terapi golongan agonis reseptor GLP-1 dapat dipertimbangkan pada pasien tertentu setelah skrining dokter.</p>
+            <ul class="ticks"><li><svg width="18" height="18" viewBox="0 0 18 18"><path d="M3 9.2 7.1 13 15 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Hanya bila memenuhi kriteria</li><li><svg width="18" height="18" viewBox="0 0 18 18"><path d="M3 9.2 7.1 13 15 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Pemantauan efek dan toleransi</li></ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="icon-wrap" aria-hidden="true"><svg width="60" height="60" viewBox="0 0 64 64" fill="none"><rect x="15" y="13" width="34" height="42" rx="9" stroke="#0f766e" stroke-width="4"/><path d="M23 25h18M23 35h18M23 45h10" stroke="#064e3b" stroke-width="4" stroke-linecap="round"/><circle cx="49" cy="43" r="9" fill="#c9f24a"/><path d="M45 43h8" stroke="#064e3b" stroke-width="3" stroke-linecap="round"/></svg></div>
+            <h3>Suplemen Kontrol Nafsu Makan</h3>
+            <p>Suplemen pendukung rasa kenyang bisa dibahas jika cocok, aman, dan memang dibutuhkan dalam rencana diet.</p>
+            <ul class="ticks"><li><svg width="18" height="18" viewBox="0 0 18 18"><path d="M3 9.2 7.1 13 15 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Bukan pengganti pola makan</li><li><svg width="18" height="18" viewBox="0 0 18 18"><path d="M3 9.2 7.1 13 15 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Dipilih sesuai kondisi pasien</li></ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="icon-wrap" aria-hidden="true"><svg width="60" height="60" viewBox="0 0 64 64" fill="none"><path d="M18 46c0-15 9-28 22-34 6 12 6 25-2 34-5 6-13 8-20 0Z" stroke="#0f766e" stroke-width="4"/><path d="M21 45c6-10 13-16 23-23" stroke="#064e3b" stroke-width="4" stroke-linecap="round"/><path d="M12 52c12-2 24 0 36-7" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/><circle cx="46" cy="18" r="8" fill="#c9f24a"/></svg></div>
+            <h3>Edukasi Pola Makan</h3>
+            <p>Kamu akan dibantu memahami porsi, rasa lapar, trigger ngemil, makan emosional, dan cara balik lagi setelah kebablasan.</p>
+            <ul class="ticks"><li><svg width="18" height="18" viewBox="0 0 18 18"><path d="M3 9.2 7.1 13 15 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Lebih mindful saat makan</li><li><svg width="18" height="18" viewBox="0 0 18 18"><path d="M3 9.2 7.1 13 15 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Fokus kebiasaan jangka panjang</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kenapa-kami" class="why" aria-labelledby="why-title">
+      <div class="container why-wrap">
+        <div class="why-panel reveal">
+          <div>
+            <span class="eyebrow" style="color:#c9f24a">Kenapa memilih kami</span>
+            <h2 id="why-title">Diet yang serius, tapi pendekatannya tetap manusiawi.</h2>
+            <p>Kami tahu diet sering gagal bukan karena kamu malas. Kadang masalahnya jadwal berantakan, lapar tidak terkendali, stres, atau strategi makan yang terlalu ekstrem.</p>
+          </div>
+          <div class="why-stats" aria-label="Highlight pendekatan">
+            <div class="why-stat"><b>1:1</b><span>Pendampingan personal sesuai kebutuhan</span></div>
+            <div class="why-stat"><b>4 fase</b><span>Dari skrining sampai maintenance</span></div>
+          </div>
+        </div>
+        <div class="why-list">
+          <article class="why-item reveal">
+            <div class="why-icon" aria-hidden="true"><svg width="38" height="38" viewBox="0 0 64 64" fill="none"><path d="M20 24c0-8 5-14 12-14s12 6 12 14-5 14-12 14-12-6-12-14Z" stroke="currentColor" stroke-width="4"/><path d="M13 55c2-11 10-17 19-17s17 6 19 17" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M48 18h10M53 13v10" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/></svg></div>
+            <div><h3>Evaluasi dokter sebelum terapi medis</h3><p>GLP-1 atau suplemen tidak otomatis cocok untuk semua orang. Dokter akan melihat riwayat kesehatan, obat yang sedang dipakai, dan faktor risiko.</p></div>
+          </article>
+          <article class="why-item reveal">
+            <div class="why-icon" aria-hidden="true"><svg width="38" height="38" viewBox="0 0 64 64" fill="none"><rect x="12" y="14" width="40" height="38" rx="10" stroke="currentColor" stroke-width="4"/><path d="M22 27h20M22 38h13" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M42 39l4 4 8-10" stroke="#fb923c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><h3>Jadwal jelas, bukan cuma saran umum</h3><p>Kamu tidak hanya diberi kalimat “makan lebih sehat”. Kami bantu turunkan ke jadwal makan dan pilihan makanan yang lebih gampang dijalankan.</p></div>
+          </article>
+          <article class="why-item reveal">
+            <div class="why-icon" aria-hidden="true"><svg width="38" height="38" viewBox="0 0 64 64" fill="none"><path d="M13 44c7 6 14 9 23 8 11-1 18-9 18-20 0-12-9-21-21-21-10 0-18 6-21 15" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M12 15v12h12" stroke="#fb923c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><h3>Follow up untuk momen saat progres mentok</h3><p>Berat badan bisa turun, diam, atau naik sedikit. Saat itu terjadi, program tidak langsung dianggap gagal. Kita cari penyebabnya bareng-bareng.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tentang" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <span class="eyebrow">Tentang Klinik</span>
+          <h2 id="about-title" class="section-title">Klinik Mari Kita Sehat hadir untuk kamu yang ingin <span>berat badan ideal</span> tanpa drama diet ekstrem.</h2>
+          <p>Kami membantu pasien dewasa yang ingin memperbaiki pola makan, mengelola obesitas, menurunkan berat badan, atau menjaga berat badan setelah sempat berhasil turun. Pendekatan kami menggabungkan edukasi nutrisi, pengaturan makanan, monitoring berkala, dan opsi terapi medis bila dibutuhkan.</p>
+          <p>Tujuannya bukan cuma angka timbangan turun. Yang lebih penting, kamu paham cara makan yang lebih teratur, bisa mengelola lapar, dan punya pola yang masuk akal untuk dijalani jangka panjang.</p>
+          <div class="about-points">
+            <div class="about-point"><span class="check" aria-hidden="true">✓</span><span>Rencana makan sesuai rutinitas</span></div>
+            <div class="about-point"><span class="check" aria-hidden="true">✓</span><span>Monitoring progres yang tidak menghakimi</span></div>
+            <div class="about-point"><span class="check" aria-hidden="true">✓</span><span>Opsi medis dengan skrining keamanan</span></div>
+            <div class="about-point"><span class="check" aria-hidden="true">✓</span><span>Fokus pada kebiasaan yang bisa bertahan</span></div>
+          </div>
+        </div>
+        <div class="clinic-card reveal" aria-label="Ilustrasi konsultasi nutrisi">
+          <div class="floating-note note-1"><b>Meal review</b><span>Kebiasaan makan kamu dibahas tanpa judgement.</span></div>
+          <svg class="coach-illustration" viewBox="0 0 460 460" role="img" aria-label="Ilustrasi konsultasi nutrisi dengan dokter">
+            <defs>
+              <linearGradient id="aSkin" x1="0" x2="1"><stop offset="0" stop-color="#fac7a4"/><stop offset="1" stop-color="#e69268"/></linearGradient>
+              <linearGradient id="greenGrad" x1="0" x2="1"><stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#064e3b"/></linearGradient>
+            </defs>
+            <ellipse cx="230" cy="407" rx="170" ry="28" fill="rgba(6,78,59,.10)"/>
+            <rect x="71" y="204" width="319" height="166" rx="36" fill="#fff" stroke="rgba(6,78,59,.12)"/>
+            <circle cx="150" cy="142" r="43" fill="url(#aSkin)"/>
+            <path d="M108 137c4-35 32-59 70-45 16 6 28 22 28 42-34-1-56-11-76-30-2 12-10 24-22 33Z" fill="#293d35"/>
+            <path d="M95 220c8-42 41-66 74-66 40 0 72 28 79 72 8 49-16 93-75 94-57 1-87-42-78-100Z" fill="url(#greenGrad)"/>
+            <path d="M124 210c25 21 68 22 96 0" stroke="#fff" stroke-width="13" stroke-linecap="round" opacity=".86"/>
+            <circle cx="321" cy="164" r="39" fill="url(#aSkin)"/>
+            <path d="M285 159c4-35 27-53 57-50 20 3 34 18 37 41-29 4-55-3-76-20-3 11-9 21-18 29Z" fill="#293d35"/>
+            <path d="M268 245c3-48 26-80 62-80s62 34 63 83c1 48-23 79-63 79-39 0-65-32-62-82Z" fill="#f7fffb" stroke="rgba(6,78,59,.10)"/>
+            <path d="M303 205h54" stroke="#0f766e" stroke-width="9" stroke-linecap="round" opacity=".28"/>
+            <path d="M296 232h68" stroke="#0f766e" stroke-width="9" stroke-linecap="round" opacity=".20"/>
+            <rect x="151" y="282" width="170" height="73" rx="21" fill="#fff7ed" stroke="rgba(6,78,59,.12)"/>
+            <path d="M180 319c33-26 72-26 111 0" stroke="#fb923c" stroke-width="8" stroke-linecap="round"/>
+            <circle cx="214" cy="305" r="10" fill="#c9f24a"/>
+            <circle cx="252" cy="305" r="10" fill="#0f766e"/>
+          </svg>
+          <div class="floating-note note-2"><b>Follow up terjadwal</b><span>Ada review dan penyesuaian saat progres berubah.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="alur" class="program" aria-labelledby="alur-title">
+      <div class="container program-box reveal">
+        <div class="video-card" aria-label="Preview edukasi program diet">
+          <div class="play" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M9 7.5v9l7-4.5-7-4.5Z" fill="currentColor"/></svg></div>
+          <div class="video-caption">Preview program: dari skrining sampai maintenance berat badan</div>
+        </div>
+        <div class="program-copy">
+          <span class="eyebrow">Alur Pendampingan</span>
+          <h2 id="alur-title">Program dibuat bertahap, jadi kamu tidak merasa dilempar sendirian.</h2>
+          <p>Kami bantu menyusun langkah yang jelas sejak awal, lalu program akan disesuaikan dari hasil follow up.</p>
+          <div class="steps">
+            <div class="step"><div class="num">01</div><div><b>Skrining & konsultasi awal</b><span>Bahas riwayat berat badan, pola makan, kebiasaan tidur, aktivitas, obat, dan target.</span></div></div>
+            <div class="step"><div class="num">02</div><div><b>Rencana makan & strategi harian</b><span>Disusun dengan pendekatan yang masih mungkin dijalankan di kehidupan nyata.</span></div></div>
+            <div class="step"><div class="num">03</div><div><b>Evaluasi terapi tambahan</b><span>Jika dibutuhkan, dokter menilai apakah GLP-1 atau suplemen pendukung aman untuk kamu.</span></div></div>
+            <div class="step"><div class="num">04</div><div><b>Follow up & maintenance</b><span>Progres dipantau, hambatan dibahas, lalu strategi disesuaikan agar lebih bertahan.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="suitability" aria-labelledby="fit-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Cocok Untuk Siapa?</span>
+          <h2 id="fit-title" class="section-title">Kalau masalahnya bukan cuma niat, program ini bisa jadi <span>awal yang lebih rapi.</span></h2>
+          <p class="section-lead">Kamu boleh mulai dari konsultasi dulu. Tidak harus langsung terapi medis.</p>
+        </div>
+        <div class="fit-grid">
+          <div class="fit-card reveal"><svg width="38" height="38" viewBox="0 0 64 64" fill="none"><path d="M18 48c9-28 19-28 28 0" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M18 48h28" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/><circle cx="32" cy="22" r="11" stroke="currentColor" stroke-width="4"/></svg><b>Berat badan mulai mengganggu aktivitas</b><span>Cepat lelah, susah konsisten, atau merasa badan makin berat.</span></div>
+          <div class="fit-card reveal"><svg width="38" height="38" viewBox="0 0 64 64" fill="none"><path d="M14 20h36v28H14z" stroke="currentColor" stroke-width="4"/><path d="M22 30h20M22 39h13" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/></svg><b>Jam makan berantakan</b><span>Sering skip makan, lalu kalap malam atau kebanyakan ngemil.</span></div>
+          <div class="fit-card reveal"><svg width="38" height="38" viewBox="0 0 64 64" fill="none"><path d="M17 31c5-15 25-15 30 0 5 16-8 24-15 24s-20-8-15-24Z" stroke="currentColor" stroke-width="4"/><path d="M32 12v12" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/></svg><b>Ingin kurus dengan arahan medis</b><span>Mau tahu pilihan yang aman, bukan sekadar ikut tren.</span></div>
+          <div class="fit-card reveal"><svg width="38" height="38" viewBox="0 0 64 64" fill="none"><path d="M16 46c6 6 14 9 23 6 12-4 17-17 11-28C44 13 30 10 20 18" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M18 12v11h11" stroke="#fb923c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Berat badan sering turun naik</b><span>Sempat turun, lalu balik lagi karena pola tidak kuat jangka panjang.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-label="Ajakan konsultasi">
+      <div class="container cta-card reveal">
+        <div>
+          <h2>Mulai dengan satu konsultasi. Kita rapikan pelan-pelan.</h2>
+          <p>Bawa cerita jujur soal pola makan kamu. Dari situ kami bantu susun langkah yang lebih masuk akal.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="#kontak">Booking Sekarang</a>
+          <a class="btn btn-secondary" href="#faq">Baca FAQ</a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="monitor-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Yang Kamu Dapat</span>
+          <h2 id="monitor-title" class="section-title">Monitoring yang bantu program terasa lebih <span>nyata.</span></h2>
+          <p class="section-lead">Selain konsultasi, kamu akan dibantu memahami pola makan dan progres dengan cara yang lebih gampang dipantau.</p>
+        </div>
+        <div class="monitoring-grid">
+          <div class="monitoring-card reveal"><svg width="42" height="42" viewBox="0 0 64 64" fill="none"><rect x="14" y="12" width="36" height="44" rx="9" stroke="currentColor" stroke-width="4"/><path d="M23 27h18M23 38h13" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/></svg><b>Catatan makan</b></div>
+          <div class="monitoring-card reveal"><svg width="42" height="42" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="22" stroke="currentColor" stroke-width="4"/><path d="M32 32 43 21" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/></svg><b>Review berat badan</b></div>
+          <div class="monitoring-card reveal"><svg width="42" height="42" viewBox="0 0 64 64" fill="none"><path d="M16 47V17M16 47h36" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M24 40l8-12 8 7 9-17" stroke="#fb923c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Grafik progres</b></div>
+          <div class="monitoring-card reveal"><svg width="42" height="42" viewBox="0 0 64 64" fill="none"><path d="M18 16h28a6 6 0 0 1 6 6v26a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6V22a6 6 0 0 1 6-6Z" stroke="currentColor" stroke-width="4"/><path d="M22 30h20M22 40h12" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/></svg><b>Reminder follow up</b></div>
+          <div class="monitoring-card reveal"><svg width="42" height="42" viewBox="0 0 64 64" fill="none"><path d="M32 12c12 10 18 18 18 28 0 9-7 16-18 16s-18-7-18-16c0-10 6-18 18-28Z" stroke="currentColor" stroke-width="4"/><path d="M24 39c5 4 11 4 16 0" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/></svg><b>Strategi kontrol lapar</b></div>
+        </div>
+        <p class="monitoring-note reveal">Hasil tiap orang bisa berbeda. Program ini bertujuan membantu perubahan yang lebih aman, terarah, dan berkelanjutan, bukan menjanjikan hasil instan.</p>
+      </div>
+    </section>
+
+    <section id="faq" class="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Pertanyaan Umum</span>
+          <h2 id="faq-title" class="section-title">FAQ seputar program diet, GLP-1, dan follow up.</h2>
+        </div>
+        <div class="faq-box reveal">
+          <details open>
+            <summary>Apakah saya harus langsung suntik GLP-1?</summary>
+            <div class="faq-content"><p>Tidak. Konsultasi awal bisa dimulai dari evaluasi pola makan dan rencana diet. Terapi GLP-1 hanya dipertimbangkan jika kondisi kamu sesuai dan dokter menilai manfaatnya lebih besar daripada risikonya.</p></div>
+          </details>
+          <details>
+            <summary>Kalau saya sering gagal diet, apakah masih bisa dibantu?</summary>
+            <div class="faq-content"><p>Bisa. Justru di konsultasi, kita cari pola yang membuat diet sebelumnya tidak bertahan, misalnya jam makan, trigger ngemil, stres, tidur kurang, atau target yang terlalu ekstrem.</p></div>
+          </details>
+          <details>
+            <summary>Apakah programnya harus makan menu khusus?</summary>
+            <div class="faq-content"><p>Tidak selalu. Kami lebih suka menyesuaikan dengan makanan yang mudah kamu temukan. Tujuannya agar program bisa dijalankan di rumah, kantor, atau saat makan di luar.</p></div>
+          </details>
+          <details>
+            <summary>Apakah suplemen penahan nafsu makan aman?</summary>
+            <div class="faq-content"><p>Suplemen pendukung kontrol nafsu makan tidak cocok untuk semua orang. Karena itu pemilihan tetap perlu melihat riwayat kesehatan, obat rutin, alergi, dan keluhan yang kamu miliki.</p></div>
+          </details>
+          <details>
+            <summary>Berapa sering follow up dilakukan?</summary>
+            <div class="faq-content"><p>Frekuensinya bisa disesuaikan dengan kebutuhan. Pada awal program, follow up biasanya lebih berguna karena tubuh dan kebiasaan makan sedang beradaptasi.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" aria-labelledby="kontak-title">
+      <div class="container contact-grid">
+        <div class="contact-visual reveal">
+          <div>
+            <span class="eyebrow" style="color:#c9f24a">Make An Enquiry</span>
+            <h2 id="kontak-title">Siap mulai? Ceritakan dulu kebutuhan kamu.</h2>
+            <p>Isi form singkat ini, lalu tim admin bisa bantu arahkan jadwal konsultasi dan informasi program yang paling sesuai.</p>
+            <div class="contact-list">
+              <div class="contact-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8.4 5.4 9.9 8c.3.5.2 1.1-.2 1.5l-1 1c1 2 2.7 3.7 4.8 4.8l1-1c.4-.4 1-.5 1.5-.2l2.6 1.5c.6.3.8 1 .6 1.6-.6 1.7-2.1 2.8-3.9 2.6C9.2 19.7 4.3 14.8 3.7 8.7 3.5 6.9 4.6 5.4 6.3 4.8c.6-.2 1.3 0 1.6.6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg> WhatsApp: 08xx-xxxx-xxxx</div>
+              <div class="contact-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16v11H4z" stroke="currentColor" stroke-width="1.8"/><path d="m4 8 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Email: admin@marikitasehat.id</div>
+              <div class="contact-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.2 7-12A7 7 0 0 0 5 9c0 6.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg> Lokasi: isi alamat klinik di sini</div>
+            </div>
+          </div>
+          <svg class="contact-illust" viewBox="0 0 420 280" role="img" aria-label="Ilustrasi konsultasi online">
+            <defs><linearGradient id="phoneGrad" x1="0" x2="1"><stop offset="0" stop-color="#fff7ed"/><stop offset="1" stop-color="#dffcf2"/></linearGradient></defs>
+            <ellipse cx="209" cy="246" rx="150" ry="20" fill="rgba(0,0,0,.13)"/>
+            <rect x="112" y="26" width="196" height="216" rx="30" fill="url(#phoneGrad)" stroke="rgba(255,255,255,.45)" stroke-width="4"/>
+            <rect x="138" y="57" width="144" height="36" rx="18" fill="#064e3b" opacity=".95"/>
+            <path d="M158 75h86" stroke="#c9f24a" stroke-width="7" stroke-linecap="round"/>
+            <circle cx="183" cy="137" r="31" fill="#f3b086"/>
+            <path d="M154 136c4-27 30-39 54-25 8 5 13 14 14 24-26 0-43-8-55-20-2 8-6 15-13 21Z" fill="#253a31"/>
+            <path d="M130 213c6-43 26-67 53-67s50 25 56 67" fill="#0f766e"/>
+            <path d="M246 132h50M246 154h36M246 176h45" stroke="#064e3b" stroke-width="8" stroke-linecap="round" opacity=".25"/>
+            <circle cx="288" cy="202" r="20" fill="#c9f24a"/>
+            <path d="M279 202l6 6 13-16" stroke="#064e3b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <form class="form-card reveal" id="bookingForm">
+          <h2>Kirim Pertanyaan</h2>
+          <p>Form ini belum terhubung ke backend. Saat tombol diklik, pesan akan dirapikan otomatis untuk dikirim ke WhatsApp admin.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="nama">Nama</label>
+              <input id="nama" name="nama" autocomplete="name" placeholder="Nama kamu" required />
+            </div>
+            <div class="field">
+              <label for="kontakPasien">Nomor WhatsApp</label>
+              <input id="kontakPasien" name="kontak" inputmode="tel" placeholder="08xxxxxxxxxx" required />
+            </div>
+            <div class="field">
+              <label for="tujuan">Tujuan utama</label>
+              <select id="tujuan" name="tujuan" required>
+                <option value="">Pilih tujuan</option>
+                <option>Ingin turun berat badan</option>
+                <option>Konsultasi nutrisi</option>
+                <option>Diet obesitas</option>
+                <option>Tanya terapi GLP-1</option>
+                <option>Tanya suplemen kontrol nafsu makan</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="jadwal">Preferensi jadwal</label>
+              <select id="jadwal" name="jadwal">
+                <option>Pagi</option>
+                <option>Siang</option>
+                <option>Sore</option>
+                <option>Fleksibel</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="pesan">Ceritakan singkat kondisi kamu</label>
+              <textarea id="pesan" name="pesan" placeholder="Contoh: berat badan naik sejak kerja shift, sering lapar malam, sudah coba diet tapi susah konsisten..."></textarea>
+            </div>
+          </div>
+          <p class="form-disclaimer">Dengan mengirim form, kamu setuju untuk dihubungi admin klinik. Untuk keluhan gawat darurat, segera ke fasilitas kesehatan terdekat.</p>
+          <div class="form-submit">
+            <button class="btn btn-primary" type="submit">Kirim ke WhatsApp</button>
+            <a class="btn btn-outline" href="mailto:admin@marikitasehat.id">Kirim Email</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#top" aria-label="Klinik Mari Kita Sehat">
+            <span class="brand-mark" aria-hidden="true"><svg width="27" height="27" viewBox="0 0 24 24" fill="none"><path d="M12 3c3.7 1.6 6.4 5.1 6.4 9.2 0 4.7-3 8-6.4 8s-6.4-3.3-6.4-8C5.6 8.1 8.3 4.6 12 3Z" stroke="currentColor" stroke-width="1.9"/><path d="M8.9 12.4c1.7.1 3.6-.7 5.8-2.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path d="M12 20V9" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></span>
+            <span><strong>Mari Kita Sehat</strong><small>Klinik Nutrisi & Berat Badan</small></span>
+          </a>
+          <p class="footer-text">Landing page SEO-friendly untuk konsultasi nutrisi, program diet obesitas, pengaturan pola makan, follow up berkala, dan terapi pendukung berat badan sesuai evaluasi medis.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Menu</h3>
+          <a href="#program">Program</a>
+          <a href="#kenapa-kami">Kenapa Kami</a>
+          <a href="#alur">Alur</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h3>Kontak</h3>
+          <span>WhatsApp: 08xx-xxxx-xxxx</span>
+          <span>Email: admin@marikitasehat.id</span>
+          <span>Alamat: isi alamat klinik di sini</span>
+        </div>
+      </div>
+      <div class="copyright">
+        <span>© <span id="year"></span> Klinik Mari Kita Sehat. Semua hak cipta dilindungi.</span>
+        <span>Informasi di halaman ini bukan pengganti konsultasi medis langsung.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="#kontak" aria-label="Chat WhatsApp Klinik Mari Kita Sehat">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.8 19.3 6 15.8A8 8 0 1 1 9 18.6l-4.2.7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.2 8.8c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.2.7l-.4.4c.6 1 1.4 1.8 2.5 2.3l.5-.5c.2-.2.4-.3.7-.2l1.6.7c.3.1.4.3.4.6v.4c0 .5-.4 1-1 1.1-3 .4-6.7-2.2-7.7-5.5-.2-.6.1-1.2.7-1.7Z" fill="currentColor"/></svg>
+  </a>
+
+  <script>
+    const year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const form = document.getElementById('bookingForm');
+    form?.addEventListener('submit', function(event){
+      event.preventDefault();
+      const data = new FormData(form);
+      const nama = data.get('nama') || '-';
+      const kontak = data.get('kontak') || '-';
+      const tujuan = data.get('tujuan') || '-';
+      const jadwal = data.get('jadwal') || '-';
+      const pesan = data.get('pesan') || '-';
+      const text = `Halo Klinik Mari Kita Sehat, saya ingin jadwalkan konsultasi.%0A%0ANama: ${encodeURIComponent(nama)}%0ANo WA: ${encodeURIComponent(kontak)}%0ATujuan: ${encodeURIComponent(tujuan)}%0AJadwal: ${encodeURIComponent(jadwal)}%0APesan: ${encodeURIComponent(pesan)}`;
+      // Ganti angka 6280000000000 dengan nomor WhatsApp klinik yang asli.
+      window.open(`https://wa.me/6280000000000?text=${text}`, '_blank', 'noopener,noreferrer');
+    });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Klinik Mari Kita Sehat",
+    "description": "Klinik konsultasi nutrisi, program diet obesitas, pengaturan pola makan, follow up berkala, dan terapi pendukung berat badan sesuai evaluasi dokter.",
+    "medicalSpecialty": ["Nutrition", "Obesity"],
+    "areaServed": "Indonesia",
+    "telephone": "08xx-xxxx-xxxx",
+    "url": "https://example.com"
+  }
+  </script>
+</body>
+</html>
