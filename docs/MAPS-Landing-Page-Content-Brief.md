@@ -12,9 +12,10 @@
 
 - Masalah
 - Noise Digital
-- CARE
+- Kenalan MAPS
 - Doctor-Led
 - Solusi
+- CARE
 - Target
 - SEO+GEO
 - Portfolio
@@ -60,7 +61,7 @@ Tapi belum terlihat meyakinkan secara digital.
 
 **Kicker:** The visibility problem
 
-**Headline:** Klinik sering bukan kalah kualitas. Mereka kalah terlihat dan ditemukan.
+**Headline:** Layanannya sudah dipercaya. Tapi calon pasien belum tentu menemukannya.
 
 **Subheadline:** Banyak klinik punya dokter bagus, layanan bagus, dan pasien puas. Tapi calon pasien pertama kali menilai dari Google, Instagram, website, dan cara klinik menjawab kebutuhan mereka secara digital.
 
@@ -108,29 +109,31 @@ Healthcare butuh bahasa pasien: hangat, jelas, tidak menakut-nakuti, tidak overc
 
 MAPS bisa bantu tema, rundown, deck, materi promosi, dan dokter sebagai speaker.
 
-## 4. The MAPS Way
+## 4. Jembatan Menuju MAPS
 
-**Headline:** Marketing healthcare yang tetap CARE.
+**Kicker:** Dari masalah ke sistem yang lebih rapi
 
-**Subheadline:** Menarik untuk pasien, aman untuk brand, dan tetap bisa dibaca datanya.
+**Headline:** Digital presence healthcare tidak cukup hanya terlihat aktif.
 
-### C - Clinical-led
+**Subheadline:** Ia harus membantu calon pasien menemukan layanan, memahami manfaatnya, mempercayai penyedianya, lalu mengambil langkah berikutnya dengan jelas.
 
-Arah komunikasi dipandu clinical reasoning, sehingga konten healthcare tidak asal klaim, tidak terlalu bombastis, dan tetap kredibel.
+**Alur:** Ditemukan -> Dipahami -> Dipercaya -> Dihubungi -> Diukur.
 
-### A - AI-assisted
+## 5. Kenalkan, MAPS
 
-AI mempercepat riset, ideasi, outline, copy, variasi konten, funnel, dan automation. Keputusan akhirnya tetap manusia dan perspektif medis.
+**Kicker:** Medical Advance Portfolio Scientific
 
-### R - Results-tracked
+**Headline:** Partner digital healthcare yang memahami marketing dan konteks medis.
 
-MAPS tidak berhenti di output. CTA, WA click, UTM, pixel/event, GA4, dan dashboard ringan disiapkan agar performa bisa dibaca.
+**Subheadline:** MAPS menyatukan strategi, konten, website, SEO + GEO, tracking, dan sistem digital sederhana dalam satu arah yang dipimpin dokter.
 
-### E - Evidence-based
+**Janji utama:**
 
-Konten disusun dengan dasar ilmiah, guideline, jurnal, atau referensi medis yang bisa dipertanggungjawabkan, lalu dibuat ringan untuk pasien.
+- Pesan layanan lebih jelas dan mudah dipahami.
+- Konten lebih credible tanpa kehilangan daya tarik.
+- Setiap CTA dan perjalanan calon pasien lebih mudah diukur.
 
-## 5. Doctor-Led, AI-Assisted
+## 6. Doctor-Led, AI-Assisted
 
 **Headline:** AI mempercepat pekerjaan. Dokter menjaga isi tetap aman.
 
@@ -152,7 +155,7 @@ Konten disusun dengan dasar ilmiah, guideline, jurnal, atau referensi medis yang
 - SEO + GEO
 - Event tracking
 
-## 6. Solusi End-to-End
+## 7. Solusi End-to-End
 
 **Headline:** Dari trust, konten, website, sampai tracking.
 
@@ -224,7 +227,29 @@ Patient flow. EMR outline. Pharmacy flow. Dashboard. SOP digital.
 
 **CTA:** Ikut update
 
-## 7. Target MAPS
+## 8. The MAPS Way
+
+**Headline:** Marketing healthcare yang tetap CARE.
+
+**Subheadline:** Menarik untuk pasien, aman untuk brand, dan tetap bisa dibaca datanya.
+
+### C - Clinical-led
+
+Arah komunikasi dipandu clinical reasoning, sehingga konten healthcare tidak asal klaim, tidak terlalu bombastis, dan tetap kredibel.
+
+### A - AI-assisted
+
+AI mempercepat riset, ideasi, outline, copy, variasi konten, funnel, dan automation. Keputusan akhirnya tetap manusia dan perspektif medis.
+
+### R - Results-tracked
+
+MAPS tidak berhenti di output. CTA, WA click, UTM, pixel/event, GA4, dan dashboard ringan disiapkan agar performa bisa dibaca.
+
+### E - Evidence-based
+
+Konten disusun dengan dasar ilmiah, guideline, jurnal, atau referensi medis yang bisa dipertanggungjawabkan, lalu dibuat ringan untuk pasien.
+
+## 9. Target MAPS
 
 **Kicker:** Untuk siapa?
 
@@ -292,7 +317,7 @@ Punya client healthcare tapi butuh medical supervision.
 
 Review konten, claim check, strategy support.
 
-## 8. SEO + GEO
+## 10. SEO + GEO
 
 **Headline:** Dicari Google. Dibaca pasien. Dipahami AI.
 
@@ -328,7 +353,7 @@ Review konten, claim check, strategy support.
 
 **MAPS direction:** Penjelasan kandungan, tipe kulit, cara pakai, batas ekspektasi, dan kapan perlu konsultasi.
 
-## 9. Portfolio
+## 11. Portfolio
 
 **Kicker:** Proof of work
 
@@ -356,7 +381,7 @@ Infografik panjang yang mengubah referensi medis menjadi alur baca yang lebih mu
 
 IG post, story, dan motion preview untuk membuat edukasi klinik lebih tegas, cepat, dan memorable.
 
-**Contoh:** 9 IG Post Klinik; 5 Story Klinik; Looping Reels HTML untuk Klinik; Motion Preview: Edukasi Hiperfosfat.
+**Contoh:** 9 Single Post; 5 Story; 1 Looping Reels HTML untuk Klinik.
 
 **CTA:** Saya mau asset seperti ini
 
@@ -384,7 +409,7 @@ Contoh landing page layanan klinik yang mobile-friendly, CTA jelas, dan siap dia
 
 **CTA:** Saya mau asset seperti ini
 
-## 10. Webinar Engine
+## 12. Webinar Engine
 
 **Headline:** Edukasi publik yang terasa rapi sejak tema sampai follow-up.
 
@@ -392,7 +417,7 @@ Contoh landing page layanan klinik yang mobile-friendly, CTA jelas, dan siap dia
 
 **Flow:** Tema. Deck. Promo. Speaker. Follow-up.
 
-## 11. Measurement Layer
+## 13. Measurement Layer
 
 **Kicker:** Bisa dipantau
 
@@ -407,7 +432,7 @@ Contoh landing page layanan klinik yang mobile-friendly, CTA jelas, dan siap dia
 - Google Sheets: Event, audit, dan lead log
 - Looker Studio: Dashboard dari Sheet/GA4
 
-## 12. Cara Kerja
+## 14. Cara Kerja
 
 **Headline:** Marketing-first. Medical-supervised. Tracking-ready.
 
@@ -437,7 +462,7 @@ Event GA4, Pixel, UTM, WhatsApp click, dan lead form disiapkan.
 
 Baca data, rapikan funnel, perbaiki CTA, dan scale yang terbukti bekerja.
 
-## 13. Next Digitalization Layer
+## 15. Next Digitalization Layer
 
 **Status:** Coming soon
 
@@ -454,7 +479,7 @@ Baca data, rapikan funnel, perbaiki CTA, dan scale yang terbukti bekerja.
 
 **CTA:** Minta update roadmap
 
-## 14. Audit Digital
+## 16. Audit Digital
 
 **Headline:** Cek Kesiapan Digital Klinik Anda
 
@@ -486,7 +511,7 @@ Baca data, rapikan funnel, perbaiki CTA, dan scale yang terbukti bekerja.
 
 **Microcopy:** MAPS bisa mulai dari prioritas terkecil yang paling terlihat dampaknya: clarity, trust, CTA, dan tracking.
 
-## 15. Paket Solusi MAPS
+## 17. Paket Solusi MAPS
 
 **Headline:** Mulai dari fondasi kecil, lalu berkembang sesuai kebutuhan.
 
@@ -524,7 +549,7 @@ Strategy; Content; Website/landing optimization; SEO article; Ads support; Track
 
 **CTA:** Diskusi Retainer
 
-## 16. Lead Form
+## 18. Lead Form
 
 **Headline:** Ceritakan kondisi digital MAPSY sekarang.
 
@@ -538,7 +563,7 @@ Strategy; Content; Website/landing optimization; SEO article; Ads support; Track
 
 **Success CTA:** Kirim ke WhatsApp
 
-## 17. FAQ
+## 19. FAQ
 
 ### Apa bedanya agency ini dengan digital marketing agency biasa?
 
@@ -588,7 +613,7 @@ Biaya tergantung scope. Klinik yang baru mulai bisa mengambil paket fondasi terl
 
 Mulai dari audit digital singkat. Setelah itu kami rekomendasikan prioritas: apakah perlu website, konten, SEO, tracking, campaign, atau sistem operasional sederhana.
 
-## 18. Final CTA
+## 20. Final CTA
 
 **Headline:** MAPSY tidak harus langsung besar untuk terlihat profesional.
 
@@ -598,7 +623,7 @@ Mulai dari audit digital singkat. Setelah itu kami rekomendasikan prioritas: apa
 
 **Microcopy:** Ceritakan kondisi digital MAPSY sekarang. MAPS bantu tentukan langkah paling masuk akal.
 
-## 19. Footer
+## 21. Footer
 
 **Brand:** MAPS - Medical Advance Portfolio Scientific
 
@@ -610,7 +635,7 @@ Mulai dari audit digital singkat. Setelah itu kami rekomendasikan prioritas: apa
 
 **Copyright:** Copyright (c) 2026 MAPS - Medical Advance Portfolio Scientific. All rights reserved.
 
-## 20. WhatsApp Default
+## 22. WhatsApp Default
 
 Halo MAPS, saya MAPSY mau audit digital untuk klinik/bisnis healthcare saya dong.
 

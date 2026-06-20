@@ -337,23 +337,6 @@ export const portfolioItemsV2 = [
     skills: ["Medical simplification", "Information design", "References", "Safety messaging"]
   },
   {
-    id: "hiperfosfat-reels",
-    category: "Video / Reels",
-    title: "Motion Preview: Edukasi Hiperfosfat",
-    thumbnail: "assets/showcase/decks/doctor-reviewed-seo.webp",
-    htmlUrl: "assets/reels/hiperfosfat-motion-preview.html",
-    problem: "Video edukasi sering terlalu textbook atau terlalu jualan.",
-    output: "Script reels 30 detik dengan hook, edukasi, warning, dan CTA konsultasi.",
-    suitableFor: "Brand renal care, apotek, edukasi pasien, KOL health content.",
-    skills: ["Reels script", "Motion copy", "Patient language", "Medical review"],
-    script: [
-      "Hook: Fosfat tinggi sering tidak terasa, tapi diam-diam bisa mengganggu tulang dan pembuluh darah.",
-      "Edu: Pada pasien ginjal, tubuh lebih sulit membuang fosfat dari makanan.",
-      "Action: Cek label, atur makanan tinggi fosfat, dan ikuti obat sesuai arahan dokter.",
-      "CTA: Konsultasikan hasil lab, jangan ubah obat sendiri."
-    ]
-  },
-  {
     id: "clinic-reels-html",
     category: "Video / Reels",
     title: "Looping Reels HTML untuk Klinik",
@@ -368,10 +351,13 @@ export const portfolioItemsV2 = [
     id: "scientific-deck",
     category: "Scientific Deck",
     title: "Scientific Deck yang Diubah Jadi Cerita Edukasi",
-    thumbnail: "assets/showcase/decks/lead-funnel-healthcare.webp",
+    thumbnail: "assets/showcase/decks/fever-pain-management-children.webp",
     gallery: [
-      "assets/showcase/decks/doctor-reviewed-seo.webp",
-      "assets/showcase/decks/lead-funnel-healthcare.webp"
+      "assets/showcase/decks/fever-pain-management-children.webp",
+      "assets/showcase/decks/nsaid-lower-gi-injury.webp",
+      "assets/showcase/decks/fatty-liver-strategies.webp",
+      "assets/showcase/decks/ibd-therapy.webp",
+      "assets/showcase/decks/variceal-bleeding-pancreatitis.webp"
     ],
     problem: "Materi ilmiah sering terlalu berat untuk tim marketing atau audiens awam.",
     output: "Deck ringkas: problem, evidence, visual hierarchy, speaker note, dan key takeaway.",

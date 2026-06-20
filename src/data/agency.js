@@ -7,10 +7,11 @@ export const agency = {
     "Agency transformasi digital marketing untuk klinik dan bisnis healthcare - dipimpin dokter, dibantu AI, dan divalidasi dengan clinical reasoning.",
   nav: [
     { label: "Masalah", href: "#masalah-klinik", event: "nav_problem" },
-    { label: "Noise Digital", href: "#hidden-problems", event: "nav_hidden_problem" },
-    { label: "CARE", href: "#care-framework", event: "nav_care" },
+    { label: "Masalah Digital", href: "#hidden-problems", event: "nav_hidden_problem" },
+    { label: "Kenalan MAPS", href: "#meet-maps", event: "nav_meet_maps" },
     { label: "Doctor-Led", href: "#doctor-led", event: "nav_doctor_led" },
     { label: "Solusi", href: "#solusi", event: "nav_solution" },
+    { label: "CARE", href: "#care-framework", event: "nav_care" },
     { label: "Target", href: "#audience", event: "nav_audience" },
     { label: "SEO+GEO", href: "#seo-geo", event: "nav_seo_geo" },
     { label: "Portfolio", href: "#portfolio", event: "nav_portfolio" },
@@ -56,9 +57,9 @@ export const agency = {
     "Simple Clinic Operations"
   ],
   painIntro: {
-    title: "Klinik sering bukan kalah kualitas. Mereka kalah terlihat dan ditemukan.",
+    title: "Layanannya sudah dipercaya. Tapi calon pasien belum tentu menemukannya.",
     subtitle:
-      "Banyak klinik punya dokter bagus, layanan bagus, dan pasien puas. Tapi di digital, tampilannya belum membangun trust.",
+      "Dokternya kompeten dan pasiennya puas. Namun ketika Google, Instagram, atau websitenya belum meyakinkan, kualitas itu tidak sempat terlihat.",
     closing:
       "Di healthcare, digital marketing tidak bisa asal ramai. Harus jelas, aman, credible, dan mudah dipahami."
   },

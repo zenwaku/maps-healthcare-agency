@@ -30,8 +30,8 @@ export default function Hero() {
             </span>
           </h1>
           <p className="hero-sub-v2">
-            MAPS membantu klinik, apotek, lab, healthtech, brand wellness, farmasi, dan bisnis healthcare membangun
-            digital presence yang lebih profesional, edukatif, scientific, dan terukur.
+            Calon pasien menilai layanan Anda dari Google, Instagram, website, dan cara Anda merespons kebutuhan mereka.
+            MAPS membantu setiap titik itu terasa lebih profesional, edukatif, scientific, dan terukur.
           </p>
           <p className="hero-doctor-v2">
             Dipimpin dokter. Dipercepat AI. Divalidasi clinical reasoning. Dieksekusi seperti agency modern.
@@ -52,7 +52,7 @@ export default function Hero() {
               Our Work Portfolio
             </a>
             <WhatsAppButton
-              className="btn btn-icon hero-wa-v2"
+              className="btn hero-wa-v2"
               source="hero"
               message={heroMessage}
               aria-label="Chat WhatsApp MAPS"
@@ -63,6 +63,7 @@ export default function Hero() {
                 aria-hidden="true"
                 draggable="false"
               />
+              <span>Chat MAPS</span>
             </WhatsAppButton>
           </div>
           <p className="hero-microcopy-v2">

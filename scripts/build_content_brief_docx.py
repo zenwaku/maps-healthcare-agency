@@ -13,7 +13,7 @@ from docx.shared import Inches, Pt, RGBColor
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "docs" / "MAPS-Landing-Page-Content-Brief.md"
-OUTPUT = ROOT / "docs" / "MAPS-Landing-Page-Content-Brief.docx"
+OUTPUT = ROOT / "docs" / "MAPS-Landing-Page-Content-Brief-Revised.docx"
 
 NAVY = RGBColor(15, 23, 42)
 TEAL = RGBColor(15, 118, 110)

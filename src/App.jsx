@@ -3,10 +3,12 @@ import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import {
   AudienceSegments,
+  BridgeToMaps,
   CareFramework,
   DoctorLedSystem,
   HealthcareProblems,
   MapsOpsPreview,
+  MeetMaps,
   ProcessV2,
   SeoGeoSection,
   ServicesV2,
@@ -34,9 +36,11 @@ const sectionIds = [
   "top",
   "masalah-klinik",
   "hidden-problems",
-  "care-framework",
+  "maps-bridge",
+  "meet-maps",
   "doctor-led",
   "solusi",
+  "care-framework",
   "audience",
   "seo-geo",
   "portfolio",
@@ -74,9 +78,11 @@ export default function App() {
         <Hero />
         <VisibilityGap />
         <HealthcareProblems />
-        <CareFramework />
+        <BridgeToMaps />
+        <MeetMaps />
         <DoctorLedSystem />
         <ServicesV2 />
+        <CareFramework />
         <AudienceSegments />
         <SeoGeoSection />
         <PortfolioShowcase />

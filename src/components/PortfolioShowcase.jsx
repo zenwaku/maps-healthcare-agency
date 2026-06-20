@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { imageFallbackHandler, resolveAssetPath } from "../utils/assetFallback.js";
 import { trackEvent } from "../utils/tracking.js";
 import SectionHeader from "./SectionHeader.jsx";
@@ -26,36 +26,33 @@ const infographicItems = [
   ["Heimlich Maneuver", "assets/showcase/infographics/heimlich-maneuver.webp"]
 ].map(([title, src]) => ({ type: "image", title, src }));
 
-const socialItems = [
-  ...Array.from({ length: 9 }, (_, index) => ({
+const singlePostItems = Array.from({ length: 9 }, (_, index) => ({
     type: "image",
     title: `IG Post Klinik ${index + 1}`,
     src: `assets/showcase/social-posts/post-maps-${index + 1}.webp`
-  })),
-  ...Array.from({ length: 5 }, (_, index) => ({
+  }));
+
+const storyItems = Array.from({ length: 5 }, (_, index) => ({
     type: "image",
     title: `Story Klinik ${index + 1}`,
     src: `assets/showcase/stories/story-maps-${index + 1}.webp`,
     portrait: true
-  })),
+  }));
+
+const reelsItems = [
   {
     type: "html",
     title: "Looping Reels HTML untuk Klinik",
     src: "assets/reels/reels-1.html"
-  },
-  {
-    type: "html",
-    title: "Motion Preview: Edukasi Hiperfosfat",
-    src: "assets/reels/hiperfosfat-motion-preview.html"
   }
 ];
 
 const deckItems = [
-  ["Fever & Pain Management in Children", "assets/portfolio/thumbs/slides/fever-pain-management-children.webp"],
-  ["Chronic Liver Disease Education Deck", "assets/portfolio/thumbs/slides/lola-chronic-liver-disease.webp"],
-  ["Bone Health Scientific Deck", "assets/portfolio/thumbs/slides/zoledronic-acid.webp"],
-  ["Doctor Reviewed SEO Deck", "assets/showcase/decks/doctor-reviewed-seo.webp"],
-  ["Healthcare Lead Funnel Deck", "assets/showcase/decks/lead-funnel-healthcare.webp"]
+  ["Fever & Pain Management in Children", "assets/showcase/decks/fever-pain-management-children.webp"],
+  ["Lower Gastrointestinal Injury: Clinical Update", "assets/showcase/decks/nsaid-lower-gi-injury.webp"],
+  ["Fatty Liver Disease: Clinical Strategy", "assets/showcase/decks/fatty-liver-strategies.webp"],
+  ["IBD in the Era of Advanced Therapy", "assets/showcase/decks/ibd-therapy.webp"],
+  ["Variceal Bleeding to Pancreatitis: Clinical Update", "assets/showcase/decks/variceal-bleeding-pancreatitis.webp"]
 ].map(([title, src]) => ({ type: "image", title, src, wide: true }));
 
 const educationDeckItems = [
@@ -90,8 +87,27 @@ const panels = [
   {
     id: "social-media-content",
     title: "Social Media Content",
-    subtitle: "IG post, story, dan motion preview untuk membuat edukasi klinik lebih tegas, cepat, dan memorable.",
-    items: socialItems,
+    subtitle: "Satu sistem konten, tiga format yang punya peran berbeda: membangun feed, menjaga ritme story, dan menarik perhatian lewat reels.",
+    groups: [
+      {
+        id: "single-post",
+        title: "Single Post",
+        subtitle: "Sembilan konten feed dengan hook, hierarchy, dan CTA yang konsisten.",
+        items: singlePostItems
+      },
+      {
+        id: "story",
+        title: "Story",
+        subtitle: "Lima story vertikal untuk edukasi cepat dan jalur menuju WhatsApp.",
+        items: storyItems
+      },
+      {
+        id: "reels",
+        title: "Reels",
+        subtitle: "Satu contoh motion HTML yang looping dan ringan untuk preview campaign.",
+        items: reelsItems
+      }
+    ],
     message:
       "Halo MAPS, saya MAPSY mau Social Media Content seperti contoh portfolio. Saya ingin post, story, reels script, dan motion edukasi untuk healthcare saya."
   },
@@ -133,7 +149,7 @@ function AssetTile({ panel, item, index, onOpen }) {
 
   return (
     <div
-      className={`portfolio-asset-tile ${isHtml ? "portfolio-asset-tile--html" : ""} ${item.portrait ? "is-portrait" : ""}`}
+      className={`portfolio-asset-tile ${isHtml ? "portfolio-asset-tile--html" : ""} ${item.portrait ? "is-portrait" : ""} ${item.wide ? "is-wide" : ""}`}
       role="button"
       tabIndex={0}
       onClick={open}
@@ -162,8 +178,49 @@ function AssetTile({ panel, item, index, onOpen }) {
   );
 }
 
+function InteractiveDeckPreview({ item }) {
+  const frameRef = useRef(null);
+
+  const moveSlide = (direction) => {
+    const frame = frameRef.current;
+    if (!frame) return;
+    try {
+      const documentRef = frame.contentDocument;
+      const control =
+        documentRef?.getElementById(direction === "next" ? "nextBtn" : "prevBtn") ||
+        documentRef?.getElementById(direction === "next" ? "next" : "prev");
+      control?.click();
+      trackEvent("portfolio_asset_view", {
+        asset_title: item.title,
+        asset_type: "interactive_deck",
+        interaction: `${direction}_slide`
+      });
+    } catch {
+      // The deck remains usable through its own controls if browser iframe policy changes.
+    }
+  };
+
+  return (
+    <div className="interactive-deck-preview">
+      <iframe ref={frameRef} title={item.title} src={resolveAssetPath(item.src)} loading="lazy" />
+      <div className="interactive-deck-controls" aria-label="Kontrol slide education deck">
+        <button type="button" onClick={() => moveSlide("previous")} aria-label="Previous slide">
+          <span aria-hidden="true">&#8592;</span> Previous
+        </button>
+        <span>Navigate inside this deck</span>
+        <button type="button" onClick={() => moveSlide("next")} aria-label="Next slide">
+          Next <span aria-hidden="true">&#8594;</span>
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function ModalPreview({ selected }) {
   const { item } = selected;
+  if (item.type === "html" && selected.panel.id === "interactive-education") {
+    return <InteractiveDeckPreview item={item} />;
+  }
   if (item.type === "html") {
     return <iframe title={item.title} src={resolveAssetPath(item.src)} loading="lazy" />;
   }
@@ -222,11 +279,35 @@ export default function PortfolioShowcase() {
                   Saya mau asset seperti ini
                 </WhatsAppButton>
               </div>
-              <div className={`portfolio-asset-grid portfolio-asset-grid--${panel.id}`}>
-                {panel.items.map((item, index) => (
-                  <AssetTile panel={panel} item={item} index={index} key={`${panel.id}-${item.title}`} onOpen={openModal} />
-                ))}
-              </div>
+              {panel.groups ? (
+                <div className="portfolio-subgroups">
+                  {panel.groups.map((group) => (
+                    <section className="portfolio-subgroup" key={group.id} aria-labelledby={`${panel.id}-${group.id}-title`}>
+                      <div className="portfolio-subgroup-head">
+                        <h4 id={`${panel.id}-${group.id}-title`}>{group.title}</h4>
+                        <p>{group.subtitle}</p>
+                      </div>
+                      <div className={`portfolio-asset-grid portfolio-asset-grid--${panel.id}-${group.id}`}>
+                        {group.items.map((item, index) => (
+                          <AssetTile
+                            panel={panel}
+                            item={item}
+                            index={index}
+                            key={`${panel.id}-${group.id}-${item.title}`}
+                            onOpen={openModal}
+                          />
+                        ))}
+                      </div>
+                    </section>
+                  ))}
+                </div>
+              ) : (
+                <div className={`portfolio-asset-grid portfolio-asset-grid--${panel.id}`}>
+                  {panel.items.map((item, index) => (
+                    <AssetTile panel={panel} item={item} index={index} key={`${panel.id}-${item.title}`} onOpen={openModal} />
+                  ))}
+                </div>
+              )}
             </article>
           ))}
         </div>

@@ -131,10 +131,9 @@ HTML reels ringan tersedia di:
 ```text
 public/assets/reels/reels-1.html
 public/assets/reels/klinik-marchelyn-motion-story.html
-public/assets/reels/hiperfosfat-motion-preview.html
 ```
 
-File MP4 original Hiperfosfat tidak dicopy ke project karena ukurannya lebih dari 100 MB dan tidak aman untuk GitHub Pages/repository. Gunakan preview HTML yang looping, atau kompres MP4 dengan tool gratis lokal sebelum commit.
+Panel Social Media Content memisahkan Single Post, Story, dan satu Reels HTML yang diputar berulang tanpa autoplay audio.
 
 ## Landing Page Dalam Landing Page
 

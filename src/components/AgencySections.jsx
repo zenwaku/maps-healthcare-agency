@@ -29,10 +29,10 @@ export function VisibilityGap() {
       <div className="container visibility-grid">
         <div className="visibility-copy reveal">
           <span className="section-kicker">The visibility problem</span>
-          <HookTitle>Klinik sering bukan kalah kualitas. Mereka kalah terlihat dan ditemukan.</HookTitle>
+          <HookTitle>Layanannya sudah dipercaya. Tapi calon pasien belum tentu menemukannya.</HookTitle>
           <p>
-            Banyak klinik punya dokter bagus, layanan bagus, dan pasien puas. Tapi calon pasien pertama kali menilai dari Google,
-            Instagram, website, dan cara klinik menjawab kebutuhan mereka secara digital.
+            Dokternya kompeten. Pasiennya puas. Namun kalau Google, Instagram, dan websitenya belum meyakinkan,
+            kualitas layanan itu tidak sempat terlihat oleh orang yang sedang mencarinya.
           </p>
           <div className="signal-stack" aria-label="Sinyal trust digital klinik">
             {["Ditemukan", "Dipahami", "Dipercaya", "Dihubungi", "Diukur"].map((signal, index) => (
@@ -101,8 +101,8 @@ export function HealthcareProblems() {
       <div className="container">
         <SectionHeader
           kicker="Masalah yang sering tidak terlihat"
-          title="Digital healthcare tidak bisa asal ramai."
-          subtitle="Harus jelas, aman, credible, mudah dipahami, dan bisa diukur."
+          title="Masalah digital yang diam-diam membuat calon pasien berhenti percaya."
+          subtitle="Bukan hanya soal feed yang sepi. Pesan yang kabur, klaim yang lemah, dan funnel yang tidak terbaca ikut menentukan keputusan pasien."
         />
         <div className="problem-grid-v2">
           {clinicProblems.map((problem, index) => (
@@ -113,6 +113,92 @@ export function HealthcareProblems() {
               </div>
               <h3>{problem.title}</h3>
               <p>{problem.copy}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function BridgeToMaps() {
+  const journey = [
+    { icon: "clinic", label: "Layanan dipercaya", copy: "Kualitasnya sudah terasa offline." },
+    { icon: "search", label: "Digital diperjelas", copy: "Pesan dan kanal dibuat mudah ditemukan." },
+    { icon: "analytics", label: "Respons diukur", copy: "Klik, chat, dan minat tidak lagi ditebak." }
+  ];
+
+  return (
+    <section id="maps-bridge" className="section section-anchor maps-bridge">
+      <div className="container maps-bridge-inner">
+        <div className="maps-bridge-copy reveal">
+          <span className="section-kicker">Saatnya digital menyusul</span>
+          <HookTitle>Kualitas layanan Anda sudah bekerja. Digital presence-nya harus ikut meyakinkan.</HookTitle>
+          <p>
+            Ketika calon pasien belum melihat kualitas yang sama secara online, ada jarak antara layanan yang sebenarnya bagus
+            dan kesan pertama yang mereka terima.
+          </p>
+        </div>
+        <div className="bridge-path reveal reveal-delay" aria-label="Perjalanan dari layanan offline ke pertumbuhan digital terukur">
+          {journey.map((item, index) => (
+            <article key={item.label} style={{ "--i": index }}>
+              <AnimatedIcon name={item.icon} motion={index === 1 ? "pulse" : "bob"} />
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong>{item.label}</strong>
+              <p>{item.copy}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function MeetMaps() {
+  const promises = [
+    {
+      icon: "doctor",
+      title: "Bahasa medis diterjemahkan",
+      copy: "Informasi klinis diubah menjadi pesan yang jelas, manusiawi, dan tetap bertanggung jawab."
+    },
+    {
+      icon: "responsive",
+      title: "Semua kanal dibuat nyambung",
+      copy: "Website, konten, SEO, WhatsApp, dan campaign bergerak dalam satu arah yang konsisten."
+    },
+    {
+      icon: "analytics",
+      title: "Performa tidak lagi ditebak",
+      copy: "CTA, sumber traffic, minat layanan, dan lead disiapkan agar bisa dibaca dan dioptimasi."
+    }
+  ];
+
+  return (
+    <section id="meet-maps" className="section section-anchor meet-maps">
+      <div className="container meet-maps-grid">
+        <div className="meet-maps-intro reveal">
+          <span className="section-kicker">Kenalkan, MAPS</span>
+          <HookTitle>Partner transformasi digital yang memang dibangun untuk healthcare.</HookTitle>
+          <p>
+            Medical Advance Portfolio Scientific membantu layanan kesehatan tampil sekuat kualitas aslinya: lebih mudah
+            ditemukan, lebih cepat dipahami, lebih layak dipercaya, dan lebih siap diukur.
+          </p>
+          <a
+            className="btn btn-primary"
+            href="#solusi"
+            onClick={() => trackEvent("cta_click", { placement: "meet_maps", label: "Lihat solusi MAPS" })}
+          >
+            Lihat Solusi MAPS
+          </a>
+        </div>
+        <div className="meet-maps-promise reveal reveal-delay">
+          {promises.map((item, index) => (
+            <article key={item.title} style={{ "--i": index }}>
+              <AnimatedIcon name={item.icon} motion={index === 1 ? "wiggle" : "pulse"} />
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
+              </div>
             </article>
           ))}
         </div>
