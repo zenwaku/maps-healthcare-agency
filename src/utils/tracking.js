@@ -144,12 +144,13 @@ export function trackEvent(eventName, params = {}) {
 }
 
 let microbeCount = 0;
-let lastMicrobeFlush = 0;
+let lastMicrobeFlush = Date.now();
 
 export function trackMicrobeNeutralized(count = 1) {
   const now = Date.now();
   microbeCount += count;
-  if (microbeCount >= 10 || now - lastMicrobeFlush > 15000) {
+  const elapsed = now - lastMicrobeFlush;
+  if ((microbeCount >= 10 && elapsed >= 15000) || (microbeCount > 0 && elapsed >= 30000)) {
     trackEvent("microbe_neutralized_batch", { count: microbeCount });
     microbeCount = 0;
     lastMicrobeFlush = now;
