@@ -2,6 +2,17 @@
 
 Panduan ini mengaktifkan measurement layer MAPS tanpa subscription, kartu, payment gateway, atau layanan berbayar.
 
+## Status Live Saat Ini
+
+- Website publik: `https://zenwaku.github.io/maps-healthcare-agency/`
+- GA4 Web Stream: `MAPS Healthcare Agency`
+- Stream ID: `15161794054`
+- Measurement ID: `G-7K5M8M3XJD`
+- GitHub Actions variable: `VITE_GA_MEASUREMENT_ID=G-7K5M8M3XJD`
+- Deploy terakhir terverifikasi: bundle publik memuat ID GA4 baru, tidak memuat ID lama, dan standar `page_view` GA4 aktif.
+
+Gunakan akun Google pemilik bisnis saat membuka GA4 dan Looker Studio. Jika ingin semua berada di akun `marchoict@gmail.com`, pastikan akun itulah yang sedang aktif saat membuka Google Analytics, Google Sheets, dan Looker Studio.
+
 ## Arsitektur
 
 1. Landing page mengirim event ke `window.dataLayer`.
@@ -18,6 +29,18 @@ Panduan ini mengaktifkan measurement layer MAPS tanpa subscription, kartu, payme
 3. Isi `VITE_GA_MEASUREMENT_ID` di `.env`.
 4. Build ulang dan deploy `dist/`.
 5. Buka GA4 DebugView atau Realtime dan uji `page_view_custom`, `cta_click`, `section_view`, dan `whatsapp_click`.
+
+Untuk deployment GitHub Pages repo ini, gunakan GitHub Actions variable:
+
+```bash
+gh variable set VITE_GA_MEASUREMENT_ID --repo zenwaku/maps-healthcare-agency --body "G-7K5M8M3XJD"
+```
+
+Lalu trigger deploy:
+
+```bash
+gh workflow run deploy-pages.yml --repo zenwaku/maps-healthcare-agency --ref master
+```
 
 ## Aktivasi Meta Pixel
 
@@ -44,12 +67,39 @@ Jangan mengirim data pasien, rekam medis, diagnosis, atau informasi kesehatan se
 
 ## Aktivasi Looker Studio
 
-1. Buat report Looker Studio.
-2. Pilih connector Google Sheets.
-3. Gunakan tab `MAPS_Tracking_Events` sebagai data source.
-4. Gunakan `received_at` sebagai date dimension dan `event` sebagai breakdown utama.
-5. Buat scorecard untuk page view, CTA, WhatsApp, lead, audit complete, serta portfolio view.
-6. Tambahkan filter `utm_source`, `utm_medium`, `utm_campaign`, `service`, dan `package`.
+Gunakan dua data source gratis:
+
+1. Google Analytics: pilih property/stream `MAPS Healthcare Agency`.
+2. Google Sheets: pilih sheet tracker MAPS jika Apps Script sudah aktif.
+
+Susunan dashboard yang direkomendasikan:
+
+- Scorecard: active users, views, event count, key events, new users, sessions.
+- Scorecard konversi MAPS: `whatsapp_click`, `lead_form_submit`, `generate_lead`, `audit_form_complete`, `package_cta_click`.
+- Time series: event count per hari.
+- Bar chart: top event name.
+- Table: page path, event name, `utm_source`, `utm_medium`, `utm_campaign`.
+- Funnel manual: `page_view` -> `section_view` -> `service_cta_click` -> `whatsapp_click`/`lead_form_submit`.
+- Filter controls: date range, `utm_source`, `utm_campaign`, `service`, `package`, `portfolio_category`.
+
+Untuk membuat report:
+
+1. Buka `https://lookerstudio.google.com/`.
+2. Pilih `Blank report`.
+3. Add data source `Google Analytics`.
+4. Pilih akun/property yang berisi stream `MAPS Healthcare Agency`.
+5. Tambahkan chart di atas.
+6. Jika Google Sheets tracker sudah aktif, pilih `Add data` > `Google Sheets`, lalu pilih file tracker MAPS.
+
+Looker Studio hanya bisa menarik data yang sudah tersedia di GA4/Sheets. Jika stream GA4 baru dibuat, beri waktu beberapa menit sampai data Realtime muncul dan sampai 24 jam untuk beberapa laporan standar.
+
+## Membaca Data Dengan Benar
+
+- GA4 membaca pengunjung anonim secara agregat: sesi, device, lokasi kasar, sumber traffic, dan event.
+- Nama, nomor, atau detail bisnis hanya muncul jika MAPSY mengisi form/klik WhatsApp dan datanya dikirim ke Sheets.
+- Jangan gunakan form untuk rekam medis, diagnosis, data pasien, atau informasi kesehatan sensitif.
+- Meta Pixel siap dipasang setelah Pixel ID dibuat manual di Meta Events Manager.
+- Ads dapat dibuat nanti secara manual oleh pemilik bisnis; landing page saat ini hanya menyiapkan measurement.
 
 ## Event Utama
 
