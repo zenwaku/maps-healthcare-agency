@@ -1,4 +1,4 @@
-const fallbackSvg = (title = "MAPS - Medical Advance Portfolio Scientific asset preview") =>
+const fallbackSvg = (title = "MAPS - Medical Advanced Portfolio Solution asset preview") =>
   `data:image/svg+xml;utf8,${encodeURIComponent(`
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" role="img" aria-label="${title}">
     <defs>

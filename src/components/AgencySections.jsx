@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   audienceSegments,
   careFramework,
@@ -180,7 +180,7 @@ export function MeetMaps() {
           <span className="section-kicker">Kenalkan, MAPS</span>
           <HookTitle>Partner transformasi digital yang memang dibangun untuk healthcare.</HookTitle>
           <p>
-            Medical Advance Portfolio Scientific membantu layanan kesehatan tampil sekuat kualitas aslinya: lebih mudah
+            Medical Advanced Portfolio Solution membantu layanan kesehatan tampil sekuat kualitas aslinya: lebih mudah
             ditemukan, lebih cepat dipahami, lebih layak dipercaya, dan lebih siap diukur.
           </p>
           <a
@@ -213,8 +213,8 @@ export function CareFramework() {
       <div className="container">
         <SectionHeader
           kicker="The MAPS way"
-          title="Marketing healthcare yang tetap CARE."
-          subtitle="Menarik untuk pasien, aman untuk brand, dan tetap bisa dibaca datanya."
+          title="Biar kreatifnya tetap punya pagar."
+          subtitle="Cara MAPS menjaga konten healthcare tetap menarik, aman untuk brand, dan bisa dibaca datanya."
         />
         <div className="care-grid">
           {careFramework.map((item, index) => (
@@ -254,10 +254,10 @@ export function DoctorLedSystem() {
         </div>
         <div className="doctor-led-copy reveal reveal-delay">
           <span className="section-kicker">Doctor-led, AI-assisted</span>
-          <HookTitle>AI mempercepat pekerjaan. Dokter menjaga isi tetap aman.</HookTitle>
+          <HookTitle>AI mempercepat kerja. Dokter menjaga arah dan batas klaim.</HookTitle>
           <p>
-            Di healthcare, satu kalimat bisa membangun trust atau membuat klaim jadi berisiko. MAPS memakai AI untuk riset,
-            outline, variasi copy, dan batching. Dokter mengarahkan pesan, menjaga konteks medis, dan memvalidasi sudut pandang.
+            Di healthcare, satu kalimat bisa membangun trust atau membuat klaim jadi berisiko. MAPS memakai AI untuk riset awal,
+            ide, outline, variasi copy, dan batching. Arah komunikasi tetap diperiksa manusia dengan perspektif medis.
           </p>
           <div className="compare-rails">
             <div>
@@ -346,7 +346,7 @@ export function ServicesV2() {
         <SectionHeader
           kicker="Solusi end-to-end"
           title="Dari trust, konten, website, sampai tracking."
-          subtitle="Mulai kecil. Rapi dulu. Lalu scale setelah datanya kebaca."
+          subtitle="Mulai dari yang paling perlu dirapikan, lalu kembangkan setelah respon audiens dan datanya mulai terbaca."
         />
         <div className="services-grid-v2">
           {servicesV2.map((service, index) => (
@@ -359,6 +359,14 @@ export function ServicesV2() {
 }
 
 export function SeoGeoSection() {
+  const [activePair, setActivePair] = useState(0);
+  const currentPair = seoPairs[activePair] || seoPairs[0];
+
+  const selectPair = (index, label) => {
+    setActivePair(index);
+    trackEvent("portfolio_filter_click", { filter: `seo_geo_${label}`, section: "seo_geo" });
+  };
+
   return (
     <section id="seo-geo" className="section section-anchor seo-geo-v2">
       <div className="container seo-geo-grid">
@@ -366,24 +374,38 @@ export function SeoGeoSection() {
           <span className="section-kicker">SEO + GEO</span>
           <HookTitle>Dicari Google. Dibaca pasien. Dipahami AI.</HookTitle>
           <p>
-            MAPS menyusun konten agar relevan untuk search intent pasien dan generative engine: lebih spesifik, lebih terstruktur,
-            dan tidak asal klaim.
+            MAPS menyusun konten dari pertanyaan yang benar-benar dicari pasien, lalu merapikannya agar mudah dipahami Google
+            dan mesin jawaban AI tanpa menjanjikan ranking instan.
           </p>
         </div>
-        <div className="seo-pair-stack reveal reveal-delay">
-          {seoPairs.map((pair) => (
-            <article className="seo-pair" key={pair.label}>
-              <span>{pair.label}</span>
+        <div className="seo-pair-explorer reveal reveal-delay">
+          <div className="seo-pair-tabs" role="tablist" aria-label="Contoh pendekatan SEO dan GEO MAPS">
+            {seoPairs.map((pair, index) => (
+              <button
+                type="button"
+                role="tab"
+                aria-selected={activePair === index}
+                className={`seo-pair-tab ${activePair === index ? "seo-pair-tab--active" : ""}`}
+                key={pair.label}
+                onClick={() => selectPair(index, pair.label)}
+              >
+                {pair.label}
+              </button>
+            ))}
+          </div>
+          <article className="seo-pair seo-pair--active">
+            <span>{currentPair.label}</span>
+            <div className="seo-pair-body">
               <div>
-                <small>Generic</small>
-                <p>{pair.bad}</p>
+                <small>Masih terlalu umum</small>
+                <p>{currentPair.bad}</p>
               </div>
               <div>
-                <small>MAPS direction</small>
-                <p>{pair.good}</p>
+                <small>Arah MAPS</small>
+                <p>{currentPair.good}</p>
               </div>
-            </article>
-          ))}
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -478,8 +500,8 @@ export function TrackingStackV2() {
     ["Meta Pixel", "ViewContent, Contact, Lead"],
     ["WhatsApp", "Klik tombol, source, service interest"],
     ["UTM", "IG, Google, broadcast, QR, referral"],
-    ["Google Sheets", "Optional Apps Script endpoint gratis"],
-    ["Looker Studio", "Dashboard dari Sheet/GA4 tanpa payment"]
+    ["Google Sheets", "Lead dan event tersusun rapi di Sheet"],
+    ["Looker Studio", "Dashboard ringkas untuk insight bulanan"]
   ];
 
   return (

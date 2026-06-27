@@ -4,7 +4,74 @@ import { trackEvent } from "../utils/tracking.js";
 import SectionHeader from "./SectionHeader.jsx";
 import WhatsAppButton from "./WhatsAppButton.jsx";
 
-const articleItems = [
+const articleReaderItems = [
+  {
+    type: "article",
+    title: "Kalsium untuk Anak",
+    src: "assets/portfolio/thumbs/articles/kalsium-untuk-anak.webp",
+    summary: "Artikel edukasi untuk membantu orang tua memahami peran kalsium tanpa membuat klaim berlebihan.",
+    article: {
+      intro:
+        "Kalsium sering dibicarakan saat membahas pertumbuhan anak. Artikel ini menempatkan kalsium sebagai bagian dari pola makan, aktivitas, tidur, dan evaluasi tumbuh kembang yang lebih utuh.",
+      points: [
+        ["Sudut pasien", "Orang tua butuh tahu tanda asupan yang perlu diperhatikan, bukan hanya daftar makanan tinggi kalsium."],
+        ["Arah SEO", "Menjawab pencarian seputar kalsium anak, tinggi badan, susu, dan kapan perlu konsultasi."],
+        ["Batas klaim", "Tidak menjanjikan anak pasti lebih tinggi; fokus pada kebutuhan nutrisi dan evaluasi yang tepat."]
+      ],
+      references: ["Kebutuhan gizi anak", "Prinsip edukasi nutrisi pediatrik", "Clinical review sebelum publikasi"]
+    }
+  },
+  {
+    type: "article",
+    title: "Zinc untuk Anak",
+    src: "assets/portfolio/thumbs/articles/zinc-untuk-anak-besar-perannya.webp",
+    summary: "Contoh artikel dengan hook sederhana untuk topik imunitas dan tumbuh kembang anak.",
+    article: {
+      intro:
+        "Zinc sering dikaitkan dengan daya tahan tubuh anak. Copy dibuat tetap ringan, sambil menjelaskan bahwa kebutuhan suplemen perlu melihat pola makan dan kondisi anak.",
+      points: [
+        ["Sudut pasien", "Membantu orang tua memahami kenapa anak sering sakit tidak bisa langsung disimpulkan dari satu nutrisi saja."],
+        ["Arah SEO", "Dibuat untuk intent pencarian zinc anak, anak sering sakit, dan nutrisi pendukung daya tahan."],
+        ["Batas klaim", "Tidak menyebut zinc pasti mencegah sakit; pesan diarahkan ke edukasi dan konsultasi bila perlu."]
+      ],
+      references: ["Nutrisi mikro anak", "Guideline edukasi suplementasi", "Medical claim check"]
+    }
+  },
+  {
+    type: "article",
+    title: "Curcuma pada Fatty Liver",
+    src: "assets/portfolio/thumbs/articles/manfaat-curcuma-pada-fatty-liver.webp",
+    summary: "Contoh artikel healthcare untuk brand wellness yang butuh tone scientific tapi tetap mudah dibaca.",
+    article: {
+      intro:
+        "Topik fatty liver mudah jatuh ke klaim bombastis. Artikel diarahkan untuk menjelaskan konteks metabolik, gaya hidup, dan posisi bahan aktif sebagai edukasi, bukan janji terapi.",
+      points: [
+        ["Sudut pasien", "Membuat pembaca paham bahwa fatty liver perlu pendekatan pola makan, aktivitas, dan evaluasi medis."],
+        ["Arah SEO", "Menghubungkan intent fatty liver, curcuma, hati berlemak, dan edukasi pencegahan."],
+        ["Batas klaim", "Tidak menyatakan curcuma menyembuhkan fatty liver; manfaat dibahas dengan batas konteks."]
+      ],
+      references: ["Review nutraceutical", "Edukasi fatty liver", "Clinical reasoning untuk klaim wellness"]
+    }
+  },
+  {
+    type: "article",
+    title: "PPI untuk Maag Lambung",
+    src: "assets/portfolio/thumbs/articles/maag-sering-kambuh.webp",
+    summary: "Contoh artikel untuk menjelaskan obat yang sering dipakai pasien tanpa mendorong self-medication sembarangan.",
+    article: {
+      intro:
+        "PPI sering dicari pasien saat maag kambuh. Artikel dibuat untuk menjelaskan fungsi, batas penggunaan, red flag, dan kapan harus konsultasi tenaga kesehatan.",
+      points: [
+        ["Sudut pasien", "Menjawab pertanyaan umum tanpa membuat pembaca merasa boleh menentukan terapi sendiri."],
+        ["Arah SEO", "Menangkap intent maag sering kambuh, obat asam lambung, PPI, dan kapan perlu periksa."],
+        ["Batas klaim", "Tidak memberi instruksi terapi individual; fokus pada edukasi dan arahan konsultasi."]
+      ],
+      references: ["Edukasi GERD/dispepsia", "Safety messaging obat", "Clinical review sebelum publikasi"]
+    }
+  }
+];
+
+const articlePosterItems = [
   ["Skincare Mahal Gak Cukup", "assets/showcase/articles/skincare-mahal.webp"],
   ["Kopi Susu Tiap Hari dan Diabetes", "assets/showcase/articles/kopi-susu-diabetes.webp"],
   ["Jangan Sampai Si Kecil Kalah Tinggi", "assets/showcase/articles/tinggi-anak.webp"],
@@ -16,6 +83,8 @@ const articleItems = [
   ["Curcuma pada Fatty Liver", "assets/showcase/articles/curcuma-fatty-liver.webp"],
   ["PPI untuk Maag Lambung", "assets/showcase/articles/ppi-maag.webp"]
 ].map(([title, src]) => ({ type: "image", title, src }));
+
+const articleItems = [...articleReaderItems, ...articlePosterItems];
 
 const infographicItems = [
   ["Pertolongan Pertama Luka Bakar di Rumah", "assets/showcase/infographics/luka-bakar-dirumah.webp"],
@@ -139,6 +208,7 @@ const panels = [
 
 function AssetTile({ panel, item, index, onOpen }) {
   const isHtml = item.type === "html";
+  const isArticle = item.type === "article";
   const open = () => onOpen(panel, item, index);
   const handleKeyDown = (event) => {
     if (event.key === "Enter" || event.key === " ") {
@@ -149,7 +219,7 @@ function AssetTile({ panel, item, index, onOpen }) {
 
   return (
     <div
-      className={`portfolio-asset-tile ${isHtml ? "portfolio-asset-tile--html" : ""} ${item.portrait ? "is-portrait" : ""} ${item.wide ? "is-wide" : ""}`}
+      className={`portfolio-asset-tile ${isHtml ? "portfolio-asset-tile--html" : ""} ${isArticle ? "portfolio-asset-tile--article" : ""} ${item.portrait ? "is-portrait" : ""} ${item.wide ? "is-wide" : ""}`}
       role="button"
       tabIndex={0}
       onClick={open}
@@ -161,9 +231,25 @@ function AssetTile({ panel, item, index, onOpen }) {
           title={item.title}
           src={resolveAssetPath(item.src)}
           loading="lazy"
+          sandbox="allow-scripts"
           tabIndex="-1"
           onLoad={() => trackEvent("portfolio_asset_view", { panel_id: panel.id, asset_title: item.title, asset_type: "html" })}
         />
+      ) : isArticle ? (
+        <>
+          <img
+            loading="lazy"
+            src={resolveAssetPath(item.src)}
+            alt={`Preview artikel ${item.title}`}
+            draggable="false"
+            onError={(event) => imageFallbackHandler(event, item.title)}
+          />
+          <div className="article-tile-copy">
+            <small>Draft artikel</small>
+            <p>{item.summary}</p>
+            <span className="article-open-label">Baca artikel</span>
+          </div>
+        </>
       ) : (
         <img
           loading="lazy"
@@ -178,6 +264,37 @@ function AssetTile({ panel, item, index, onOpen }) {
   );
 }
 
+function ArticlePreview({ item }) {
+  return (
+    <div className="article-preview">
+      <img
+        src={resolveAssetPath(item.src)}
+        alt={`Thumbnail artikel ${item.title}`}
+        draggable="false"
+        onError={(event) => imageFallbackHandler(event, item.title)}
+      />
+      <div className="article-preview-copy">
+        <span>Draft artikel berbasis referensi</span>
+        <h4>{item.title}</h4>
+        <p>{item.article.intro}</p>
+        <div className="article-preview-points">
+          {item.article.points.map(([label, copy]) => (
+            <article key={label}>
+              <strong>{label}</strong>
+              <p>{copy}</p>
+            </article>
+          ))}
+        </div>
+        <div className="article-preview-references" aria-label="Arah referensi artikel">
+          {item.article.references.map((reference) => (
+            <span key={reference}>{reference}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function InteractiveDeckPreview({ item }) {
   const frameRef = useRef(null);
 
@@ -188,8 +305,18 @@ function InteractiveDeckPreview({ item }) {
       const documentRef = frame.contentDocument;
       const control =
         documentRef?.getElementById(direction === "next" ? "nextBtn" : "prevBtn") ||
-        documentRef?.getElementById(direction === "next" ? "next" : "prev");
-      control?.click();
+        documentRef?.getElementById(direction === "next" ? "next" : "prev") ||
+        documentRef?.querySelector(direction === "next" ? "[data-next], .next, .swiper-button-next" : "[data-prev], .prev, .swiper-button-prev");
+      if (control) {
+        control.click();
+      } else {
+        frame.contentWindow?.dispatchEvent(
+          new KeyboardEvent("keydown", {
+            key: direction === "next" ? "ArrowRight" : "ArrowLeft",
+            bubbles: true
+          })
+        );
+      }
       trackEvent("portfolio_asset_view", {
         asset_title: item.title,
         asset_type: "interactive_deck",
@@ -218,11 +345,22 @@ function InteractiveDeckPreview({ item }) {
 
 function ModalPreview({ selected }) {
   const { item } = selected;
+  if (item.type === "article") {
+    return <ArticlePreview item={item} />;
+  }
   if (item.type === "html" && selected.panel.id === "interactive-education") {
     return <InteractiveDeckPreview item={item} />;
   }
   if (item.type === "html") {
-    return <iframe title={item.title} src={resolveAssetPath(item.src)} loading="lazy" />;
+    return (
+      <iframe
+        title={item.title}
+        src={resolveAssetPath(item.src)}
+        loading="lazy"
+        sandbox="allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox"
+        referrerPolicy="no-referrer"
+      />
+    );
   }
   return (
     <img
@@ -245,6 +383,23 @@ export default function PortfolioShowcase() {
     return () => window.removeEventListener("keydown", close);
   }, []);
 
+  useEffect(() => {
+    const handleShowcaseMessage = (event) => {
+      const data = event.data || {};
+      if (data.type !== "maps_showcase_cta") return;
+      trackEvent("portfolio_asset_view", {
+        panel_id: selected?.panel?.id || "landing-page-showcase",
+        asset_title: selected?.item?.title || data.demo || "Landing page demo",
+        asset_type: "landing_page_demo",
+        demo: data.demo,
+        interaction: data.action
+      });
+    };
+
+    window.addEventListener("message", handleShowcaseMessage);
+    return () => window.removeEventListener("message", handleShowcaseMessage);
+  }, [selected]);
+
   const openModal = (panel, item, index) => {
     setSelected({ panel, item, index });
     trackEvent("portfolio_card_click", { panel_id: panel.id, asset_title: item.title, index });
@@ -257,8 +412,8 @@ export default function PortfolioShowcase() {
       <div className="container">
         <SectionHeader
           kicker="Proof of work"
-          title="Portfolio MAPS dibagi sesuai fungsi asset."
-          subtitle="Agar MAPSY bisa menilai: mana untuk edukasi, mana untuk trust, mana untuk search, mana untuk conversion."
+          title="Dari topik medis yang rumit jadi aset yang enak dibaca dan siap dipakai."
+          subtitle="Artikel, poster, story, deck, dan landing page dibuat dengan tujuan yang jelas: pasien paham, brand lebih dipercaya, dan action lebih mudah terjadi."
         />
 
         <div className="portfolio-panel-stack">
@@ -293,7 +448,7 @@ export default function PortfolioShowcase() {
                             panel={panel}
                             item={item}
                             index={index}
-                            key={`${panel.id}-${group.id}-${item.title}`}
+                            key={`${panel.id}-${group.id}-${item.type}-${item.title}-${index}`}
                             onOpen={openModal}
                           />
                         ))}
@@ -304,7 +459,7 @@ export default function PortfolioShowcase() {
               ) : (
                 <div className={`portfolio-asset-grid portfolio-asset-grid--${panel.id}`}>
                   {panel.items.map((item, index) => (
-                    <AssetTile panel={panel} item={item} index={index} key={`${panel.id}-${item.title}`} onOpen={openModal} />
+                    <AssetTile panel={panel} item={item} index={index} key={`${panel.id}-${item.type}-${item.title}-${index}`} onOpen={openModal} />
                   ))}
                 </div>
               )}
@@ -326,7 +481,7 @@ export default function PortfolioShowcase() {
               <span />
               <span />
             </button>
-            <div className={`modal-media-v2 ${selected.item.type === "html" ? "modal-media-v2--html" : ""}`}>
+            <div className={`modal-media-v2 ${selected.item.type === "html" ? "modal-media-v2--html" : ""} ${selected.item.type === "article" ? "modal-media-v2--article" : ""}`}>
               <ModalPreview selected={selected} />
               <span className="portfolio-watermark">MAPS preview</span>
             </div>

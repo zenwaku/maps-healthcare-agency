@@ -5,7 +5,7 @@ import "./styles.css";
 import { initTracking, trackEvent } from "./utils/tracking.js";
 
 initTracking();
-trackEvent("page_view_custom", { page: "home", brand: "MAPS - Medical Advance Portfolio Scientific" });
+trackEvent("page_view_custom", { page: "home", brand: "MAPS - Medical Advanced Portfolio Solution" });
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>

@@ -1,6 +1,6 @@
-# MAPS - Medical Advance Portfolio Scientific
+# MAPS - Medical Advanced Portfolio Solution
 
-Landing page gratis untuk digital agency healthcare `MAPS - Medical Advance Portfolio Scientific`.
+Landing page gratis untuk digital agency healthcare `MAPS - Medical Advanced Portfolio Solution`.
 
 MAPS membantu MAPSY seperti klinik, apotek, lab pemeriksaan, healthtech, brand suplemen/skincare/wellness, farmasi, medical device, dan bisnis healthcare membangun digital presence yang lebih profesional, edukatif, scientific, dan terukur.
 
@@ -13,10 +13,10 @@ MAPS membantu MAPSY seperti klinik, apotek, lab pemeriksaan, healthtech, brand s
 - localStorage untuk lead, audit, UTM, dan event log ringan
 - WhatsApp generated message
 - GA4 dan Meta Pixel optional
-- Google Sheets + Apps Script optional untuk cloud event log gratis
+- Google Sheets + Apps Script optional untuk event log terhubung
 - GitHub Pages gratis
 
-Tidak ada backend berbayar, SaaS form, payment gateway, subscription, free trial, credit card, template premium, stock berbayar, atau API berbayar.
+Tidak ada backend berbayar, SaaS form, payment gateway, subscription, credit card, template premium, stock berbayar, API berbayar, atau koneksi pembayaran apa pun.
 
 ## Menjalankan Project
 
@@ -175,19 +175,20 @@ Jangan gunakan form untuk data medis sensitif atau identitas pasien.
 
 ## GA4
 
-1. Buat property GA4 gratis.
-2. Ambil Measurement ID.
+1. Buat property GA4 di akun Google pemilik bisnis.
+2. Buat Web data stream untuk domain GitHub Pages.
+3. Ambil Measurement ID.
 3. Isi:
 
 ```bash
 VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
 
-Tracking akan memanggil `gtag` hanya jika ID valid.
+Tracking akan memanggil `gtag` hanya jika ID valid. Tanpa ID, website tetap berjalan dan event tetap tersimpan lokal.
 
 ## Meta Pixel
 
-1. Buat Pixel gratis di Meta Business.
+1. Buat Pixel di Meta Business Suite / Events Manager.
 2. Ambil Pixel ID.
 3. Isi:
 
@@ -195,11 +196,11 @@ Tracking akan memanggil `gtag` hanya jika ID valid.
 VITE_META_PIXEL_ID=000000000000000
 ```
 
-Pixel disiapkan hanya untuk membaca event gratis jika MAPSY ingin mengukur traffic atau campaign sendiri.
+Pixel disiapkan untuk membaca event seperti `PageView`, `ViewContent`, `Contact`, dan `Lead`. Campaign ads tetap disiapkan manual oleh pemilik bisnis bila nanti dibutuhkan.
 
 ## Google Sheets Dan Looker Studio
 
-Opsi cloud gratis memakai Google Sheets + Apps Script Web App:
+Opsi event log terhubung memakai Google Sheets + Apps Script Web App:
 
 1. Buat Google Sheet kosong.
 2. Buka Extensions > Apps Script.
@@ -220,7 +221,7 @@ VITE_TRACKING_WEBAPP_URL=
 
 Script membuat kolom event, UTM, layanan/paket, hasil audit, serta field lead yang siap dijadikan data source Looker Studio.
 
-Catatan penting: koneksi ini membutuhkan akun Google milik user dan URL Apps Script dari user. Project sudah siap secara teknis, tetapi property GA4, Pixel, Sheet, dan report Looker tidak dapat menjadi live sebelum ID/URL dari akun pemilik diisi.
+Catatan penting: koneksi ini membutuhkan akun Google/Meta milik pemilik bisnis dan URL Apps Script dari akun tersebut. Project sudah siap secara teknis, tetapi property GA4, Pixel, Sheet, dan report Looker tidak dapat menjadi live sebelum ID/URL resmi diisi.
 
 Analytics menunjukkan sesi, perangkat, sumber traffic, section, dan klik secara agregat. Identitas nama hanya tersedia jika pengunjung memang mengisi form; website tidak mencoba mengidentifikasi pengunjung anonim.
 
@@ -301,7 +302,6 @@ Meta Pixel mapping:
 ## Checklist 0 Rupiah
 
 - Tidak memakai platform berbayar.
-- Tidak memakai free trial.
 - Tidak memakai subscription.
 - Tidak memakai tool yang meminta credit card.
 - Tidak memakai template premium.

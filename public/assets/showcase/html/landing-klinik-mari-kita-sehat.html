@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
   <title>Klinik Mari Kita Sehat | Konsultasi Nutrisi, Diet Obesitas & Program Berat Badan Ideal</title>
   <meta name="description" content="Klinik Mari Kita Sehat membantu program diet, konsultasi nutrisi, obesitas, pola makan tidak teratur, follow up berkala, terapi GLP-1 sesuai evaluasi dokter, dan pendampingan berat badan ideal." />
   <meta name="keywords" content="klinik diet, konsultasi nutrisi, diet obesitas, program turun berat badan, suntik GLP-1, klinik obesitas, berat badan ideal, pola makan sehat" />
@@ -964,6 +965,38 @@
     .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease, transform .65s ease}
     .reveal.in{opacity:1;transform:none}
 
+    .maps-demo-ribbon{
+      position:fixed;
+      left:50%;
+      bottom:18px;
+      transform:translateX(-50%);
+      z-index:80;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      width:min(700px, calc(100% - 28px));
+      padding:10px 14px;
+      border:1px solid rgba(255,255,255,.38);
+      border-radius:999px;
+      color:#fff;
+      background:linear-gradient(135deg, rgba(6,78,59,.88), rgba(15,118,110,.82));
+      box-shadow:0 18px 60px rgba(6,78,59,.24);
+      backdrop-filter:blur(16px);
+      font-size:12px;
+      font-weight:850;
+      letter-spacing:.02em;
+    }
+    .maps-demo-ribbon span{
+      display:grid;
+      place-items:center;
+      width:26px;
+      height:26px;
+      border-radius:50%;
+      color:var(--forest);
+      background:var(--lime);
+      flex:0 0 auto;
+    }
+
     @media (prefers-reduced-motion: reduce){
       *{scroll-behavior:auto !important;animation-duration:.001ms !important;transition-duration:.001ms !important}
       .reveal{opacity:1;transform:none}
@@ -1018,11 +1051,13 @@
       .contact-visual{min-height:auto}
       .footer-grid{grid-template-columns:1fr}
       .copyright{display:block}
-      .wa-float{right:16px;bottom:16px;width:54px;height:54px}
+      .wa-float{right:16px;bottom:78px;width:54px;height:54px}
+      .maps-demo-ribbon{bottom:12px;border-radius:22px;align-items:flex-start}
     }
   </style>
 </head>
 <body>
+  <div class="maps-demo-ribbon" aria-label="Demo showcase MAPS"><span>MAPS</span> Demo landing page showcase. Nama, nomor, terapi, dan data klinik bersifat contoh.</div>
   <header class="topbar" aria-label="Navigasi utama">
     <div class="container nav">
       <a class="brand" href="#top" aria-label="Klinik Mari Kita Sehat">
@@ -1442,7 +1477,7 @@
             <span class="brand-mark" aria-hidden="true"><svg width="27" height="27" viewBox="0 0 24 24" fill="none"><path d="M12 3c3.7 1.6 6.4 5.1 6.4 9.2 0 4.7-3 8-6.4 8s-6.4-3.3-6.4-8C5.6 8.1 8.3 4.6 12 3Z" stroke="currentColor" stroke-width="1.9"/><path d="M8.9 12.4c1.7.1 3.6-.7 5.8-2.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path d="M12 20V9" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></span>
             <span><strong>Mari Kita Sehat</strong><small>Klinik Nutrisi & Berat Badan</small></span>
           </a>
-          <p class="footer-text">Landing page SEO-friendly untuk konsultasi nutrisi, program diet obesitas, pengaturan pola makan, follow up berkala, dan terapi pendukung berat badan sesuai evaluasi medis.</p>
+          <p class="footer-text">Landing page demo MAPS untuk layanan nutrisi dan berat badan. Data klinik, nomor, jadwal, terapi, dan legalitas harus diganti sesuai data resmi bila digunakan.</p>
         </div>
         <div class="footer-col">
           <h3>Menu</h3>
@@ -1470,6 +1505,9 @@
   </a>
 
   <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.querySelectorAll('img, svg').forEach(asset => asset.setAttribute('draggable', 'false'));
+
     const year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 
@@ -1494,7 +1532,14 @@
       const pesan = data.get('pesan') || '-';
       const text = `Halo Klinik Mari Kita Sehat, saya ingin jadwalkan konsultasi.%0A%0ANama: ${encodeURIComponent(nama)}%0ANo WA: ${encodeURIComponent(kontak)}%0ATujuan: ${encodeURIComponent(tujuan)}%0AJadwal: ${encodeURIComponent(jadwal)}%0APesan: ${encodeURIComponent(pesan)}`;
       // Ganti angka 6280000000000 dengan nomor WhatsApp klinik yang asli.
+      window.parent?.postMessage({ type: 'maps_showcase_cta', demo: 'klinik-mari-kita-sehat', action: 'form_whatsapp' }, '*');
       window.open(`https://wa.me/6280000000000?text=${text}`, '_blank', 'noopener,noreferrer');
+    });
+
+    document.querySelectorAll('a[href="#kontak"], .call-card, .wa-float').forEach(link => {
+      link.addEventListener('click', () => {
+        window.parent?.postMessage({ type: 'maps_showcase_cta', demo: 'klinik-mari-kita-sehat', action: 'contact_click' }, '*');
+      });
     });
   </script>
 

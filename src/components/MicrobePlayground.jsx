@@ -356,7 +356,7 @@ export default function MicrobePlayground() {
   return (
     <div className="microbe-game-panel">
       <div className="microbe-game-top">
-        <strong>Drag tabletnya. Bersihkan pathogen digital satu per satu.</strong>
+        <strong>Geser tabletnya untuk bantu membersihkan patogen digital satu per satu.</strong>
         <output aria-live="polite">{score} cleaned</output>
       </div>
       <canvas

@@ -1,6 +1,7 @@
 import { agency } from "../data/agency.js";
 import { servicesV2 } from "../data/landingV2.js";
 import { trackEvent } from "../utils/tracking.js";
+import MapsLogo from "./MapsLogo.jsx";
 
 export default function Footer() {
   const email = import.meta.env.VITE_CONTACT_EMAIL || "hellow@maps-healthcare.id";
@@ -11,9 +12,10 @@ export default function Footer() {
         <div>
           <a className="brand footer-brand" href="#top">
             <span className="brand-mark" aria-hidden="true">
-              MAPS
+              <MapsLogo />
             </span>
             <span className="brand-copy">
+              <strong>MAPS</strong>
               <small>{agency.label}</small>
             </span>
           </a>
@@ -43,7 +45,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <span>Copyright (c) {new Date().getFullYear()} MAPS - Medical Advance Portfolio Scientific. All rights reserved.</span>
+        <span>Copyright (c) {new Date().getFullYear()} MAPS - Medical Advanced Portfolio Solution. All rights reserved.</span>
       </div>
     </footer>
   );

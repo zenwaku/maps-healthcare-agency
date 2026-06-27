@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
   <title>Klinik Pratama Sehat Jaya Mobile | Infus Vitamin & Homecare Nurse di Rumah</title>
   <meta name="description" content="Klinik Pratama Sehat Jaya Mobile menyediakan layanan infus vitamin, hidrasi, obat akut sesuai indikasi dokter, dan kunjungan nurse terlatih ke rumah dengan jadwal yang bisa diatur." />
   <meta name="keywords" content="klinik pratama sehat jaya mobile, infus vitamin di rumah, homecare nurse, infus kesehatan, perawat datang ke rumah, layanan infus homecare" />
@@ -845,6 +846,38 @@
     }
     .wa-float:hover { transform: translateY(-3px) scale(1.03); }
 
+    .maps-demo-ribbon {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      z-index: 90;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: min(720px, calc(100% - 28px));
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,.38);
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(135deg, rgba(15,41,51,.9), rgba(16,185,129,.82));
+      box-shadow: 0 18px 60px rgba(15,41,51,.26);
+      backdrop-filter: blur(16px);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: .02em;
+    }
+    .maps-demo-ribbon span {
+      display: grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      color: var(--navy);
+      background: var(--yellow);
+      flex: 0 0 auto;
+    }
+
     @media (max-width: 1080px) {
       .nav-links { display: none; }
       .menu-btn { display: block; }
@@ -902,7 +935,8 @@
       .section { padding: 58px 0; }
       .faq-wrap, .form-box, .contact-card, .map-card-body { border-radius: 26px; padding: 28px 20px; }
       .form-box { padding: 28px 18px; }
-      .wa-float { width: 56px; height: 56px; right: 14px; bottom: 14px; }
+      .wa-float { width: 56px; height: 56px; right: 14px; bottom: 78px; }
+      .maps-demo-ribbon { bottom: 12px; border-radius: 22px; align-items: flex-start; }
     }
     @media (max-width: 420px) {
       .hero-actions .btn, .goal-actions .btn { width: 100%; }
@@ -912,6 +946,7 @@
   </style>
 </head>
 <body>
+  <div class="maps-demo-ribbon" aria-label="Demo showcase MAPS"><span>MAPS</span> Demo landing page showcase. Nama, nomor, layanan, dan data klinik bersifat contoh.</div>
   <div class="top-wrap">
     <nav class="nav" aria-label="Navigasi utama">
       <div class="container nav-inner">
@@ -1340,7 +1375,7 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div><strong>Klinik Pratama Sehat Jaya Mobile</strong><br/>Layanan infus kesehatan dan homecare nurse terjadwal.</div>
+      <div><strong>Klinik Pratama Sehat Jaya Mobile</strong><br/>Landing page demo MAPS untuk layanan homecare. Data klinik, nomor, alamat, dan legalitas wajib diganti bila digunakan.</div>
       <div><a href="#top">Kembali ke atas</a></div>
     </div>
   </footer>
@@ -1368,6 +1403,9 @@
   </script>
 
   <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.querySelectorAll('img, svg').forEach(asset => asset.setAttribute('draggable', 'false'));
+
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
     menuBtn?.addEventListener('click', () => {
@@ -1393,7 +1431,14 @@
       e.preventDefault();
       const form = new FormData(e.currentTarget);
       const text = `Halo Klinik Pratama Sehat Jaya Mobile, saya mau booking layanan homecare.\n\nNama: ${form.get('name')}\nNomor WA: ${form.get('phone')}\nLayanan: ${form.get('service')}\nLokasi: ${form.get('location')}\nCatatan: ${form.get('message') || '-'}\n\nMohon dibantu cek jadwal dan skrining awal ya.`;
+      window.parent?.postMessage({ type: 'maps_showcase_cta', demo: 'klinik-pratama-sehat-jaya', action: 'form_whatsapp' }, '*');
       window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    });
+
+    document.querySelectorAll('a[href*="wa.me"], a[href="#kontak"], .wa-float').forEach(link => {
+      link.addEventListener('click', () => {
+        window.parent?.postMessage({ type: 'maps_showcase_cta', demo: 'klinik-pratama-sehat-jaya', action: 'contact_click' }, '*');
+      });
     });
   </script>
 </body>

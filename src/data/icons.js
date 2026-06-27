@@ -1,4 +1,12 @@
 export const iconAssets = {
+  clinicalCompass: "assets/generated/icons/clinical-compass.png",
+  aiSpark: "assets/generated/icons/ai-spark.png",
+  insightRadar: "assets/generated/icons/insight-radar.png",
+  evidenceJournal: "assets/generated/icons/evidence-journal.png",
+  patientSearch: "assets/generated/icons/patient-search.png",
+  safeClaim: "assets/generated/icons/safe-claim.png",
+  conversionPath: "assets/generated/icons/conversion-path.png",
+  webinarStage: "assets/generated/icons/webinar-stage.png",
   website: "assets/icons/website-content.png",
   mobile: "assets/icons/mobile-clinic.png",
   landing: "assets/icons/landing-page.png",

@@ -1,6 +1,6 @@
 # MAPS Analytics Setup
 
-Panduan ini mengaktifkan measurement layer MAPS tanpa subscription, free trial, kartu, payment gateway, atau layanan berbayar.
+Panduan ini mengaktifkan measurement layer MAPS tanpa subscription, kartu, payment gateway, atau layanan berbayar.
 
 ## Arsitektur
 

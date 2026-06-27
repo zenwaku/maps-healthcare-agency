@@ -134,7 +134,7 @@ def add_cover(doc):
     subtitle = doc.add_paragraph()
     subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
     subtitle.paragraph_format.space_after = Pt(8)
-    run = subtitle.add_run("Medical Advance Portfolio Scientific")
+    run = subtitle.add_run("Medical Advanced Portfolio Solution")
     set_font(run, size=16, color=TEAL, bold=True)
 
     tagline = doc.add_paragraph()
@@ -177,7 +177,7 @@ def add_header_footer(doc):
     paragraph = footer.paragraphs[0]
     paragraph.alignment = WD_ALIGN_PARAGRAPH.RIGHT
     paragraph.paragraph_format.space_before = Pt(0)
-    run = paragraph.add_run("Medical Advance Portfolio Scientific  |  ")
+    run = paragraph.add_run("Medical Advanced Portfolio Solution  |  ")
     set_font(run, size=9, color=MUTED)
     add_page_field(paragraph)
 
@@ -228,7 +228,7 @@ def build():
     props = doc.core_properties
     props.title = "MAPS Landing Page Content Brief"
     props.subject = "Master website copy reference"
-    props.author = "MAPS - Medical Advance Portfolio Scientific"
+    props.author = "MAPS - Medical Advanced Portfolio Solution"
     props.keywords = "MAPS, healthcare digital marketing, landing page, content brief"
     doc.save(OUTPUT)
     print(OUTPUT)

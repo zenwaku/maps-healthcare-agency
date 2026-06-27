@@ -21,7 +21,7 @@ export default function Hero() {
           </div>
           <h1
             className="hero-title-v2"
-            aria-label="Klinik Anda Sudah Bagus. Tapi Belum Terlihat Meyakinkan Secara Digital."
+            aria-label="Klinik Anda sudah bagus. Tapi belum terlihat meyakinkan secara digital."
           >
             <span className="title-line">Klinik Anda</span>
             <KineticText as="span" text="Sudah Bagus." chunk="char" className="title-pop" />
@@ -47,9 +47,9 @@ export default function Hero() {
             <a
               className="btn btn-secondary hero-work-v2"
               href="#portfolio"
-              onClick={() => trackEvent("cta_click", { placement: "hero", label: "Our Work Portfolio" })}
+              onClick={() => trackEvent("cta_click", { placement: "hero", label: "Lihat Portfolio" })}
             >
-              Our Work Portfolio
+              Lihat Portfolio
             </a>
             <WhatsAppButton
               className="btn hero-wa-v2"

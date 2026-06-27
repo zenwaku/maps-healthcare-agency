@@ -1,7 +1,7 @@
 export const heroProof = [
-  { label: "Doctor-led", value: "Clinical reasoning dulu" },
+  { label: "Doctor-led", value: "Arah medis dijaga" },
   { label: "SEO + GEO", value: "Dicari manusia dan AI" },
-  { label: "Measured", value: "CTA, WA, UTM, Pixel, GA4" }
+  { label: "Terukur", value: "CTA, WA, UTM, Pixel, GA4" }
 ];
 
 export const careFramework = [
@@ -10,28 +10,28 @@ export const careFramework = [
     title: "Clinical-led",
     copy:
       "Arah komunikasi dipandu clinical reasoning, sehingga konten healthcare tidak asal klaim, tidak terlalu bombastis, dan tetap kredibel.",
-    icon: "doctor"
+    icon: "clinicalCompass"
   },
   {
     letter: "A",
     title: "AI-assisted",
     copy:
       "AI mempercepat riset, ideasi, outline, copy, variasi konten, funnel, dan automation. Keputusan akhirnya tetap manusia dan perspektif medis.",
-    icon: "ai"
+    icon: "aiSpark"
   },
   {
     letter: "R",
     title: "Results-tracked",
     copy:
       "MAPS tidak berhenti di output. CTA, WA click, UTM, pixel/event, GA4, dan dashboard ringan disiapkan agar performa bisa dibaca.",
-    icon: "analytics"
+    icon: "insightRadar"
   },
   {
     letter: "E",
     title: "Evidence-based",
     copy:
       "Konten disusun dengan dasar ilmiah, guideline, jurnal, atau referensi medis yang bisa dipertanggungjawabkan, lalu dibuat ringan untuk pasien.",
-    icon: "record"
+    icon: "evidenceJournal"
   }
 ];
 
@@ -39,70 +39,70 @@ export const audienceSegments = [
   {
     title: "Klinik Umum",
     image: "assets/cute/clinic-general.webp",
-    icon: "clinic",
+    icon: "clinicalCompass",
     hook: "Layanan bagus perlu terlihat jelas sebelum pasien chat.",
     service: "Website layanan, SEO lokal, konten keluhan harian."
   },
   {
     title: "Klinik Gigi",
     image: "assets/cute/dental-clinic.webp",
-    icon: "stethoscope",
+    icon: "safeClaim",
     hook: "Pasien butuh percaya sebelum booking tindakan.",
     service: "Landing page per layanan, carousel edukasi, CTA booking."
   },
   {
     title: "Klinik Kecantikan",
     image: "assets/cute/beauty-clinic.webp",
-    icon: "shield",
+    icon: "safeClaim",
     hook: "Cantik saja tidak cukup; klaim harus tetap aman.",
     service: "Campaign treatment, claim check, visual trust."
   },
   {
     title: "Klinik Ibu & Anak",
     image: "assets/cute/mom-child-clinic.webp",
-    icon: "family",
+    icon: "patientSearch",
     hook: "Orang tua mencari jawaban yang tenang dan kredibel.",
     service: "Konten edukasi, FAQ pasien, funnel WhatsApp."
   },
   {
     title: "Apotek",
     image: "assets/cute/pharmacy.webp",
-    icon: "capsule",
+    icon: "conversionPath",
     hook: "Promosi obat dan produk kesehatan tidak boleh asal klaim.",
     service: "Konten produk, edukasi aman, WhatsApp flow."
   },
   {
     title: "Lab & Medical Check-Up",
     image: "assets/cute/lab-checkup.webp",
-    icon: "record",
+    icon: "insightRadar",
     hook: "Paket pemeriksaan harus mudah dipahami, bukan sekadar list harga.",
     service: "Service page, explainer content, lead tracker."
   },
   {
     title: "Suplemen, Skincare, Wellness",
     image: "assets/cute/wellness-brand.webp",
-    icon: "heart",
+    icon: "evidenceJournal",
     hook: "Benefit perlu dibingkai edukatif, bukan bombastis.",
     service: "Evidence angle, SEO article, social campaign."
   },
   {
     title: "Healthtech",
     image: "assets/cute/healthtech-dashboard.webp",
-    icon: "dashboard",
+    icon: "aiSpark",
     hook: "Produk healthcare harus dipahami pasien, HCP, dan bisnis.",
     service: "Positioning, onboarding copy, conversion funnel."
   },
   {
     title: "Pharma & Medical Device",
     image: "assets/cute/pharma-device.webp",
-    icon: "molecule",
+    icon: "webinarStage",
     hook: "Materi ilmiah perlu turun ke pesan yang bisa dipakai campaign.",
     service: "Scientific deck, KOL material, medical copy."
   },
   {
     title: "Agency Partner",
     image: "assets/cute/agency-team.webp",
-    icon: "support",
+    icon: "clinicalCompass",
     hook: "Punya client healthcare tapi butuh medical supervision.",
     service: "Review konten, claim check, strategy support."
   }
@@ -110,32 +110,32 @@ export const audienceSegments = [
 
 export const clinicProblems = [
   {
-    icon: "search",
+    icon: "patientSearch",
     title: "Klinik bagus, tapi susah ditemukan",
     copy: "Google tidak rapi. Maps kurang kuat. Website belum menjawab pertanyaan pasien."
   },
   {
-    icon: "message",
+    icon: "conversionPath",
     title: "Instagram hidup, strateginya belum",
     copy: "Posting jalan, tapi pillar, hook, CTA, dan tone edukasinya belum konsisten."
   },
   {
-    icon: "ai",
+    icon: "aiSpark",
     title: "AI cepat, tapi bisa halusinasi",
     copy: "Output kesehatan harus dicek ulang. Di MAPS, AI membantu; dokter mengarahkan."
   },
   {
-    icon: "pixel",
+    icon: "insightRadar",
     title: "Iklan dan CTA tidak terbaca",
     copy: "Klik, WhatsApp, UTM, dan lead source perlu terlihat agar keputusan tidak pakai feeling."
   },
   {
-    icon: "heart",
+    icon: "safeClaim",
     title: "Konten terlalu jualan atau terlalu textbook",
     copy: "Healthcare butuh bahasa pasien: hangat, jelas, tidak menakut-nakuti, tidak overclaim."
   },
   {
-    icon: "calendar",
+    icon: "webinarStage",
     title: "Webinar dibuat dadakan",
     copy: "MAPS bisa bantu tema, rundown, deck, materi promosi, dan dokter sebagai speaker."
   }
@@ -146,7 +146,7 @@ export const servicesV2 = [
     id: "healthcare-website",
     icon: "responsive",
     title: "Website Klinik yang Bikin Pasien Paham",
-    hook: "Bukan cuma cantik. Harus jelas, cepat, mobile-first, dan siap tracking.",
+    hook: "Bukan cuma cantik. Pasien harus cepat paham layanan, lokasi, cara booking, dan alasan percaya.",
     points: ["Service page", "WhatsApp CTA", "FAQ pasien", "SEO lokal", "GA4 + Pixel"],
     waMessage:
       "Halo MAPS, saya MAPSY mau diskusi layanan Website Klinik. Saya ingin website/landing page healthcare yang lebih jelas, mobile-friendly, siap SEO, dan siap tracking."
@@ -155,7 +155,7 @@ export const servicesV2 = [
     id: "scientific-content",
     icon: "doctor",
     title: "Scientific Content yang Tetap Enak Dibaca",
-    hook: "Artikel, carousel, poster, story, dan caption dengan medical review angle.",
+    hook: "Artikel, carousel, poster, story, dan caption dibuat enak dibaca tanpa melepas konteks medisnya.",
     points: ["Evidence angle", "Claim check", "Bahasa pasien", "FAQ", "Referensi"],
     waMessage:
       "Halo MAPS, saya MAPSY tertarik layanan Scientific Content. Saya ingin konten healthcare yang evidence-based, mudah dipahami pasien, dan tidak asal klaim."
@@ -164,7 +164,7 @@ export const servicesV2 = [
     id: "social-engine",
     icon: "message",
     title: "Social Media Healthcare yang Punya Arah",
-    hook: "Tidak random. Setiap post punya fungsi: edukasi, trust, search, atau conversion.",
+    hook: "Tidak sekadar rajin posting. Setiap konten diberi peran: edukasi, trust, search, atau conversion.",
     points: ["Pillar", "Calendar", "Carousel", "Single image", "Story", "Reels script"],
     waMessage:
       "Halo MAPS, saya MAPSY mau diskusi Social Media Healthcare. Saya butuh content pillar, kalender, carousel, story, reels script, caption, dan CTA yang lebih rapi."
@@ -173,7 +173,7 @@ export const servicesV2 = [
     id: "seo-geo",
     icon: "search",
     title: "SEO + GEO untuk Dicari dan Direkomendasikan",
-    hook: "Konten disusun agar masuk search intent dan mudah dibaca mesin jawaban AI.",
+    hook: "Konten disusun dari pertanyaan pasien, lalu dirapikan agar mudah dibaca Google dan mesin jawaban AI.",
     points: ["Keyword map", "Topical cluster", "Schema", "FAQ", "Internal link"],
     waMessage:
       "Halo MAPS, saya MAPSY mau diskusi SEO + GEO. Saya ingin website/artikel healthcare lebih mudah ditemukan di Google dan lebih mudah dipahami AI."
@@ -182,7 +182,7 @@ export const servicesV2 = [
     id: "tracking",
     icon: "analytics",
     title: "Tracking Funnel Tanpa Ribet",
-    hook: "GA4, Meta Pixel, UTM, WhatsApp click, dan local event log siap dipantau.",
+    hook: "GA4, Meta Pixel, UTM, WhatsApp click, dan lead source disiapkan supaya keputusan tidak hanya pakai feeling.",
     points: ["CTA event", "WA click", "UTM", "Lead form", "Looker-ready sheet"],
     waMessage:
       "Halo MAPS, saya MAPSY mau diskusi Tracking Funnel. Saya ingin CTA, WhatsApp click, UTM, GA4, Meta Pixel, dan laporan digital lebih terbaca."
@@ -191,7 +191,7 @@ export const servicesV2 = [
     id: "campaign",
     icon: "target",
     title: "Campaign Layanan yang Tidak Asal Ramai",
-    hook: "Angle dibuat dari kebutuhan pasien, batas klaim, dan tujuan bisnis.",
+    hook: "Angle dibuat dari kebutuhan pasien, batas klaim, dan tujuan bisnis yang realistis.",
     points: ["Offer framing", "Creative angle", "Landing page", "Pixel event", "Insight"],
     waMessage:
       "Halo MAPS, saya MAPSY mau diskusi Campaign Layanan. Saya ingin campaign healthcare yang angle-nya jelas, CTA-nya rapi, dan tracking-nya siap."
@@ -200,7 +200,7 @@ export const servicesV2 = [
     id: "deck-webinar",
     icon: "report",
     title: "Scientific Deck + Webinar Engine",
-    hook: "Dari ide sampai materi edukasi yang bisa dibawakan dokter atau tim.",
+    hook: "Dari ide sampai materi edukasi yang bisa dibawakan dokter, tim, atau narasumber acara.",
     points: ["Tema", "Deck", "Key visual", "Rundown", "Speaker note", "Promo"],
     waMessage:
       "Halo MAPS, saya MAPSY mau diskusi Scientific Deck dan Webinar. Saya butuh deck, alur edukasi, materi promo, dan support acara healthcare."
@@ -230,18 +230,18 @@ export const seoPairs = [
   },
   {
     bad: "Artikel AI cepat jadi.",
-    good: "Outline SEO, clinical reasoning, FAQ, dan referensi yang bisa diaudit ulang.",
-    label: "Scientific depth"
+    good: "Outline SEO, clinical reasoning, FAQ, dan referensi yang bisa dicek ulang.",
+    label: "Kedalaman ilmiah"
   },
   {
     bad: "Klinik gigi dekat sini.",
     good: "Klinik gigi untuk scaling, tambal, behel, dan keluhan gusi dengan CTA booking WhatsApp yang jelas.",
-    label: "Service intent"
+    label: "Niat cari layanan"
   },
   {
     bad: "Produk skincare paling ampuh.",
     good: "Penjelasan kandungan, tipe kulit, cara pakai, batas ekspektasi, dan kapan perlu konsultasi.",
-    label: "Trust before claim"
+    label: "Trust sebelum klaim"
   }
 ];
 

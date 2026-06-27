@@ -1,25 +1,17 @@
 export const agency = {
   name: "MAPS",
-  legalName: "MAPS - Medical Advance Portfolio Scientific",
+  legalName: "MAPS - Medical Advanced Portfolio Solution",
   tagline: "Doctor-Led Digital Marketing for Healthcare Growth",
-  label: "Medical Advance Portfolio Scientific",
+  label: "Medical Advanced Portfolio Solution",
   positioning:
     "Agency transformasi digital marketing untuk klinik dan bisnis healthcare - dipimpin dokter, dibantu AI, dan divalidasi dengan clinical reasoning.",
   nav: [
-    { label: "Masalah", href: "#masalah-klinik", event: "nav_problem" },
-    { label: "Masalah Digital", href: "#hidden-problems", event: "nav_hidden_problem" },
-    { label: "Kenalan MAPS", href: "#meet-maps", event: "nav_meet_maps" },
-    { label: "Doctor-Led", href: "#doctor-led", event: "nav_doctor_led" },
-    { label: "Solusi", href: "#solusi", event: "nav_solution" },
-    { label: "CARE", href: "#care-framework", event: "nav_care" },
-    { label: "Target", href: "#audience", event: "nav_audience" },
-    { label: "SEO+GEO", href: "#seo-geo", event: "nav_seo_geo" },
+    { label: "Layanan", href: "#solusi", event: "nav_solution" },
+    { label: "Cara Kerja", href: "#process", event: "nav_process" },
     { label: "Portfolio", href: "#portfolio", event: "nav_portfolio" },
+    { label: "Untuk Siapa", href: "#audience", event: "nav_audience" },
     { label: "Webinar", href: "#webinar", event: "nav_webinar" },
-    { label: "Measurement", href: "#tracking", event: "nav_tracking" },
-    { label: "Alur", href: "#process", event: "nav_process" },
-    { label: "Audit", href: "#audit", event: "nav_audit" },
-    { label: "Paket", href: "#paket", event: "nav_packages" }
+    { label: "FAQ", href: "#faq", event: "nav_faq" }
   ],
   hero: {
     badge: "Doctor-Led Healthcare Digital Marketing Agency",
@@ -28,11 +20,11 @@ export const agency = {
       "Kami membantu klinik, apotek, tenaga kesehatan, dan bisnis healthcare membangun digital presence yang lebih profesional, edukatif, dan terukur - mulai dari konten, website, SEO, iklan, tracking, sampai sistem operasional sederhana.",
     doctorLed:
       "Dipimpin oleh dokter. Dipercepat dengan AI. Divalidasi dengan clinical reasoning. Dieksekusi seperti digital marketing agency modern.",
-    primaryCta: "Audit Digital Klinik Gratis",
-    secondaryCta: "Lihat Solusi Kami",
+    primaryCta: "Audit Digital Gratis",
+    secondaryCta: "Lihat Portfolio",
     microcopy:
       "Cocok untuk MAPSY yang ingin mulai digital secara lebih rapi, bukan sekadar posting random.",
-    canvasCopy: "Drag the tablet to clean digital pathogen noise.",
+    canvasCopy: "Geser tablet untuk membersihkan patogen digital.",
     stats: [
       {
         value: "Content Clarity",

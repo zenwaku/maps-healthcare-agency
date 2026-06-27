@@ -3,6 +3,14 @@ import { resolveAssetPath } from "../utils/assetFallback.js";
 
 const iconAlt = {
   website: "Ikon website healthcare",
+  clinicalCompass: "Ikon kompas clinical-led MAPS",
+  aiSpark: "Ikon AI-assisted healthcare marketing MAPS",
+  insightRadar: "Ikon radar insight dan tracking MAPS",
+  evidenceJournal: "Ikon jurnal evidence-based MAPS",
+  patientSearch: "Ikon pencarian pasien untuk SEO healthcare",
+  safeClaim: "Ikon batas klaim yang lebih aman",
+  conversionPath: "Ikon jalur conversion dan WhatsApp lead",
+  webinarStage: "Ikon webinar dan public education healthcare",
   mobile: "Ikon mobile clinic",
   landing: "Ikon landing page klinik",
   search: "Ikon SEO dan pencarian healthcare",
@@ -46,7 +54,7 @@ const iconAlt = {
   funnel: "Ikon funnel marketing healthcare",
   qr: "Ikon QR campaign healthcare",
   support: "Ikon support healthcare agency",
-  cloud: "Ikon penyimpanan cloud gratis opsional",
+  cloud: "Ikon sinkronisasi data opsional",
   lock: "Ikon privasi dan keamanan data",
   check: "Ikon validasi konten healthcare",
   award: "Ikon proof of work MAPS"
