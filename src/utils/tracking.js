@@ -90,7 +90,10 @@ export function initTracking() {
         window.dataLayer.push(arguments);
       };
     window.gtag("js", new Date());
-    window.gtag("config", gaId, { send_page_view: false });
+    window.gtag("config", gaId, {
+      page_title: document.title,
+      page_location: window.location.href
+    });
   }
 
   if (isRealId(pixelId)) {
