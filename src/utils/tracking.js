@@ -18,6 +18,16 @@ function isRealId(id) {
   return !placeholderIds.has(id) && typeof id === "string" && id.trim().length > 4;
 }
 
+function preferProductionConfig(localValue, envValue) {
+  return isRealId(envValue) ? envValue : localValue;
+}
+
+function isTrackingDebugMode() {
+  if (typeof window === "undefined") return false;
+  const params = new URLSearchParams(window.location.search);
+  return params.get("maps_debug") === "1" || window.localStorage.getItem("maps_tracking_debug") === "1";
+}
+
 function readLocalTrackingConfig() {
   try {
     return JSON.parse(window.localStorage.getItem("maps_tracking_config") || "{}");
@@ -79,8 +89,16 @@ export function initTracking() {
   window.dataLayer = window.dataLayer || [];
 
   const localConfig = readLocalTrackingConfig();
-  const gaId = localConfig.gaId || import.meta.env.VITE_GA_MEASUREMENT_ID;
-  const pixelId = localConfig.pixelId || import.meta.env.VITE_META_PIXEL_ID;
+  const gaId = preferProductionConfig(localConfig.gaId, import.meta.env.VITE_GA_MEASUREMENT_ID);
+  const pixelId = preferProductionConfig(localConfig.pixelId, import.meta.env.VITE_META_PIXEL_ID);
+  const debugMode = isTrackingDebugMode();
+
+  window.mapsTrackingState = {
+    gaId: isRealId(gaId) ? gaId : "",
+    pixelConfigured: isRealId(pixelId),
+    cloudConfigured: Boolean(getCloudEndpoint()),
+    debugMode
+  };
 
   if (isRealId(gaId)) {
     loadScript(`https://www.googletagmanager.com/gtag/js?id=${gaId}`, "ga4-script");
@@ -90,10 +108,12 @@ export function initTracking() {
         window.dataLayer.push(arguments);
       };
     window.gtag("js", new Date());
-    window.gtag("config", gaId, {
+    const gaConfig = {
       page_title: document.title,
       page_location: window.location.href
-    });
+    };
+    if (debugMode) gaConfig.debug_mode = true;
+    window.gtag("config", gaId, gaConfig);
   }
 
   if (isRealId(pixelId)) {
@@ -132,7 +152,8 @@ export function trackEvent(eventName, params = {}) {
   sendCloudEvent(cloudPayload);
 
   if (typeof window.gtag === "function") {
-    window.gtag("event", eventName, publicParams);
+    const gaParams = isTrackingDebugMode() ? { ...publicParams, debug_mode: true } : publicParams;
+    window.gtag("event", eventName, gaParams);
   }
 
   if (typeof window.fbq === "function") {

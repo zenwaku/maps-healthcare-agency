@@ -9,9 +9,12 @@ Panduan ini mengaktifkan measurement layer MAPS tanpa subscription, kartu, payme
 - Stream ID: `15161794054`
 - Measurement ID: `G-7K5M8M3XJD`
 - GitHub Actions variable: `VITE_GA_MEASUREMENT_ID=G-7K5M8M3XJD`
+- Debug URL: `https://zenwaku.github.io/maps-healthcare-agency/?maps_debug=1`
 - Deploy terakhir terverifikasi: bundle publik memuat ID GA4 baru, tidak memuat ID lama, dan standar `page_view` GA4 aktif.
 
 Gunakan akun Google pemilik bisnis saat membuka GA4 dan Looker Studio. Jika ingin semua berada di akun `marchoict@gmail.com`, pastikan akun itulah yang sedang aktif saat membuka Google Analytics, Google Sheets, dan Looker Studio.
+
+Catatan teknis: production ID dari GitHub Actions diprioritaskan di atas config lokal browser. Ini mencegah browser lama mengirim event ke Measurement ID yang salah.
 
 ## Arsitektur
 
@@ -21,6 +24,21 @@ Gunakan akun Google pemilik bisnis saat membuka GA4 dan Looker Studio. Jika ingi
 4. Semua event disimpan maksimal 500 item di `localStorage` sebagai fallback.
 5. Jika Apps Script Web App URL tersedia, event, UTM, audit, dan lead dicatat ke Google Sheets.
 6. Google Sheet dapat dipakai langsung sebagai data source Looker Studio.
+
+## Quick Smoke Test GA4
+
+1. Buka `https://zenwaku.github.io/maps-healthcare-agency/`.
+2. Buka GA4 > Reports > Realtime.
+3. Klik CTA, WhatsApp, filter portfolio, dan form audit.
+4. Pastikan event muncul dalam beberapa menit.
+
+Jika Realtime masih kosong:
+
+1. Buka `https://zenwaku.github.io/maps-healthcare-agency/?maps_debug=1`.
+2. Buka GA4 > Admin > Data display > DebugView.
+3. Refresh website dan klik CTA.
+4. Cek Console browser dan jalankan `window.mapsTrackingState`; nilai `gaId` harus `G-7K5M8M3XJD`.
+5. Matikan ad blocker/privacy blocker untuk domain GitHub Pages bila request GA4 diblokir.
 
 ## Aktivasi GA4
 
